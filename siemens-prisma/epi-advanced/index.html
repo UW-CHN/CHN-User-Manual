@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Kelly Chang">
+  <link rel="canonical" href="siemens-prisma/epi-advanced/">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>EPI: Advanced Parameter and Sequence Issues - MRI User Manual</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../../css/custom.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "EPI: Advanced Parameter and Sequence Issues";
+    var mkdocs_page_input_path = "siemens-prisma/epi-advanced.md";
+    var mkdocs_page_url = "siemens-prisma/epi-advanced/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> MRI User Manual</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">SIEMENS PRISMA 3T SCANNER</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../setting-up/">Setting Up and Acquiring Scans</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../epi-basic/">EPI: Basic Parameter and Sequence Issues</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">EPI: Advanced Parameter and Sequence Issues</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-the-hell-is-ipat-last-time-i-checked-grappa-was-a-strong-italian-drink-it-makes-no-sense">What the hell is iPAT? Last time I checked, grappa was a strong Italian drink! It makes no sense!</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#is-grappa-a-good-technique-to-use-what-are-the-caveats">Is GRAPPA a good technique to use? What are the caveats?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-partial-fourier-and-why-might-i-want-to-consider-it-for-epi">What is “partial Fourier” and why might I want to consider it for EPI?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#is-partial-fourier-a-good-technique-to-use-what-are-the-caveats">Is partial Fourier a good technique to use? What are the caveats?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#it-looks-like-i-will-need-to-use-either-partial-fourier-or-grappa-to-get-the-spatial-resolution-and-coverage-that-i-want-which-method-should-i-use">It looks like I will need to use either partial Fourier or GRAPPA to get the spatial resolution and coverage that I want. Which method should I use?</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../epi-artifacts/">EPI: Artifacts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../miscellaneous/">Miscellaneous</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">PERIPHERALS</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../peripherals/eyelink/">EyeLink 1000 Plus</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Appendix</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/normal-checklist/">Normal Operations Checklist</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/emergency-checklist/">Emergency Checklist</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">MRI User Manual</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>SIEMENS PRISMA 3T SCANNER &raquo;</li>
+        
+      
+    
+    <li>EPI: Advanced Parameter and Sequence Issues</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/example/repo/edit/master/docs/siemens-prisma/epi-advanced.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="epi-advanced-parameter-and-sequence-issues">EPI: Advanced Parameter and Sequence Issues<a class="headerlink" href="#epi-advanced-parameter-and-sequence-issues" title="Permanent link">&para;</a></h1>
+<p>To understand this section you will need to have a basic understanding of the EPI pulse sequence. A basic understanding of k-space is also extremely useful. If you haven’t already done so, consider reading chapter 4 of the book Functional Magnetic Resonance Imaging by Huettel, Song &amp; McCarthy, or read the series of blog posts, Physics for Understanding fMRI Artifacts at <a href="http://practiCalfMRI.blogspot.com">http://practiCalfMRI.blogspot.com</a>.</p>
+<h2 id="what-the-hell-is-ipat-last-time-i-checked-grappa-was-a-strong-italian-drink-it-makes-no-sense">What the hell is iPAT? Last time I checked, grappa was a strong Italian drink! It makes no sense!<a class="headerlink" href="#what-the-hell-is-ipat-last-time-i-checked-grappa-was-a-strong-italian-drink-it-makes-no-sense" title="Permanent link">&para;</a></h2>
+<p>While you may feel like you need a drink when you have to think about how parallel imaging works, the concepts and the practical consequences are relatively simple to understand. In the first instance, iPAT is just what Siemens calls its parallel imaging implementation. It stands for integrated parallel imaging techniques and is the general term for the entire family of receiver coil-based data acceleration methods.</p>
+<p>Essentially, with parallel imaging methods such as GRAPPA (“generalized autocalibrating partially parallel acquisitions”) and mSENSE (“modified sensitivity encoding”), spatial information is partly acquired from the receive-field of the RF coil elements, and partly from k-space (i.e. gradient) encoding. With conventional, non-parallel imaging we only use k-space encoding. Using iPAT means that we can acquire less gradient episodes and so acquire less data per volume during an EPI time series. For example, with GRAPPA enabled and iPAT = 2 we acquire half of the number of echoes for EPI as without iPAT. That means the level of distortion in the phase encode direction is also halved. And if we were using GRAPPA with iPAT=4 we would acquire only one quarter of the gradient-encoded data than would be needed without iPAT, and distortion would be reduced by a factor of four by comparison.</p>
+<p>Whilst iPAT is available for most pulse sequences, generally you won’t care whether iPAT is being used or not for anatomical scans. (It is being used for your standard MP-RAGE, for instance.) But you definitely need to be aware of using iPAT for your EPI scans because it has consequences for image SNR, artifacts, motion sensitivity and the maximum nominal spatial resolution per unit time. So let’s focus on iPAT as used for EPI.</p>
+<p>There are two flavors of iPAT available for all the EPI sequences. Click the Resolution tab then select the iPAT card option. PAT mode is either None, GRAPPA or mSENSE. If PAT mode is set to None then parallel imaging is not being used. GRAPPA and mSENSE are both parallel imaging methods, but they are k-space and image space-based methods, respectively. For reasons that you almost certainly don’t care about, it turns out that GRAPPA is better than mSENSE for fMRI. So if you want to use parallel imaging, set PAT mode to GRAPPA.</p>
+<p>When you select GRAPPA you will find two more information fields come alive: Accel. factor PE, and Ref. lines PE. The first, Accel. factor  (also known as iPAT factor), is the acceleration amount. A factor of two means that only every second k-space line is acquired in the EPI echo train; a factor of three, every third line, etc. If you are using the standard, 12-channel head coil, set the Accel. factor to 2. Don’t use factors of 3 or 4 without talking to me first! If you are using the 32-channel head coil you may use a factor of 2, 3, or 4, your choice. But it is generally a good idea to decide in discussion with Ben or Daniel.</p>
+<p>The Ref. lines PE parameter controls the number of phase encoding lines that are acquired during the auto-calibrating signal (ACS) scan (sometimes referred to colloquially as the GRAPPA reference scan). This parameter can be left at the default 24. If it’s set to less than 24, come talk to me. If it’s higher than 24 feel free to set it to 24, or come talk to me and we’ll investigate whether there are any reasons not to use the lower value. In empirical tests I found no performance difference using 24, 36 or 48 reference lines.</p>
+<p>So what happens if you have GRAPPA enabled? Well, in exchange for being able to skip k-space lines in each EPI, we need to map spatial information at the start of the acquisition. With iPAT=2, two reference EPI volumes are acquired. These happen immediately after dummy scans and before the first real (saved) volume of EPI. (Higher iPAT factors require more reference steps, in proportion.) Not only do these reference scans add some time to the total measurement, but of more importance is that it is essential there be no subject motion while they are acquired! If the subject moves during those critical few seconds - for iPAT=2 and TR=2000 ms the reference scans would take 4 seconds to acquire - the spatial reconstruction will be affected, causing all of the EPIs in the subsequent time series to have artifacts in them.</p>
+<p>How do you know if your subject moved during these reference acquisitions? Well, all you can do is open the Inline Display window as soon as you’ve started the scan and wait to see the EPIs that result. If the subject did move during the reference scans, you’ll see artifacts in the images and these will stay fairly constant as the scan progresses, i.e. they don’t suddenly go away, leaving lovely EPIs. (See the next section for an example.) Contrast this with a situation where the subject does NOT move during the reference scans, but does move a short time thereafter. In this case, the EPIs will start out looking pretty good, then occasionally go bad with the subject movement, then perhaps go back to looking good again, etc.</p>
+<p>In summary, then, if the images start bad and stay bad, bet that the subject moved during the GRAPPA reference acquisitions and stop the scan. Remind the subject to lie as still as possible, and start again. One related trick is to ask the subject to swallow before the scan starts, and ask him not to swallow again until he has counted to ten seconds after the start of the EPI noise. With a TR of 2 seconds and two dummy scans the subject won’t then swallow until after the third real volume of EPI is being acquired. (Recall 4 secs of dummy scans, 4 secs of reference acquisitions for iPAT=2, then the first real EPI volume is acquired.) Many subjects don’t consider swallowing (or moving their eyes come to that!) as ‘head’ movement. Politely remind them that at the beginning of the scan it is also important to keep everything still, including the eyes, the mouth/throat, arms, legs…</p>
+<p>If you want the ultimate in experimental robustness for GRAPPA, consider having several null events at the start of your stimulus script. For example, you might have four fixation crosses in a row, each displayed for 2 seconds (for TR=2000 ms) before the first real stimulus is displayed. This would give you an eight-second time window during which you could evaluate the EPI quality – looking for possible movement during the GRAPPA reference acquisitions, as just described - and, if needed (or even if you’re just slightly worried!) you can stop the scan before any real stimuli have been presented to the subject. You could stop and restart your EPI acquisition as many times as necessary to avoid movement during the reference scans. Of course, in doing this you will need some experience to differentiate movement during a GRAPPA reference scan from some other problem (e.g. the effects of a bad shim) but, given the general problem of subject motion, it doesn’t hurt to provide yourself a small cushion at the start of each run.</p>
+<h2 id="is-grappa-a-good-technique-to-use-what-are-the-caveats">Is GRAPPA a good technique to use? What are the caveats?<a class="headerlink" href="#is-grappa-a-good-technique-to-use-what-are-the-caveats" title="Permanent link">&para;</a></h2>
+<p>In general, the decision whether or not to use parallel imaging (iPAT) - whether GRAPPA, mSENSE or another iPAT method not presently on the scanner - is driven by the spatio-temporal requirements of your experiment. (On occasion, a user might opt to use iPAT with the express purpose of reducing distortion, but in general that is a secondary consideration, after spatio-temporal specifications, sensitivity, etc.) If you can meet your voxel resolution and spatial coverage (slices per TR) requirements without GRAPPA, apply Occam’s razor and don’t introduce an unnecessary complexity (which will translate into additional motion sensitivity, as you will see) that your neuroscience question doesn't require. You will only want to consider GRAPPA if you need higher spatio-temporal resolution than can be achieved with full k-space EPI.</p>
+<p>As a rough rule of thumb, 64x64 matrix EPI can be acquired without GRAPPA, allowing circa 3.5 mm in-plane resolution and circa 32 slices in TR=2 sec. These parameters are typical for 3.5 mm voxels with whole brain coverage. If you need to push the spatial resolution below 3 mm in plane, or acquire thinner slices and maintain whole brain coverage, or maintain 3.5 mm voxels but use a TR much shorter than 2 secs (e.g. for connectivity) then GRAPPA may be a solution.
+Let’s first deal with method selection. Why GRAPPA, not mSENSE? We have found that mSENSE is very much less stable in the presence of subject motion when used to acquire EPI for fMRI. So at this point the choice is GRAPPA or not.</p>
+<p>As discussed in the previous section, GRAPPA (as with other parallel imaging methods) takes advantage of the spatial information provided by the RF coil geometry to allow undersampled EPI acquisitions. Here, undersampling means we don’t have to acquire every line in k-space. And just how much we can undersample, i.e. the maximum acceleration (or iPAT) factor that is permitted, will depend primarily on the RF coil in use. Generally, the more channels the RF coil has, the more spatial information can be encoded from the coil and the higher the maximum iPAT factor can be. As mentioned in the previous section that introduced the GRAPPA method, you are really limited to maxima of iPAT=2 for the 12-channel head coil and iPAT=4 for the 32-channel head coil.</p>
+<p>So GRAPPA allows faster EPI acquisitions. That’s good, right? Yup, it can be. If you are using iPAT=2 you only need acquire 32 echoes in the EPI echo train, instead of the full 64 echoes, and you can still get a 64x64 matrix image out of it! Clearly, reducing the length of the echo train means we spend less time acquiring the spatial information for each EPI slice, and that means that we can acquire more slices per unit time (or per TR), meaning that our spatial coverage can be improved. Thus, as a general principle, the higher the iPAT factor the higher we can make spatial resolution and/or spatial coverage, without altering TR.</p>
+<p>What about the caveats of using GRAPPA? First of all, you never get something for nothing! GRAPPA reduces SNR, even in the absence of motion. Sampling a shortened echo train with iPAT=2 reduces the image SNR by √2, or 40%. Next, there may be artifacts in the reconstruction process caused by the mixture of imperfect receive-field encoding with a k-space encoding process. These reconstruction errors tend to increase with increasing iPAT factor. This is essentially why we can’t use higher than iPAT=2 with the 12-channel coil; we need more channels (coil elements) to push up to iPAT=3 or 4.</p>
+<p>The next problem is far more insidious and there is no guaranteed way to avoid it ahead of time: head motion. Of course, you have carefully packed your subject’s head and he has been instructed not to move, but he is still alive! Some movement is involuntary! Now consider how GRAPPA works again. First, some calibration scans are acquired, then the (undersampled) EPI time series starts up. What if the subject just happens to move – perhaps swallows – during those calibration scans? These critical reference acquisitions will be corrupted in some fashion that depends on the magnitude and nature of the motion. What precisely the resultant EPIs will look like is anybody’s guess – there are infinite ways for a subject to move – but one example of a motion-contaminated GRAPPA scheme is shown below:</p>
+<figure>
+    <img src="/img/motion-free-grappa.png" alt="Motion-free GRAPPA images">
+    <figcaption>
+    Motion-free GRAPPA images. Note the relatively homogeneous background noise.
+    </figcaption>
+</figure>
+
+<figure>
+    <img src="/img/motion-contaminated-acs.png" alt="Motion-contaminated ACS">
+    <figcaption>
+    Motion-contaminated ACS. Note the structured noise in several slices.
+    This structure persists throughout every volume of the time series.
+    </figcaption>
+</figure>
+
+<p>Let’s continue to focus on selecting a suitable iPAT factor for our experiment. We now recognize that any sort of reference scan that is used for reconstruction will necessarily increase the motion sensitivity of the entire time series. We can state with confidence that the least motion sensitivity is achieved for single-shot, full k-space EPI, i.e. when we aren’t using GRAPPA. Use of GRAPPA will always increase motion sensitivity. And the longer we must spend acquiring reference scans before starting the EPI time series, the more motion sensitivity we introduce to the overall experiment. So we only want to move to higher iPAT factors if we can assure minimal subject motion, and/or we can take steps to mitigate any incidental motion (such as including dummy fixation cross events at the start of the task, to allow a window for evaluating the EPIs and making a decision on whether or not to allow the acquisition to proceed prior to the first real stimulus being presented).</p>
+<p>We also need to be concerned about motion after the reference acquisitions, however. For EPI volume n acquired n*TR seconds after the completion of the reference scans, we have an ever increasing opportunity for the spatial information obtained during the reference scans to be rendered invalid. Slow, drifting motion is quite common, e.g. as subjects get more comfortable in the scanner, their neck muscles relax, the foam padding compresses, etc. And of course subjects may be yawning, scratching their noses, etc. These motions will generate a form of ‘mismatch’ between the spatial information encoded via gradients in the nth volume acquisition, and the prior reference scan information acquired at the start of the time series. As before, precisely how that mismatch manifests in the resultant nth completed EPI depends on the nature of the motion. Whether or not you decide the artifacts are too large to continue the current EPI time series will depend on many things, not least whether the motion was a one-time event and the subject returned his head to the starting position, whether the subject seems to be moving almost continuously, whether the task has novel components that mean it can’t be re-run on the current subject, etc. As with many issues in fMRI, what you do will be dictated by your experience, and that means interpreting and differentiating between the various types of artifacts. GRAPPA isn’t for the inexperienced!</p>
+<p>To finish up this section, let’s go back to the initial question: GRAPPA or not? You’ve now got an appreciation of the trade-offs with GRAPPA: essentially, this means exchanging higher spatio-temporal resolution for lower SNR and more motion sensitivity. Is it a fair trade? It all depends! If your experiment requires 2 mm voxels then you have little choice but to select how you do GRAPPA, not whether you do it. But if you only need 3 mm voxels then you have the choice to do GRAPPA or not. (Probably not.) Are you in between? Then it’s probably time to talk protocols with Ben and see if one factor overrides the others for your experiment.</p>
+<h2 id="what-is-partial-fourier-and-why-might-i-want-to-consider-it-for-epi">What is “partial Fourier” and why might I want to consider it for EPI?<a class="headerlink" href="#what-is-partial-fourier-and-why-might-i-want-to-consider-it-for-epi" title="Permanent link">&para;</a></h2>
+<p>Partial Fourier (pF) is another approach to reducing the number of k-space lines acquired in order to produce an echo planar image. (It can also be used for non-EPI sequences but here we will focus on its use for EPI.) Like parallel imaging methods, pF is intended to speed up data acquisition, usually as a way to increase the spatio-temporal resolution. However, unlike parallel imaging techniques such as GRAPPA, pF doesn’t require any sort of reference scan. All the information needed to reconstruct a particular EPI slice is contained in that (partial) slice acquisition.</p>
+<p>The temporal benefit arising from pF can be understood by considering the k-space matrix below. Rather than acquiring every single echo in the EPI echo train, only just over half of the echoes are acquired by omitting the first, say, one quarter of the phase-encoded echoes in the train. (In the diagram below the first 7/16ths of the echoes have been omitted.) This allows the TE to be shortened, thereby allowing more slices per unit time.</p>
+<figure>
+    <img src="/img/k-space-sampling.png" alt="k-space sampling">
+</figure>
+
+<p>Acquiring partial k-space produces a k-space matrix with two distinct parts: the low spatial frequencies in the central part (dark gray) are sampled symmetrically whereas the high spatial frequencies have been measured only once, on one side of the k-space matrix (light gray). To reconstruct the final EPI from a 2D FT we need to synthesize the missing k-space (white). This is permissible because k-space of a real object, such as a brain, exhibits what is known as Hermitian symmetry provided certain conditions are met. The high spatial frequencies sampled on the right, in light gray, can be converted mathematically into the missing data on the left, albeit with a slight reduction of the SNR for the high spatial frequencies. (By sampling the high frequencies only once their SNR is reduced by √2.) Then, once a complete k-space matrix has been obtained, the resultant can be 2D Fourier transformed to yield images.</p>
+<p>Now, Siemens simply leaves the white space (the omitted echoes) set to zero, so that they add no signal or noise to the final image. This is another approach to image reconstruction that isn’t as sophisticated as the method I outlined in the above paragraph, but provided the number of omitted echoes isn’t too large the zero filling approach seems to work. (Siemens allows a maximum omission of a quarter of the total echoes, through partial Fourier factors of 7/8ths or 6/8ths only.)</p>
+<p>In contrast to GRAPPA, skipping a portion of the echoes in a partial Fourier acquisition doesn’t alter the inherent distortion in the final image. This is because GRAPPA with iPAT=2 skips alternate lines in k-space, making the sampled (acquired) k-space step size twice what it would be for an unaccelerated, full k-space EPI matrix, thereby doubling the effective bandwidth in the phase encoding dimension and halving the inherent distortion. But with partial Fourier the k-space step size is maintained at the same value as for full k-space. The echoes that are dropped from the acquisition reside in a single block at one side of the k-space matrix. Thus, the bandwidth in the phase encoding dimension is unchanged from a full k-space acquisition, and the distortion in the phase encoding dimension is unchanged as well.</p>
+<h2 id="is-partial-fourier-a-good-technique-to-use-what-are-the-caveats">Is partial Fourier a good technique to use? What are the caveats?<a class="headerlink" href="#is-partial-fourier-a-good-technique-to-use-what-are-the-caveats" title="Permanent link">&para;</a></h2>
+<p>In general, partial Fourier should only be considered when you wish to use a TE that is considerably shorter than can be attained by the acquisition of your desired full k-space matrix (e.g. to reduce signal dropout) or to increase by a few slices the spatial coverage in the slice direction (i.e. slices per TR). Let’s say you want to end up with images that are 128x128 pixels. With full k-space coverage let’s assume the minimum TE to achieve that matrix is 44 ms. But you want to use a TE of only 30 ms because you know that gives robust BOLD signal, and unless you can shave 14 ms off the acquisition time for each slice you won’t get sufficient brain coverage in the slice dimension, either. By omitting the first thirty-two of 128 echoes (i.e. using 6/8ths partial Fourier) it is feasible to reduce the minimum allowable TE by something like 16 ms, thus allowing the shorter TE of around 30 ms that you want for your experiment. You will acquire only 96x128 data points then have the scanner reconstruct the “missing” 32 lines of data in the phase encode dimension to yield images of 128x128 pixels, as you intend.</p>
+<p>There are of course experimental caveats to partial Fourier scanning. By acquiring only 6/8ths of the echoes in a full echo train, the per image SNR is decreased by sqrt(8/6), or 15%, compared to the full 8/8ths sampling. Of course, this SNR comparison is valid only at a fixed TE, but since the partial Fourier scheme allows you to shorten the TE compared to full echo train sampling you will likely recover, perhaps even increase, the actual SNR in each EPI!</p>
+<p>However, this caveat has a caveat of its own. Not all signal regions in every EPI slice will refocus at exactly the center of k-space. Well-shimmed regions, especially in occipital and parietal cortex, will likely refocus at kx,y=0, as they should, and they should obey the SNR rules just mentioned above. Similarly, brain regions for which the magnetic field causes the signal to refocus late in the echo train (to the right of kx,y=0) will be sampled in a partial k-space scheme as for full k-space, and again their SNR should not be drastically affected by the omitted portion of k-space. But regions suffering from strong magnetic field gradients – the usual suspects of inferior and deep brain, frontal cortex and lateral temporal lobes – may refocus earlier than the theoretical center of k-space. Recall that we don’t start sampling until 2/8ths of k-space would already have been acquired were we doing full k-space sampling. (This is the blank region of k-space bounded by the dashed line on the left-hand side of the figure in the previous section.) It is entirely possible for these signal regions to refocus before sampling even commences, effectively “falling off the edge” of the sampled k-space and contributing (if anything) only weakly to the final image. In other words, signal dropout for these regions is enhanced. Note also that this dropout effect is unlikely to be sufficiently mitigated by reducing the TE, unless the TE is made very short indeed (which would have its own negative connotations for BOLD sensitivity, as discussed in an earlier section).</p>
+<p>Below are three sets of images acquired with full, 7/8ths partial and 6/8ths partial k-space.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The pronounced dropout in temporal lobes as the degree of k-space sampling is reduced. In this example the TE was held constant; no attempt was made to compensate for dropout from early refocusing.</p>
+</div>
+<figure>
+    <img src="/img/full-fourier.png" alt="Full Fourier">
+    <figcaption>Full Fourier 64x64 EPI.</figcaption>
+</figure>
+
+<figure>
+    <img src="/img/partial-fourier-7-8.png" alt="7/8ths partial Fourier">
+    <figcaption>7/8ths partial Fourier EPI.</figcaption>
+</figure>
+
+<figure>
+    <img src="/img/partial-fourier-6-8.png" alt="6/8ths partial Fourier">
+    <figcaption>6/8ths partial Fourier EPI.</figcaption>
+</figure>
+
+<h2 id="it-looks-like-i-will-need-to-use-either-partial-fourier-or-grappa-to-get-the-spatial-resolution-and-coverage-that-i-want-which-method-should-i-use">It looks like I will need to use either partial Fourier or GRAPPA to get the spatial resolution and coverage that I want. Which method should I use?<a class="headerlink" href="#it-looks-like-i-will-need-to-use-either-partial-fourier-or-grappa-to-get-the-spatial-resolution-and-coverage-that-i-want-which-method-should-i-use" title="Permanent link">&para;</a></h2>
+<p>An obvious question, given the need to reduce the minimum attainable TE and/or increase spatial coverage (in terms of slices/TR), is whether to use GRAPPA or partial Fourier. There is no simple answer to this question, but there are a handful of points to consider. The first is your intended use. If you want to shorten the minimum attainable TE and can achieve the TE you want using partial Fourier, then that is probably a good enough reason to stick to pF; it doesn’t require any form of “reference scan” so it has lower motion sensitivity than GRAPPA. In some pilot studies at BIC, users have found that temporal SNR of partial Fourier is better than it is for GRAPPA when all other parameters are held constant. In one test on deep brain regions the TSNR for GRAPPA was 11, whereas it was 16 for partial Fourier.</p>
+<p>However, unlike GRAPPA, using partial Fourier does not reduce the level of distortion inherent in the phase-encoded dimension of the EPIs. Thus, if one of your intentions is to reduce distortion you might want to use GRAPPA and the highest acceleration factor that your experiment can tolerate subject to the reduction of SNR, the presence of residual aliasing artifacts, the enhanced motion sensitivity and all the other fun stuff that comes with that method!</p>
+<p>But do not despair! By the time you are ready to consider partial Fourier or GRAPPA for your protocol, it is time to talk to Ben or Daniel for an in-depth discussion of your experiment. We would probably suggest doing some simple pilot tests to assess each method’s utility for your purposes. Under no circumstances should you be opting for partial Fourier or GRAPPA without fully understanding how your experiment might benefit (or otherwise) from your selection. At this point it suffices that you simply know that these options exist.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../epi-artifacts/" class="btn btn-neutral float-right" title="EPI: Artifacts">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../epi-basic/" class="btn btn-neutral" title="EPI: Basic Parameter and Sequence Issues"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/example/repo/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../epi-basic/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../epi-artifacts/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
