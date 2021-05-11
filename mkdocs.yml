@@ -56,5 +56,3 @@ plugins:
   - search:
       separator: '[\s\-\.]+'
       min_search_length: 2
-
-lang: "en"
