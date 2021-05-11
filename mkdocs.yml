@@ -1,0 +1,65 @@
+# version: 2
+
+# mkdocs:
+#   configuration: mkdocs.yml
+
+# Project Information
+
+site_name: MRI User Manual
+site_url: 127.0.0.1:8000/
+site_description: This is a description that ends up in the meta tag
+site_author: Kelly Chang
+copyright: null
+
+repo_url: https://github.com/example/repo/
+repo_name: "GitHub"
+remote_branch: gh-pages
+remote_name: origin
+
+google_analytics: null
+
+# Documentation Layout
+
+nav:
+  - Home: index.md
+  - SIEMENS PRISMA 3T SCANNER:
+    - Setting Up and Acquiring Scans: siemens-prisma/setting-up.md
+    - "EPI: Basic Parameter and Sequence Issues": siemens-prisma/epi-basic.md
+    - "EPI: Advanced Parameter and Sequence Issues": siemens-prisma/epi-advanced.md
+    - "EPI: Artifacts": siemens-prisma/epi-artifacts.md
+    - Miscellaneous: siemens-prisma/miscellaneous.md
+  - PERIPHERALS:
+    - EyeLink 1000 Plus: peripherals/eyelink.md
+  - Appendix:
+    - Normal Operations Checklist: appendix/normal-checklist.md
+    - Emergency Checklist: appendix/emergency-checklist.md
+
+# Build Directories
+
+theme:
+  name: readthedocs
+  navigation_depth: 3
+
+docs_dir: 'docs'
+site_dir: 'site'
+
+extra_css:
+  - css/custom.css
+
+extra_javascript: []
+extra_templates: []
+
+# Formatting Options
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: True
+      toc_depth: 2
+
+plugins:
+  - search:
+      separator: '[\s\-\.]+'
+      min_search_length: 2
+
+lang: ["en"]

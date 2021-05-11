@@ -1,0 +1,12 @@
+figure {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 auto 24px auto;
+  text-align: center;
+  width: 95%;
+}
+
+figure img {
+  margin: 0 0 6px 0;
+  object-fit: scale-down;
+}
