@@ -1,6 +1,6 @@
 # Project Information
 
-site_name: MRI User Manual
+site_name: CHN User Manual
 site_url: 127.0.0.1:8000/
 site_description: This is a description that ends up in the meta tag
 site_author: Kelly Chang
@@ -16,7 +16,7 @@ google_analytics: null
 # Documentation Layout
 
 nav:
-  - Home: index.md
+  - HOME: index.md
   - SIEMENS PRISMA 3T SCANNER:
     - Setting Up and Acquiring Scans: siemens-prisma/setting-up.md
     - "EPI: Basic Parameter and Sequence Issues": siemens-prisma/epi-basic.md
@@ -24,8 +24,15 @@ nav:
     - "EPI: Artifacts": siemens-prisma/epi-artifacts.md
     - Miscellaneous: siemens-prisma/miscellaneous.md
   - PERIPHERALS:
-    - EyeLink 1000 Plus: peripherals/eyelink.md
-  - Appendix:
+    - BOLDscreen: peripherals/boldscreen.md
+    - Button Boxes: peripherals/button-boxes.md
+    - EyeLink 1000 Plus: peripherals/eyelink1000-plus.md
+    - Mock Scanner: peripherals/mock-scanner.md
+    - Sensimetrics S14: peripherals/sensimetrics-s14.md
+    - Physiology: peripherals/physiology.md
+  - FORMS: forms.md
+  - CONTACT: contact.md
+  - APPENDIX:
     - Normal Operations Checklist: appendix/normal-checklist.md
     - Emergency Checklist: appendix/emergency-checklist.md
 

@@ -31,8 +31,6 @@
     4. If possible, recover subject from magnet leaving magnetic item in place.
 5. Notify Ben/Rick/Miguel by email, text or phone.
 
-</div>
-
 ## Fire
 
 1. Pull the fire alarm!
