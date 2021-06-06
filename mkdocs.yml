@@ -30,6 +30,9 @@ nav:
     - Mock Scanner: peripherals/mock-scanner.md
     - Sensimetrics S14: peripherals/sensimetrics-s14.md
     - Physiology: peripherals/physiology.md
+  - COMPUTATIONAL_RESOURCES: computational-resources/computational-resources.md
+    - Hyak: computational-resources/hyak.md
+    - Cloud: computational-resources/cloud.md
   - FORMS: forms.md
   - CONTACT: contact.md
   - APPENDIX:
