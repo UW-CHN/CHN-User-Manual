@@ -1,171 +1,901 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <meta name="author" content="Kelly Chang">
-  <link rel="canonical" href="siemens-prisma/setting-up/">
-  <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Setting Up and Acquiring Scans - CHN User Manual</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../../css/theme.css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  <link href="../../css/custom.css" rel="stylesheet" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Setting Up and Acquiring Scans";
-    var mkdocs_page_input_path = "siemens-prisma/setting-up.md";
-    var mkdocs_page_url = "siemens-prisma/setting-up/";
-  </script>
-  
-  <script src="../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
-</head>
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This is a description that ends up in the meta tag">
+      
+      
+      
+        <meta name="author" content="Kelly Chang">
+      
+      
+        <link rel="canonical" href="https://uw-chn.github.io/CHN-User-Manual/siemens-prisma/setting-up/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
+    
+    
+      
+        <title>Setting Up and Acquiring Scans - CHN User Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8b42a75e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+    
+      
 
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
 
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> CHN User Manual</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#setting-up-and-acquiring-scans" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../..">HOME</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">SIEMENS PRISMA 3T SCANNER</span></p>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Setting Up and Acquiring Scans</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#what-is-the-practical-difference-between-the-12-channel-and-32-channel-head-coils-which-one-is-best-for-fmri">What is the practical difference between the 12-channel and 32-channel head coils? Which one is best for fMRI?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#i-have-a-subject-who-has-a-lot-of-dental-work-is-this-person-okay-to-scan">I have a subject who has a lot of dental work. Is this person okay to scan?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#why-does-the-scanner-instruct-me-that-the-patient-bed-might-move-when-i-start-the-first-scan-in-my-session-usually-a-localizer">Why does the scanner instruct me that the patient bed might move when I start the first scan in my session (usually a localizer)?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#i-cant-hear-anything-happening-how-can-i-tell-what-the-scanner-is-doing-right-now">I can’t hear anything happening? How can I tell what the scanner is doing right now?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#why-do-i-sometimes-get-a-message-that-the-subject-might-experience-peripheral-nerve-stimulation-should-i-tell-the-subject">Why do I sometimes get a message that the subject might experience peripheral nerve stimulation? Should I tell the subject?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#how-does-the-autoalign-feature-work-should-i-use-it">How does the AutoAlign feature work? Should I use it?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#i-have-an-existing-protocol-that-uses-the-old-autoalign-aascout-how-do-i-get-and-use-the-new-autoalign-aahscout-instead">I have an existing protocol that uses the old AutoAlign (AAScout). How do I get and use the new AutoAlign (AAHScout) instead?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#i-dont-want-to-trust-autoalign-how-should-i-define-my-slice-positions-manually">I don’t want to trust AutoAlign. How should I define my slice positions manually?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#i-want-to-add-a-new-acquisition-and-acquire-exactly-the-same-slices-as-this-other-epi-acquisition-i-just-acquired-how-do-i-tell-the-scanner-to-do-that">I want to add a new acquisition and acquire exactly the same slices as this other EPI acquisition I just acquired. How do I tell the scanner to do that?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#when-does-shimming-happen-and-what-is-actually-done">When does shimming happen and what is actually done?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#i-want-to-re-shim-my-subjects-brain-midway-through-my-session-how-do-i-do-it">I want to re-shim my subject’s brain midway through my session. How do I do it?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#how-do-i-know-whether-i-should-re-shim-or-not">How do I know whether I should re-shim or not?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#i-want-to-know-how-long-my-scan-will-take-where-is-the-scan-time-shown">I want to know how long my scan will take. Where is the scan time shown?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#what-is-the-difference-between-the-scan-and-apply-buttons-for-starting-a-scan">What is the difference between the Scan and Apply buttons for starting a scan?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#help-what-pulse-sequence-am-i-using">Help! What pulse sequence am I using?</a>
-    </li>
-    </ul>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../epi-basic/">EPI: Basic Parameter and Sequence Issues</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../epi-advanced/">EPI: Advanced Parameter and Sequence Issues</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../epi-artifacts/">EPI: Artifacts</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../miscellaneous/">Miscellaneous</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">PERIPHERALS</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../peripherals/boldscreen/">BOLDscreen</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../peripherals/button-boxes/">Button Boxes</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../peripherals/eyelink1000-plus/">EyeLink 1000 Plus</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../peripherals/mock-scanner/">Mock Scanner</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../peripherals/sensimetrics-s14/">Sensimetrics S14</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../peripherals/physiology/">Physiology</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../forms/">FORMS</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../contact/">CONTACT</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">APPENDIX</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/normal-checklist/">Normal Operations Checklist</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../appendix/emergency-checklist/">Emergency Checklist</a>
-                    </li>
-                </ul>
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CHN User Manual" class="md-header__button md-logo" aria-label="CHN User Manual" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CHN User Manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Setting Up and Acquiring Scans
+            
+          </span>
+        </div>
       </div>
     </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">CHN User Manual</a>
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
       </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/UW-CHN/CHN-User-Manual/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
 
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CHN User Manual" class="md-nav__button md-logo" aria-label="CHN User Manual" data-md-component="logo">
       
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    CHN User Manual
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/UW-CHN/CHN-User-Manual/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
     
       
-        
-          <li>SIEMENS PRISMA 3T SCANNER &raquo;</li>
-        
       
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        HOME
+      </a>
+    </li>
+  
+
     
-    <li>Setting Up and Acquiring Scans</li>
-    <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/example/repo/edit/master/docs/siemens-prisma/setting-up.md"
-          class="icon icon-github"> Edit on GitHub</a>
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          SIEMENS PRISMA 3T
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SIEMENS PRISMA 3T" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          SIEMENS PRISMA 3T
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Setting Up and Acquiring Scans
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Setting Up and Acquiring Scans
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-practical-difference-between-the-12-channel-and-32-channel-head-coils-which-one-is-best-for-fmri" class="md-nav__link">
+    What is the practical difference between the 12-channel and 32-channel head coils? Which one is best for fMRI?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-have-a-subject-who-has-a-lot-of-dental-work-is-this-person-okay-to-scan" class="md-nav__link">
+    I have a subject who has a lot of dental work. Is this person okay to scan?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-does-the-scanner-instruct-me-that-the-patient-bed-might-move-when-i-start-the-first-scan-in-my-session-usually-a-localizer" class="md-nav__link">
+    Why does the scanner instruct me that the patient bed might move when I start the first scan in my session (usually a localizer)?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-cant-hear-anything-happening-how-can-i-tell-what-the-scanner-is-doing-right-now" class="md-nav__link">
+    I can’t hear anything happening? How can I tell what the scanner is doing right now?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-do-i-sometimes-get-a-message-that-the-subject-might-experience-peripheral-nerve-stimulation-should-i-tell-the-subject" class="md-nav__link">
+    Why do I sometimes get a message that the subject might experience peripheral nerve stimulation? Should I tell the subject?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-the-autoalign-feature-work-should-i-use-it" class="md-nav__link">
+    How does the AutoAlign feature work? Should I use it?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-have-an-existing-protocol-that-uses-the-old-autoalign-aascout-how-do-i-get-and-use-the-new-autoalign-aahscout-instead" class="md-nav__link">
+    I have an existing protocol that uses the old AutoAlign (AAScout). How do I get and use the new AutoAlign (AAHScout) instead?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-dont-want-to-trust-autoalign-how-should-i-define-my-slice-positions-manually" class="md-nav__link">
+    I don’t want to trust AutoAlign. How should I define my slice positions manually?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-want-to-add-a-new-acquisition-and-acquire-exactly-the-same-slices-as-this-other-epi-acquisition-i-just-acquired-how-do-i-tell-the-scanner-to-do-that" class="md-nav__link">
+    I want to add a new acquisition and acquire exactly the same slices as this other EPI acquisition I just acquired. How do I tell the scanner to do that?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-does-shimming-happen-and-what-is-actually-done" class="md-nav__link">
+    When does shimming happen and what is actually done?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-want-to-re-shim-my-subjects-brain-midway-through-my-session-how-do-i-do-it" class="md-nav__link">
+    I want to re-shim my subject’s brain midway through my session. How do I do it?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-know-whether-i-should-re-shim-or-not" class="md-nav__link">
+    How do I know whether I should re-shim or not?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-want-to-know-how-long-my-scan-will-take-where-is-the-scan-time-shown" class="md-nav__link">
+    I want to know how long my scan will take. Where is the scan time shown?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-the-scan-and-apply-buttons-for-starting-a-scan" class="md-nav__link">
+    What is the difference between the Scan and Apply buttons for starting a scan?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#help-what-pulse-sequence-am-i-using" class="md-nav__link">
+    Help! What pulse sequence am I using?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
-  </ul>
   
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
+
+            
+          
+            
               
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../epi-basic/" class="md-nav__link">
+        EPI: Basic Parameter and Sequence Issues
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../epi-advanced/" class="md-nav__link">
+        EPI: Advanced Parameter and Sequence Issues
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../epi-artifacts/" class="md-nav__link">
+        EPI: Artifacts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miscellaneous/" class="md-nav__link">
+        Miscellaneous
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          PERIPHERALS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="PERIPHERALS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          PERIPHERALS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../peripherals/boldscreen/" class="md-nav__link">
+        BOLDscreen
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../peripherals/button-boxes/" class="md-nav__link">
+        Button Boxes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../peripherals/eyelink1000-plus/" class="md-nav__link">
+        EyeLink 1000 Plus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../peripherals/mock-scanner/" class="md-nav__link">
+        Mock Scanner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../peripherals/sensimetrics-s14/" class="md-nav__link">
+        Sensimetrics S14
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../peripherals/physiology/" class="md-nav__link">
+        Physiology
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          FLYWHEEL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="FLYWHEEL" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          FLYWHEEL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flywheel/general/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flywheel/bids-curation/" class="md-nav__link">
+        BIDS Curation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flywheel/freesurfer-recon-all/" class="md-nav__link">
+        FreeSurfer recon-all
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          APPENDIX
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="APPENDIX" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          APPENDIX
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/normal-checklist/" class="md-nav__link">
+        Normal Operations Checklist
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/emergency-checklist/" class="md-nav__link">
+        Emergency Checklist
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../forms/" class="md-nav__link">
+        Forms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-practical-difference-between-the-12-channel-and-32-channel-head-coils-which-one-is-best-for-fmri" class="md-nav__link">
+    What is the practical difference between the 12-channel and 32-channel head coils? Which one is best for fMRI?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-have-a-subject-who-has-a-lot-of-dental-work-is-this-person-okay-to-scan" class="md-nav__link">
+    I have a subject who has a lot of dental work. Is this person okay to scan?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-does-the-scanner-instruct-me-that-the-patient-bed-might-move-when-i-start-the-first-scan-in-my-session-usually-a-localizer" class="md-nav__link">
+    Why does the scanner instruct me that the patient bed might move when I start the first scan in my session (usually a localizer)?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-cant-hear-anything-happening-how-can-i-tell-what-the-scanner-is-doing-right-now" class="md-nav__link">
+    I can’t hear anything happening? How can I tell what the scanner is doing right now?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-do-i-sometimes-get-a-message-that-the-subject-might-experience-peripheral-nerve-stimulation-should-i-tell-the-subject" class="md-nav__link">
+    Why do I sometimes get a message that the subject might experience peripheral nerve stimulation? Should I tell the subject?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-the-autoalign-feature-work-should-i-use-it" class="md-nav__link">
+    How does the AutoAlign feature work? Should I use it?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-have-an-existing-protocol-that-uses-the-old-autoalign-aascout-how-do-i-get-and-use-the-new-autoalign-aahscout-instead" class="md-nav__link">
+    I have an existing protocol that uses the old AutoAlign (AAScout). How do I get and use the new AutoAlign (AAHScout) instead?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-dont-want-to-trust-autoalign-how-should-i-define-my-slice-positions-manually" class="md-nav__link">
+    I don’t want to trust AutoAlign. How should I define my slice positions manually?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-want-to-add-a-new-acquisition-and-acquire-exactly-the-same-slices-as-this-other-epi-acquisition-i-just-acquired-how-do-i-tell-the-scanner-to-do-that" class="md-nav__link">
+    I want to add a new acquisition and acquire exactly the same slices as this other EPI acquisition I just acquired. How do I tell the scanner to do that?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-does-shimming-happen-and-what-is-actually-done" class="md-nav__link">
+    When does shimming happen and what is actually done?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-want-to-re-shim-my-subjects-brain-midway-through-my-session-how-do-i-do-it" class="md-nav__link">
+    I want to re-shim my subject’s brain midway through my session. How do I do it?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-know-whether-i-should-re-shim-or-not" class="md-nav__link">
+    How do I know whether I should re-shim or not?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-want-to-know-how-long-my-scan-will-take-where-is-the-scan-time-shown" class="md-nav__link">
+    I want to know how long my scan will take. Where is the scan time shown?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-the-scan-and-apply-buttons-for-starting-a-scan" class="md-nav__link">
+    What is the difference between the Scan and Apply buttons for starting a scan?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#help-what-pulse-sequence-am-i-using" class="md-nav__link">
+    Help! What pulse sequence am I using?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/UW-CHN/CHN-User-Manual/edit/master/docs/siemens-prisma/setting-up.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
                 <h1 id="setting-up-and-acquiring-scans">Setting Up and Acquiring Scans<a class="headerlink" href="#setting-up-and-acquiring-scans" title="Permanent link">&para;</a></h1>
 <h2 id="what-is-the-practical-difference-between-the-12-channel-and-32-channel-head-coils-which-one-is-best-for-fmri">What is the practical difference between the 12-channel and 32-channel head coils? Which one is best for fMRI?<a class="headerlink" href="#what-is-the-practical-difference-between-the-12-channel-and-32-channel-head-coils-which-one-is-best-for-fmri" title="Permanent link">&para;</a></h2>
 <p>RF coil selection is probably the first decision you will face when you start to develop a new protocol. Here are the main differences to consider:</p>
@@ -199,7 +929,7 @@
 <p>Another minor consideration before selecting the 32-channel coil might be the availability of backup sites. At present, UCSF only has the 12-channel coil and console, so if the BIC scanner went down for an extended period of time and you wanted to move your scans to UCSF’s NIC, you’d have a problem unless you’re using the 12-channel coil.</p>
 <p>The bottom line at this point is for you to know that there is a choice and that the choice presents significant differences. Talk to Ben when you’re ready to set up a new protocol/experiment and you can make a more informed decision then.</p>
 <figure>
-    <img src="/img/12ch-and-32ch.png" alt="12 channel vs. 32 channel">
+    <img src="img/12ch-and-32ch.png" alt="12 channel vs. 32 channel">
     <figcaption>
     SNR profiles for the Siemens 12-ch and 32-ch coils. Note especially the high cortical sensitivity of the 32-ch coil, but that the SNR is also higher in the midbrain when compared to the 12-ch coil.
     </figcaption>
@@ -239,7 +969,7 @@
 <p>Whether or not you should use either AutoAlign procedure depends on the specifics of your experiment. If your EPI slice prescription covers all or nearly all of the brain, has (near) isotropic voxels and you aren’t especially worried about getting certain anatomical features captured within specific 2D planes, then the performance of AutoAlign is probably good enough for you. At a minimum, however, you will want to inspect the automated slice prescription and make sure the yellow slice box is roughly where you intend. Don’t assume that it will always work! But if you’re doing high-resolution retinotopy with a dozen coronal slices placed so as to just capture all of V1-V5 then you should probably stick to prescribing your slices by hand/eye, using detailed localizer/pilot scans and your anatomical knowledge to place your slices.</p>
 <p>One problem that AutoAlign can introduce for EPI is a rotation of the image plane, i.e. a rotation of the read and phase encode axes away from the primary gradient axes. In a typical axial scan, for example, the readout dimension uses the X gradient only (subject’s left-right) while the phase encoding is performed by the Y gradient (subject’s anterior-posterior). Rotating the image plane causes a mixing of these assignments and can increase EPI ghosting if the rotation becomes large (&gt;5 degrees). If you do use AA, always check the parameter Phase enc. dir on the Geometry parameter card. It should be at or near zero. (See figure below.) If AA renders this parameter non-zero, overrule it and set Phase enc. dir to zero manually.</p>
 <figure>
-    <img src="/img/phase-enc-dir.png" alt="Phase encoding direction">
+    <img src="img/phase-enc-dir.png" alt="Phase encoding direction">
     <figcaption>
     On the Routine tab, click the three dots to the right of the Phase enc. dir. field. This opens the Inplane Rotation window, above. Assure the Rotation angle is zero. If AutoAlign has set it non-zero, set it back.
     </figcaption>
@@ -253,7 +983,7 @@
 <p>AAHScout replaces the combination of a Localizer and the old AAScout; there’s no need to acquire a separate Localizer unless you want to. AAHScout automatically creates a three-plane localizer display and loads it into the three windows to allow slice prescriptions.</p>
 <p>AAHScout has three modes: Basis, Brain, and Brain Atlas, settable on the Routine task card of the experiment you are about to acquire; that is, on your destination EPI or MP-RAGE scan, for example, not on the AAHScout scan itself. See the figure below for the location of the AutoAlign mode field on the Routine tab (of a destination EPI scan). Note that the default mode is off – indicated by three dashes – so if your slices don’t appear where you think they should, check that you have a mode enabled!</p>
 <figure>
-    <img src="/img/head-brain.png" alt="Head brain">
+    <img src="img/head-brain.png" alt="Head brain">
 </figure>
 
 <p>According to the Siemens documentation, which isn’t very clear on how AAHScout is supposed to work, Brain Atlas is equivalent to the old AAScout, i.e. it uses a brain atlas to compute slice positions. I tested it, it doesn’t work especially well compared to the Brain or Basis modes, but I didn’t compare directly against the old AAScout. (So, if you want to use the old AAScout, don’t use AAHScout and set the mode to Brain Atlas! Use the old AAScout instead!)</p>
@@ -265,7 +995,7 @@
 <p>If you don’t want to, or can’t, spend the first five minutes of a session acquiring an MP-RAGE, there is a fast alternative. You can use the gre_neuro sequence in 2D or 3D mode (2D is probably best) to acquire low-resolution sections of the whole brain. Typically you would acquire about 24 slices with a resolution of about 4-5 mm in 15 seconds, but it is possible to spend more or less time and get higher or lower resolution, respectively.</p>
 <p>You can grab a suitable starting scan for gre_neuro set up for 2D acquisitions from the protocol DanZone/RELEASED, in either gre_neuro_12ch or gre_neuro_32ch. If you are unfamiliar with the sequence or the use of multislice 2D gradient echo images for setting slice prescriptions, drop Ben a line and get some tuition at the scanner. Below are examples of using MP-RAGE and gre_neuro_2DLoc scans to check that an EPI slice prescription covers both temporal poles as well as all of parietal cortex. Either scan can be used, the MP-RAGE being preferred if it can be acquired before any EPIs.</p>
 <figure>
-    <img src="/img/mprage-gre-neuro-2dloc.png" alt="Example MPRAGE and gre_neuro_2DLoc scans">
+    <img src="img/mprage-gre-neuro-2dloc.png" alt="Example MPRAGE and gre_neuro_2DLoc scans">
     <figcaption>
     To use either the MP-RAGE or a gre_neuro_2DLoc scan as a reference for your slice prescription, use the left mouse to drag and drop the completed image icon from the exam queue to the GUI window, as shown above.
     </figcaption>
@@ -278,7 +1008,7 @@
 <p>Having established your protocol in the Exam Explorer, identify the first experiment in the series of scans that is going to have the slices that you want to propagate into one or more later acquisitions. This might be the first EPI acquisition, for example. We are going to consider this acquisition the “source scan” for the purposes of slice packet location.</p>
 <p>Next, right click on a target acquisition - one that occurs beneath (after) the source acquisition you want to copy from - and scroll down to the bottom option of the menu to select Properties. This will open the Protocol properties window (below). Select the tab labeled Copy References. The window will then look something like this:</p>
 <figure>
-    <img src="/img/protocol-properties.png" alt="Protocol properties">
+    <img src="img/protocol-properties.png" alt="Protocol properties">
 </figure>
 
 <p>Check the Copy reference is active box as shown above. This will reveal a list of potential source experiments that you can copy parameters from. There are five potential source scans in the figure above. Find the one on the list that you want to use as the source, select it and ensure that just the Center of slice groups &amp; sat regions option is highlighted on the right. Also ensure that the two boxes at bottom-left are unchecked. (In this example we are assuming that all the spatial parameters have already been set up correctly in the target acquisitions, and all we’re trying to do here is match the center of the target slice packet to the center of a source slice packet.)</p>
@@ -287,12 +1017,12 @@
 <p><strong>(2)</strong> <em>During a scan:</em></p>
 <p>If you would rather copy the slice packet position manually, during your session, e.g. because you bring over one acquisition at a time in the Exam queue and decide on-the-fly when to acquire a co-planar acquisition (such as a field map or a high-res 2D T1 image), then first establish your source acquisition and start or fully acquire the scan. In the following example, scan #2 in the exam queue will be the source. It’s already acquiring. Scan #3 is the target and we want to match the slice positions. Ensure the target scan is open, as shown, then right click the source scan to open the following menu:</p>
 <figure>
-    <img src="/img/copy-parameter-1.png" alt="Copy parameters option">
+    <img src="img/copy-parameter-1.png" alt="Copy parameters option">
 </figure>
 
 <p>Select the Copy Parameter option, as shown above. This will open a new window, as shown below:</p>
 <figure>
-    <img src="/img/copy-parameter-2.png" alt="Copy parameters new window">
+    <img src="img/copy-parameter-2.png" alt="Copy parameters new window">
 </figure>
 
 <p>Select the Center of slice groups &amp; sat regions as shown above, and ensure the two boxes at bottom left are unchecked. (As before, we are assuming all the spatial parameters of the target experiment have been preset correctly, or will be set up correctly once the slice packet has been copied.) Click OK to close the window. As the window closes you will see the yellow bars depicting the slice packet in scan #3 move to the new slice prescription, matching that already being acquired in scan #2.</p>
@@ -354,59 +1084,97 @@
 <p>Somewhat counter-intuitively, the Apply button initiates the acquisition for the current scan and doesn’t alter anything else in the scan queue. The Scan button initiates the current acquisition, too, but it also makes a clone of the protocol and appends (or inserts) it immediately after the scan that has just been initiated. So the Scan button could be used for a series of identical EPI acquisitions, say, without the need to bring over a fresh protocol or use the Append menu item to make a protocol clone. In general I am in the habit of only using the Apply button, and if I need a repeat (cloned) acquisition I first make one using the Append menu item. It’s personal preference, but I find it makes keeping track of what’s in the protocol queue that much simpler. As far as the acquisitions themselves are concerned, however, there is no difference.</p>
 <h2 id="help-what-pulse-sequence-am-i-using">Help! What pulse sequence am I using?<a class="headerlink" href="#help-what-pulse-sequence-am-i-using" title="Permanent link">&para;</a></h2>
 <p>The pulse sequence name is given in the violet/blue line of information on the Exam task card. (See the answer to the question above about scan time for how to read the information you want.) The pulse sequence is the last information field on that line. It might say epfid, for example. This is not actually the sequence name, however! To determine the sequence name, place the cursor over the epfid field. As you do, a window pops up for a few seconds and displays two more fields: Sequence name and Sequence variant. Sequence name could be ep2d_bold, for example. ep2d_neuro is the preferred sequence for all BIC users. There are some differences between the different EPI pulse sequences, a general explanation of which is provided in later sections.</p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 23, 2021</span>
+      
+    
+  </small>
+</div>
+                  
+                
               
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: HOME" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              HOME
             </div>
           </div>
-          <footer>
+        </a>
+      
+      
+        
+        <a href="../epi-basic/" class="md-footer__link md-footer__link--next" aria-label="Next: EPI: Basic Parameter and Sequence Issues" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              EPI: Basic Parameter and Sequence Issues
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../epi-basic/" class="btn btn-neutral float-right" title="EPI: Basic Parameter and Sequence Issues">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../.." class="btn btn-neutral" title="HOME"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
       
     </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
   </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
       
-          <a href="https://github.com/example/repo/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
-      
-      
-        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../epi-basic/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div>
-    <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js" defer></script>
-      <script src="../../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
-
-</body>
+    
+  </body>
 </html>
