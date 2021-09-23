@@ -11,7 +11,7 @@ Imagine there is a simple delay at the very start of the gradient echo train. Fr
 Below is an example of three EPI slices, contrasted to show the ghosts:
 
 <figure>
-    <img src="img/epi-ghosts.png" alt="EPI slice ghosts">
+    <img src="/img/epi-ghosts.png" alt="EPI slice ghosts">
 </figure>
 
 It was necessary to increase the background intensity to visualize the ghosts. That is typical for a well-shimmed, low ghost EPI. As a rough rule of thumb – and given that it is difficult to quantify by inspection – the ghost level should be 5% or less than the intensity of the brain signal.
@@ -65,12 +65,12 @@ The final way to reduce dropout is to use a shorter TE. You saw in an earlier se
 In the figure below you can see the effect of decreasing TE on the degree of signal dropout, as well as on overall image SNR, in a comparison of TE = 20 ms and TE = 36 ms. The frontal and temporal lobe signals are considerably lower in the latter image when compared to parietal and occipital lobes. Also note how much weaker the subcutaneous lipid in the scalp shows up at TE = 36 ms, because the presence of the skull immediately beneath, and air around the head, causes a strong susceptibility gradient across the scalp, leading to a relatively short T2* for the scalp fat. (The scalp fat T2 is actually very much longer than brain tissue T2, so the dark scalp fat signal would be a surprising observation if we didn’t understand the effects of susceptibility gradients causing short T2*.)
 
 <figure>
-    <img src="img/te-20ms.png" alt="TE at 20ms">
+    <img src="/img/te-20ms.png" alt="TE at 20ms">
     <figcaption>TE = 20 ms</figcaption>
 </figure>
 
 <figure>
-    <img src="img/te-36ms.png" alt="TE at 36ms">
+    <img src="/img/te-36ms.png" alt="TE at 36ms">
     <figcaption>TE = 36 ms</figcaption>
 </figure>
 
