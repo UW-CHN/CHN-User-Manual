@@ -4,14 +4,11 @@ site_name: CHN User Manual
 site_url: https://uw-chn.github.io/CHN-User-Manual/
 site_description: This is a description that ends up in the meta tag
 site_author: Kelly Chang
-copyright: null
 
+repo_name: "CHN User Manual"
 repo_url: https://github.com/UW-CHN/CHN-User-Manual/
-repo_name: "GitHub"
-remote_branch: gh-pages
-remote_name: origin
 
-google_analytics: null
+copyright: Copyright &copy; 2020 - 2021 CHN
 
 # Documentation Layout
 

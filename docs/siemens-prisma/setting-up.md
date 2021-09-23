@@ -34,7 +34,7 @@ Another minor consideration before selecting the 32-channel coil might be the av
 The bottom line at this point is for you to know that there is a choice and that the choice presents significant differences. Talk to Ben when you’re ready to set up a new protocol/experiment and you can make a more informed decision then.
 
 <figure>
-    <img src="/img/12ch-and-32ch.png" alt="12 channel vs. 32 channel">
+    <img src="img/12ch-and-32ch.png" alt="12 channel vs. 32 channel">
     <figcaption>
     SNR profiles for the Siemens 12-ch and 32-ch coils. Note especially the high cortical sensitivity of the 32-ch coil, but that the SNR is also higher in the midbrain when compared to the 12-ch coil.
     </figcaption>
@@ -87,7 +87,7 @@ Whether or not you should use either AutoAlign procedure depends on the specific
 One problem that AutoAlign can introduce for EPI is a rotation of the image plane, i.e. a rotation of the read and phase encode axes away from the primary gradient axes. In a typical axial scan, for example, the readout dimension uses the X gradient only (subject’s left-right) while the phase encoding is performed by the Y gradient (subject’s anterior-posterior). Rotating the image plane causes a mixing of these assignments and can increase EPI ghosting if the rotation becomes large (>5 degrees). If you do use AA, always check the parameter Phase enc. dir on the Geometry parameter card. It should be at or near zero. (See figure below.) If AA renders this parameter non-zero, overrule it and set Phase enc. dir to zero manually.
 
 <figure>
-    <img src="/img/phase-enc-dir.png" alt="Phase encoding direction">
+    <img src="img/phase-enc-dir.png" alt="Phase encoding direction">
     <figcaption>
     On the Routine tab, click the three dots to the right of the Phase enc. dir. field. This opens the Inplane Rotation window, above. Assure the Rotation angle is zero. If AutoAlign has set it non-zero, set it back.
     </figcaption>
@@ -106,7 +106,7 @@ AAHScout replaces the combination of a Localizer and the old AAScout; there’s 
 AAHScout has three modes: Basis, Brain, and Brain Atlas, settable on the Routine task card of the experiment you are about to acquire; that is, on your destination EPI or MP-RAGE scan, for example, not on the AAHScout scan itself. See the figure below for the location of the AutoAlign mode field on the Routine tab (of a destination EPI scan). Note that the default mode is off – indicated by three dashes – so if your slices don’t appear where you think they should, check that you have a mode enabled!
 
 <figure>
-    <img src="/img/head-brain.png" alt="Head brain">
+    <img src="img/head-brain.png" alt="Head brain">
 </figure>
 
 According to the Siemens documentation, which isn’t very clear on how AAHScout is supposed to work, Brain Atlas is equivalent to the old AAScout, i.e. it uses a brain atlas to compute slice positions. I tested it, it doesn’t work especially well compared to the Brain or Basis modes, but I didn’t compare directly against the old AAScout. (So, if you want to use the old AAScout, don’t use AAHScout and set the mode to Brain Atlas! Use the old AAScout instead!)
@@ -126,7 +126,7 @@ If you don’t want to, or can’t, spend the first five minutes of a session ac
 You can grab a suitable starting scan for gre_neuro set up for 2D acquisitions from the protocol DanZone/RELEASED, in either gre_neuro_12ch or gre_neuro_32ch. If you are unfamiliar with the sequence or the use of multislice 2D gradient echo images for setting slice prescriptions, drop Ben a line and get some tuition at the scanner. Below are examples of using MP-RAGE and gre_neuro_2DLoc scans to check that an EPI slice prescription covers both temporal poles as well as all of parietal cortex. Either scan can be used, the MP-RAGE being preferred if it can be acquired before any EPIs.
 
 <figure>
-    <img src="/img/mprage-gre-neuro-2dloc.png" alt="Example MPRAGE and gre_neuro_2DLoc scans">
+    <img src="img/mprage-gre-neuro-2dloc.png" alt="Example MPRAGE and gre_neuro_2DLoc scans">
     <figcaption>
     To use either the MP-RAGE or a gre_neuro_2DLoc scan as a reference for your slice prescription, use the left mouse to drag and drop the completed image icon from the exam queue to the GUI window, as shown above.
     </figcaption>
@@ -145,7 +145,7 @@ Having established your protocol in the Exam Explorer, identify the first experi
 Next, right click on a target acquisition - one that occurs beneath (after) the source acquisition you want to copy from - and scroll down to the bottom option of the menu to select Properties. This will open the Protocol properties window (below). Select the tab labeled Copy References. The window will then look something like this:
 
 <figure>
-    <img src="/img/protocol-properties.png" alt="Protocol properties">
+    <img src="img/protocol-properties.png" alt="Protocol properties">
 </figure>
 
 Check the Copy reference is active box as shown above. This will reveal a list of potential source experiments that you can copy parameters from. There are five potential source scans in the figure above. Find the one on the list that you want to use as the source, select it and ensure that just the Center of slice groups & sat regions option is highlighted on the right. Also ensure that the two boxes at bottom-left are unchecked. (In this example we are assuming that all the spatial parameters have already been set up correctly in the target acquisitions, and all we’re trying to do here is match the center of the target slice packet to the center of a source slice packet.)
@@ -159,13 +159,13 @@ Note that if you change the order of the acquisitions in your protocol, e.g. you
 If you would rather copy the slice packet position manually, during your session, e.g. because you bring over one acquisition at a time in the Exam queue and decide on-the-fly when to acquire a co-planar acquisition (such as a field map or a high-res 2D T1 image), then first establish your source acquisition and start or fully acquire the scan. In the following example, scan #2 in the exam queue will be the source. It’s already acquiring. Scan #3 is the target and we want to match the slice positions. Ensure the target scan is open, as shown, then right click the source scan to open the following menu:
 
 <figure>
-    <img src="/img/copy-parameter-1.png" alt="Copy parameters option">
+    <img src="img/copy-parameter-1.png" alt="Copy parameters option">
 </figure>
 
 Select the Copy Parameter option, as shown above. This will open a new window, as shown below:
 
 <figure>
-    <img src="/img/copy-parameter-2.png" alt="Copy parameters new window">
+    <img src="img/copy-parameter-2.png" alt="Copy parameters new window">
 </figure>
 
 Select the Center of slice groups & sat regions as shown above, and ensure the two boxes at bottom left are unchecked. (As before, we are assuming all the spatial parameters of the target experiment have been preset correctly, or will be set up correctly once the slice packet has been copied.) Click OK to close the window. As the window closes you will see the yellow bars depicting the slice packet in scan #3 move to the new slice prescription, matching that already being acquired in scan #2.
