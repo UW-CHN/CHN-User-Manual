@@ -40,14 +40,14 @@ What about the caveats of using GRAPPA? First of all, you never get something fo
 The next problem is far more insidious and there is no guaranteed way to avoid it ahead of time: head motion. Of course, you have carefully packed your subject’s head and he has been instructed not to move, but he is still alive! Some movement is involuntary! Now consider how GRAPPA works again. First, some calibration scans are acquired, then the (undersampled) EPI time series starts up. What if the subject just happens to move – perhaps swallows – during those calibration scans? These critical reference acquisitions will be corrupted in some fashion that depends on the magnitude and nature of the motion. What precisely the resultant EPIs will look like is anybody’s guess – there are infinite ways for a subject to move – but one example of a motion-contaminated GRAPPA scheme is shown below:
 
 <figure>
-    <img src="/img/motion-free-grappa.png" alt="Motion-free GRAPPA images">
+    <img src="img/motion-free-grappa.png" alt="Motion-free GRAPPA images">
     <figcaption>
     Motion-free GRAPPA images. Note the relatively homogeneous background noise.
     </figcaption>
 </figure>
 
 <figure>
-    <img src="/img/motion-contaminated-acs.png" alt="Motion-contaminated ACS">
+    <img src="img/motion-contaminated-acs.png" alt="Motion-contaminated ACS">
     <figcaption>
     Motion-contaminated ACS. Note the structured noise in several slices.
     This structure persists throughout every volume of the time series.
@@ -67,7 +67,7 @@ Partial Fourier (pF) is another approach to reducing the number of k-space lines
 The temporal benefit arising from pF can be understood by considering the k-space matrix below. Rather than acquiring every single echo in the EPI echo train, only just over half of the echoes are acquired by omitting the first, say, one quarter of the phase-encoded echoes in the train. (In the diagram below the first 7/16ths of the echoes have been omitted.) This allows the TE to be shortened, thereby allowing more slices per unit time.
 
 <figure>
-    <img src="/img/k-space-sampling.png" alt="k-space sampling">
+    <img src="img/k-space-sampling.png" alt="k-space sampling">
 </figure>
 
 Acquiring partial k-space produces a k-space matrix with two distinct parts: the low spatial frequencies in the central part (dark gray) are sampled symmetrically whereas the high spatial frequencies have been measured only once, on one side of the k-space matrix (light gray). To reconstruct the final EPI from a 2D FT we need to synthesize the missing k-space (white). This is permissible because k-space of a real object, such as a brain, exhibits what is known as Hermitian symmetry provided certain conditions are met. The high spatial frequencies sampled on the right, in light gray, can be converted mathematically into the missing data on the left, albeit with a slight reduction of the SNR for the high spatial frequencies. (By sampling the high frequencies only once their SNR is reduced by √2.) Then, once a complete k-space matrix has been obtained, the resultant can be 2D Fourier transformed to yield images.
@@ -90,17 +90,17 @@ Below are three sets of images acquired with full, 7/8ths partial and 6/8ths par
     The pronounced dropout in temporal lobes as the degree of k-space sampling is reduced. In this example the TE was held constant; no attempt was made to compensate for dropout from early refocusing.
 
 <figure>
-    <img src="/img/full-fourier.png" alt="Full Fourier">
+    <img src="img/full-fourier.png" alt="Full Fourier">
     <figcaption>Full Fourier 64x64 EPI.</figcaption>
 </figure>
 
 <figure>
-    <img src="/img/partial-fourier-7-8.png" alt="7/8ths partial Fourier">
+    <img src="img/partial-fourier-7-8.png" alt="7/8ths partial Fourier">
     <figcaption>7/8ths partial Fourier EPI.</figcaption>
 </figure>
 
 <figure>
-    <img src="/img/partial-fourier-6-8.png" alt="6/8ths partial Fourier">
+    <img src="img/partial-fourier-6-8.png" alt="6/8ths partial Fourier">
     <figcaption>6/8ths partial Fourier EPI.</figcaption>
 </figure>
 

@@ -43,7 +43,7 @@ In general, for fMRI the TE you select will be the primary determinant of the am
 For most studies, a TE in the range 25-35 ms is a good compromise between speed, contrast and raw signal level. If you need to get more slices per TR you might want to consider a slightly shorter TE. Or, if you are particularly interested in fMRI of frontal or temporal lobes, or hippocampus, or thalamus, you also might want to shorten the TE a bit. But if you’re doing retinotopy and all your slices are in the occipital lobe, and you have plenty of time to get the number of slices you require in your TR, then feel free to put the TE out around 35 or even 40 ms. If you don’t have any specific requirements and you want an all-around TE, use 30 ms, plus or minus a millisecond if it will allow you to get the exact spatial coverage you need. (The effect of TE choice on signal dropout is considered in a later section.)
 
 <figure>
-    <img src="/img/snr-bold-vs-te.png" alt="SNR x BOLD vs. TE">
+    <img src="img/snr-bold-vs-te.png" alt="SNR x BOLD vs. TE">
     <figcaption>
     The optimum TE for fMRI varies across the brain. Spatial variations in susceptibility gradients cause T2*, and hence the optimum TE, to vary also. Optimal BOLD sensitivity for OFC occurs at a TE several milliseconds shorter than occipital or parietal cortex.
     </figcaption>
