@@ -10,7 +10,7 @@
       
       
       
-        <meta name="author" content="Kelly Chang">
+        <meta name="author" content="Kelly Chang and John Pyles">
       
       
         <link rel="canonical" href="https://uw-chn.github.io/CHN-User-Manual/siemens-prisma/epi-advanced/">
@@ -41,6 +41,8 @@
       
     
     
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
     
       <link rel="stylesheet" href="../../css/custom.css">
     
@@ -651,8 +653,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../forms/" class="md-nav__link">
-        Forms
+      <a href="../../appendix/documentation/" class="md-nav__link">
+        Documentation
       </a>
     </li>
   
@@ -665,8 +667,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contact/" class="md-nav__link">
-        Contact
+      <a href="../../appendix/contact/" class="md-nav__link">
+        Contacts
       </a>
     </li>
   
@@ -779,14 +781,14 @@ Let’s first deal with method selection. Why GRAPPA, not mSENSE? We have found 
 <p>The next problem is far more insidious and there is no guaranteed way to avoid it ahead of time: head motion. Of course, you have carefully packed your subject’s head and he has been instructed not to move, but he is still alive! Some movement is involuntary! Now consider how GRAPPA works again. First, some calibration scans are acquired, then the (undersampled) EPI time series starts up. What if the subject just happens to move – perhaps swallows – during those calibration scans? These critical reference acquisitions will be corrupted in some fashion that depends on the magnitude and nature of the motion. What precisely the resultant EPIs will look like is anybody’s guess – there are infinite ways for a subject to move – but one example of a motion-contaminated GRAPPA scheme is shown below:</p>
 <figure>
     <img src="../../img/motion-free-grappa.png" alt="Motion-free GRAPPA images">
-    <figcaption>
+    <figcaption class="margin-1em">
     Motion-free GRAPPA images. Note the relatively homogeneous background noise.
     </figcaption>
 </figure>
 
 <figure>
     <img src="../../img/motion-contaminated-acs.png" alt="Motion-contaminated ACS">
-    <figcaption>
+    <figcaption class="margin-1em">
     Motion-contaminated ACS. Note the structured noise in several slices.
     This structure persists throughout every volume of the time series.
     </figcaption>
@@ -816,17 +818,17 @@ Let’s first deal with method selection. Why GRAPPA, not mSENSE? We have found 
 </div>
 <figure>
     <img src="../../img/full-fourier.png" alt="Full Fourier">
-    <figcaption>Full Fourier 64x64 EPI.</figcaption>
+    <figcaption class="margin-1em">Full Fourier 64x64 EPI.</figcaption>
 </figure>
 
 <figure>
     <img src="../../img/partial-fourier-7-8.png" alt="7/8ths partial Fourier">
-    <figcaption>7/8ths partial Fourier EPI.</figcaption>
+    <figcaption class="margin-1em">7/8ths partial Fourier EPI.</figcaption>
 </figure>
 
 <figure>
     <img src="../../img/partial-fourier-6-8.png" alt="6/8ths partial Fourier">
-    <figcaption>6/8ths partial Fourier EPI.</figcaption>
+    <figcaption class="margin-1em">6/8ths partial Fourier EPI.</figcaption>
 </figure>
 
 <h2 id="it-looks-like-i-will-need-to-use-either-partial-fourier-or-grappa-to-get-the-spatial-resolution-and-coverage-that-i-want-which-method-should-i-use">It looks like I will need to use either partial Fourier or GRAPPA to get the spatial resolution and coverage that I want. Which method should I use?<a class="headerlink" href="#it-looks-like-i-will-need-to-use-either-partial-fourier-or-grappa-to-get-the-spatial-resolution-and-coverage-that-i-want-which-method-should-i-use" title="Permanent link">&para;</a></h2>
@@ -841,7 +843,7 @@ Let’s first deal with method selection. Why GRAPPA, not mSENSE? We have found 
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 23, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 24, 2021</span>
       
     
   </small>
@@ -927,6 +929,10 @@ Let’s first deal with method selection. Why GRAPPA, not mSENSE? We have found 
     
     
       <script src="../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+      
+        <script src="../../js/config.js"></script>
       
     
   </body>

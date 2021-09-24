@@ -10,7 +10,7 @@
       
       
       
-        <meta name="author" content="Kelly Chang">
+        <meta name="author" content="Kelly Chang and John Pyles">
       
       
         <link rel="canonical" href="https://uw-chn.github.io/CHN-User-Manual/siemens-prisma/epi-artifacts/">
@@ -41,6 +41,8 @@
       
     
     
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
     
       <link rel="stylesheet" href="../../css/custom.css">
     
@@ -672,8 +674,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../forms/" class="md-nav__link">
-        Forms
+      <a href="../../appendix/documentation/" class="md-nav__link">
+        Documentation
       </a>
     </li>
   
@@ -686,8 +688,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contact/" class="md-nav__link">
-        Contact
+      <a href="../../appendix/contact/" class="md-nav__link">
+        Contacts
       </a>
     </li>
   
@@ -847,12 +849,12 @@
 <p>In the figure below you can see the effect of decreasing TE on the degree of signal dropout, as well as on overall image SNR, in a comparison of TE = 20 ms and TE = 36 ms. The frontal and temporal lobe signals are considerably lower in the latter image when compared to parietal and occipital lobes. Also note how much weaker the subcutaneous lipid in the scalp shows up at TE = 36 ms, because the presence of the skull immediately beneath, and air around the head, causes a strong susceptibility gradient across the scalp, leading to a relatively short T2<em> for the scalp fat. (The scalp fat T2 is actually very much longer than brain tissue T2, so the dark scalp fat signal would be a surprising observation if we didn’t understand the effects of susceptibility gradients causing short T2</em>.)</p>
 <figure>
     <img src="../../img/te-20ms.png" alt="TE at 20ms">
-    <figcaption>TE = 20 ms</figcaption>
+    <figcaption class="margin-1em">TE = 20 ms</figcaption>
 </figure>
 
 <figure>
     <img src="../../img/te-36ms.png" alt="TE at 36ms">
-    <figcaption>TE = 36 ms</figcaption>
+    <figcaption class="margin-1em">TE = 36 ms</figcaption>
 </figure>
 
 <h2 id="what-is-the-origin-of-distortion-in-epi-can-it-be-fixed">What is the origin of distortion in EPI? Can it be fixed?<a class="headerlink" href="#what-is-the-origin-of-distortion-in-epi-can-it-be-fixed" title="Permanent link">&para;</a></h2>
@@ -869,8 +871,8 @@
 <p>The next experimental complexity arises when you consider the separate acquisition of the field map from the EPIs you want to fix. What if the subject has moved? Clearly, motion will cause some degree of mismatch between the field map and some or all of the EPIs in a time series. The assumption in the correction method is that signals in the GRE images provide mathematical support (signal, in other words) for all regions of space that can be (and have been) distorted in the corresponding EPIs. Motion will very likely challenge that assumption. How much? It depends, of course. But if you are sufficiently bothered by distortion in EPIs to want to try to correct it with a field map, then a good general rule is to acquire one field map per block of EPI, unless your EPI blocks are very short (2-3 minutes each) in which case one field map every two or three blocks probably suffices. But, as indicated, the appropriateness of the field map is dependent on the amount your subject moves within and between EPI blocks.</p>
 <h2 id="i-want-to-try-to-fix-my-distortion-with-a-field-map-what-do-i-need-to-acquire">I want to try to fix my distortion with a field map. What do I need to acquire?<a class="headerlink" href="#i-want-to-try-to-fix-my-distortion-with-a-field-map-what-do-i-need-to-acquire" title="Permanent link">&para;</a></h2>
 <p>You first need to add a suitable acquisition to your protocol. In the Exam Explorer, copy-paste the gre_field_mapping sequence from:</p>
-<pre><code>SIEMENS &gt; advanced applications libraries &gt; bold imaging
-</code></pre>
+<div class="highlight"><pre><span></span><code>SIEMENS &gt; advanced applications libraries &gt; bold imaging
+</code></pre></div>
 <p>into your protocol, then change all the spatial parameters of your copy of the gre_field_mapping sequence to match those of the EPI scan that you intend to undistort. The spatial parameters are the slice prescription, in-plane resolution (i.e. the field-of-view and matrix size), number of slices, slice thickness and slice gap. (If your protocol uses two or more different EPI parameter sets, e.g. one slice thickness for a task-based experiment and a different one for resting state, then you need a separate field map for each.) However, you don’t need to set up the gre_field_mapping sequence to use GRAPPA or partial Fourier should your EPI scan use one or both of these options. Contact Ben if you are unsure of how to match parameters.</p>
 <p>Unlike for EPI, it actually doesn’t matter whether you use interleaved or descending slices, so feel free to leave the multi-slice mode set at Interleaved. All timing parameters, including the TE and TR, can be left at their default values as well, unless the scanner tells you that it must increase TR to fit the number of slices you’re requesting, in which case accept the TR the scanner computes.</p>
 <p>Save the spatially matched field map sequence in with your protocol. During your experiment, when you are ready to acquire the field map data, ensure that the slice prescription for the field map sequence matches that for your EPI, by using either AutoAlign or by copying the slice prescription parameter directly from the EPI to the target field map sequence. If you’re using AAHScout, ensure that the AutoAlign parameter (on the Routine tab) is set to Head &gt; Brain mode on the gre_field_mapping scan, exactly as you use for EPI. Depending on the spatial resolution requested, each field map will take about a minute to acquire. Larger matrix sizes will take longer. Re-acquire the field map whenever your EPI spatial parameters change, whenever you suspect the subject has moved (such that the field map is unlikely to match the EPIs you want to correct), and whenever there’s an idle moment in your protocol.</p>
@@ -895,7 +897,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 23, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 24, 2021</span>
       
     
   </small>
@@ -981,6 +983,10 @@
     
     
       <script src="../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+      
+        <script src="../../js/config.js"></script>
       
     
   </body>

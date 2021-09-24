@@ -10,7 +10,7 @@
       
       
       
-        <meta name="author" content="Kelly Chang">
+        <meta name="author" content="Kelly Chang and John Pyles">
       
       
         <link rel="canonical" href="https://uw-chn.github.io/CHN-User-Manual/flywheel/bids-curation/">
@@ -41,6 +41,8 @@
       
     
     
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
     
       <link rel="stylesheet" href="../../css/custom.css">
     
@@ -526,8 +528,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#flywheel-bids" class="md-nav__link">
-    Flywheel + BIDS
+  <a href="#flywheel-and-bids" class="md-nav__link">
+    Flywheel and BIDS
   </a>
   
 </li>
@@ -658,8 +660,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../forms/" class="md-nav__link">
-        Forms
+      <a href="../../appendix/documentation/" class="md-nav__link">
+        Documentation
       </a>
     </li>
   
@@ -672,8 +674,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contact/" class="md-nav__link">
-        Contact
+      <a href="../../appendix/contact/" class="md-nav__link">
+        Contacts
       </a>
     </li>
   
@@ -712,8 +714,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#flywheel-bids" class="md-nav__link">
-    Flywheel + BIDS
+  <a href="#flywheel-and-bids" class="md-nav__link">
+    Flywheel and BIDS
   </a>
   
 </li>
@@ -773,12 +775,32 @@
                 <h1 id="bids-curation">BIDS Curation<a class="headerlink" href="#bids-curation" title="Permanent link">&para;</a></h1>
 <p>The Brain Imaging Data Structure (BIDS) is a methods of organizing neuroimaging and behavioral data. The BIDS specficiation has become more widespread as it provides a standard directory structure for complicated neuroimaging data. It also facilitates data sharing across sites and labs.</p>
 <p>To read more about the latest BIDS standard, go to the <a href="https://bids.neuroimaging.io/index.html">BIDS Homepage</a> or the <a href="https://bids-specification.readthedocs.io/en/stable/">BIDS Documentation</a>.</p>
-<h2 id="flywheel-bids">Flywheel + BIDS<a class="headerlink" href="#flywheel-bids" title="Permanent link">&para;</a></h2>
+<h2 id="flywheel-and-bids">Flywheel and BIDS<a class="headerlink" href="#flywheel-and-bids" title="Permanent link">&para;</a></h2>
+<p>There is a weird relationship between the two. </p>
+<ul>
+<li>explain the process that went into the SciTran classifier, dcm2niix</li>
+<li>CMRR gear for physio if applicable</li>
+<li>explain the <code>acquision.label</code> on Flywheel and relationship with ReproIn (NEED WEBSITE LINK)</li>
+<li></li>
+</ul>
 <h2 id="bids-curation-gear">BIDS Curation Gear<a class="headerlink" href="#bids-curation-gear" title="Permanent link">&para;</a></h2>
-<p><a href="https://docs.flywheel.io/hc/en-us/articles/360053720853-Webinar-BIDS-Templating">important!</a></p>
-<p><a href="https://gitlab.com/flywheel-io/flywheel-apps/curate-bids">gitlab site</a></p>
+<p><a href="https://gitlab.com/flywheel-io/flywheel-apps/curate-bids">gitlab repo</a></p>
 <h2 id="bids-curation-template-file">BIDS Curation Template File<a class="headerlink" href="#bids-curation-template-file" title="Permanent link">&para;</a></h2>
+<p><a href="https://docs.flywheel.io/hc/en-us/articles/360053720853-Webinar-BIDS-Templating">flywheel documentation on bids</a></p>
 <h2 id="bids-curation-process">BIDS Curation Process<a class="headerlink" href="#bids-curation-process" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Run BIDS Curation gear</p>
+<ul>
+<li>configuration</li>
+</ul>
+</li>
+<li>
+<p>Check BIDS View</p>
+</li>
+<li>If error, check log, check metadata</li>
+<li>Repeat steps 1 - 3 until BIDS-ified</li>
+</ol>
 <h2 id="exporting-data-in-bids-format">Exporting Data in BIDS Format<a class="headerlink" href="#exporting-data-in-bids-format" title="Permanent link">&para;</a></h2>
 <h3 id="flywheel-command-line-interface-cli">Flywheel Command-Line Interface (CLI)<a class="headerlink" href="#flywheel-command-line-interface-cli" title="Permanent link">&para;</a></h3>
 <p>Currently, the only method of download data from Flywheel in BIDS format is through the Flywheel Command-Line Interface (CLI). The CLI is an additional Flywheel program that can be used from the computer's Command Prompt (Windows) or Terminal (Mac). To install the Flywheel CLI, go to <a href="https://docs.flywheel.io/hc/en-us/articles/360008162214">Flywheel's CLI Installation</a> page.</p>
@@ -823,7 +845,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 23, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 24, 2021</span>
       
     
   </small>
@@ -909,6 +931,10 @@
     
     
       <script src="../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+      
+        <script src="../../js/config.js"></script>
       
     
   </body>
