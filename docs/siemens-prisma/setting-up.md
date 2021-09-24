@@ -35,7 +35,7 @@ The bottom line at this point is for you to know that there is a choice and that
 
 <figure>
     <img src="../../img/12ch-and-32ch.png" alt="12 channel vs. 32 channel">
-    <figcaption>
+    <figcaption class="margin-1em">    
     SNR profiles for the Siemens 12-ch and 32-ch coils. Note especially the high cortical sensitivity of the 32-ch coil, but that the SNR is also higher in the midbrain when compared to the 12-ch coil.
     </figcaption>
 </figure>
@@ -88,7 +88,7 @@ One problem that AutoAlign can introduce for EPI is a rotation of the image plan
 
 <figure>
     <img src="../../img/phase-enc-dir.png" alt="Phase encoding direction">
-    <figcaption>
+    <figcaption class="margin-1em">
     On the Routine tab, click the three dots to the right of the Phase enc. dir. field. This opens the Inplane Rotation window, above. Assure the Rotation angle is zero. If AutoAlign has set it non-zero, set it back.
     </figcaption>
 </figure>
@@ -127,7 +127,7 @@ You can grab a suitable starting scan for gre_neuro set up for 2D acquisitions f
 
 <figure>
     <img src="../../img/mprage-gre-neuro-2dloc.png" alt="Example MPRAGE and gre_neuro_2DLoc scans">
-    <figcaption>
+    <figcaption class="margin-1em">
     To use either the MP-RAGE or a gre_neuro_2DLoc scan as a reference for your slice prescription, use the left mouse to drag and drop the completed image icon from the exam queue to the GUI window, as shown above.
     </figcaption>
 </figure>

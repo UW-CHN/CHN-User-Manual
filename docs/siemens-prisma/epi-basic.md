@@ -44,7 +44,7 @@ For most studies, a TE in the range 25-35 ms is a good compromise between speed,
 
 <figure>
     <img src="../../img/snr-bold-vs-te.png" alt="SNR x BOLD vs. TE">
-    <figcaption>
+    <figcaption class="margin-1em">
     The optimum TE for fMRI varies across the brain. Spatial variations in susceptibility gradients cause T2*, and hence the optimum TE, to vary also. Optimal BOLD sensitivity for OFC occurs at a TE several milliseconds shorter than occipital or parietal cortex.
     </figcaption>
 </figure>

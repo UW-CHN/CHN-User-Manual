@@ -41,14 +41,14 @@ The next problem is far more insidious and there is no guaranteed way to avoid i
 
 <figure>
     <img src="../../img/motion-free-grappa.png" alt="Motion-free GRAPPA images">
-    <figcaption>
+    <figcaption class="margin-1em">
     Motion-free GRAPPA images. Note the relatively homogeneous background noise.
     </figcaption>
 </figure>
 
 <figure>
     <img src="../../img/motion-contaminated-acs.png" alt="Motion-contaminated ACS">
-    <figcaption>
+    <figcaption class="margin-1em">
     Motion-contaminated ACS. Note the structured noise in several slices.
     This structure persists throughout every volume of the time series.
     </figcaption>
@@ -91,17 +91,17 @@ Below are three sets of images acquired with full, 7/8ths partial and 6/8ths par
 
 <figure>
     <img src="../../img/full-fourier.png" alt="Full Fourier">
-    <figcaption>Full Fourier 64x64 EPI.</figcaption>
+    <figcaption class="margin-1em">Full Fourier 64x64 EPI.</figcaption>
 </figure>
 
 <figure>
     <img src="../../img/partial-fourier-7-8.png" alt="7/8ths partial Fourier">
-    <figcaption>7/8ths partial Fourier EPI.</figcaption>
+    <figcaption class="margin-1em">7/8ths partial Fourier EPI.</figcaption>
 </figure>
 
 <figure>
     <img src="../../img/partial-fourier-6-8.png" alt="6/8ths partial Fourier">
-    <figcaption>6/8ths partial Fourier EPI.</figcaption>
+    <figcaption class="margin-1em">6/8ths partial Fourier EPI.</figcaption>
 </figure>
 
 ## It looks like I will need to use either partial Fourier or GRAPPA to get the spatial resolution and coverage that I want. Which method should I use?

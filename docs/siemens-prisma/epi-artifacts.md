@@ -66,12 +66,12 @@ In the figure below you can see the effect of decreasing TE on the degree of sig
 
 <figure>
     <img src="../../img/te-20ms.png" alt="TE at 20ms">
-    <figcaption>TE = 20 ms</figcaption>
+    <figcaption class="margin-1em">TE = 20 ms</figcaption>
 </figure>
 
 <figure>
     <img src="../../img/te-36ms.png" alt="TE at 36ms">
-    <figcaption>TE = 36 ms</figcaption>
+    <figcaption class="margin-1em">TE = 36 ms</figcaption>
 </figure>
 
 ## What is the origin of distortion in EPI? Can it be fixed?
