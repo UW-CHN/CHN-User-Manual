@@ -850,7 +850,7 @@ INFO     -  [14:56:49] Serving on http://127.0.0.1:8000/
 <p class="admonition-title">Important</p>
 <p>Multiple people could be working on the site at the same time. It is good practice to call <a href="https://www.atlassian.com/git/tutorials/syncing/git-pull"><code>git pull</code></a> before you start working and commit changes to stay up to date.</p>
 </div>
-<p>When you are satisfied with the edits to the site, you need to <code>git commit</code> your work. First, you must navigate your through the command line to the project folder. Using the <code>git</code> command, you will <a href="https://www.atlassian.com/git/tutorials/saving-changes"><code>add</code></a> all the relevant files, and then <a href="https://www.atlassian.com/git/tutorials/saving-changes/git-commit"><code>commit</code></a> them.</p>
+<p>When you are satisfied with the edits to the site, you need to <code>git commit</code> your work. First, you must navigate your through the command line to the project folder. Using the <code>git</code> command, you will <a href="https://www.atlassian.com/git/tutorials/saving-changes"><code>add</code></a> all the relevant files, <a href="https://www.atlassian.com/git/tutorials/saving-changes/git-commit"><code>commit</code></a> the changes, and <a href="https://www.atlassian.com/git/tutorials/syncing/git-push"><code>push</code></a> the work to GitHub.</p>
 <pre><code class="language-bash"># Navigate to project directory
 cd /path/to/project
 
@@ -862,6 +862,9 @@ git add mkdocs.yml docs/appendix/*.md
 
 # Commit changes with a message
 git commit -m &quot;Editing the appendix pages&quot;
+
+# Push commits to GitHub
+git push origin master
 </code></pre>
 <p>All work should be committed such that when the command <code>git status</code> is ran, you should get the following message.</p>
 <pre><code class="language-shell">$ git status
