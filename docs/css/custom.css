@@ -10,3 +10,11 @@ figure img {
   margin: 0 0 6px 0;
   object-fit: scale-down;
 }
+
+figcaption.margin-1em {
+  margin: 1em auto;
+}
+
+figure.border img {
+  border-style: double; 
+}

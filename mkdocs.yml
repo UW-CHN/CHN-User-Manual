@@ -3,7 +3,7 @@
 site_name: CHN User Manual
 site_url: https://uw-chn.github.io/CHN-User-Manual/
 site_description: This is a description that ends up in the meta tag
-site_author: Kelly Chang
+site_author: Kelly Chang and John Pyles
 
 repo_name: "CHN User Manual"
 repo_url: https://github.com/UW-CHN/CHN-User-Manual/
@@ -34,8 +34,9 @@ nav:
   - APPENDIX:
     - Normal Operations Checklist: appendix/normal-checklist.md
     - Emergency Checklist: appendix/emergency-checklist.md
-    - Forms: forms.md
-    - Contact: contact.md
+    - Documentation: appendix/documentation.md
+    - Contacts: appendix/contact.md
+  
 
 # Build Directories
 
@@ -46,16 +47,23 @@ theme:
 docs_dir: 'docs'
 site_dir: 'site'
 
+extra_javascript: 
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js
+  - js/config.js
+
 extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css
   - css/custom.css
 
-extra_javascript: []
 extra_templates: []
 
 # Formatting Options
 
 markdown_extensions:
   - admonition
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.highlight
   - toc:
       permalink: True
       toc_depth: 2
