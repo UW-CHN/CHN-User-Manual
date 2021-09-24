@@ -43,6 +43,15 @@ user.email=johndoe@example.com
 ...
 ```
 
+Perform `git clone` to acquire this site's repository and existing files:
+
+```shell
+$ git clone https://github.com/UW-CHN/CHN-User-Manual.git
+```
+
+This will download the [website's GitHub repository](https://github.com/UW-CHN/CHN-User-Manual) to your current working directory. You will need to run this command only once.
+
+
 ## MkDocs Site Structure
 
 The MkDocs documentation has a helpful [getting started guide](https://www.mkdocs.org/getting-started/?#getting-started-with-mkdocs).
@@ -122,7 +131,7 @@ The above code would produce a page like this:
     </figcaption>
 </figure>
 
-??? "Advanced: HTML"
+??? example "Advanced: HTML"
     In the case that Markdown is *not* enough for your purposes, inserting raw HTML into the Markdown files is also viable. For example, if you wanted to set the `alt`, `width`, and `height` attributes of an embedded image:
 
     `#!html <img src="img/picture-1.jpg" alt="Alt text" width="300" height="300">`
@@ -143,18 +152,46 @@ Opening the server `http://127.0.0.1:8000/` in your favorite browser will displa
 
 ## Commit and Deploy Site
 
-When you are satisfied with the edits to the site, you need to `git commit` your work. First, you must navigate your through the command line to the project folder. Using the `git` command, you will [`add`](https://www.atlassian.com/git/tutorials/saving-changes) all the relevant files, and then [`commit`](https://www.atlassian.com/git/tutorials/saving-changes/git-commit) them.
+!!! important
+    Multiple people could be working on the site at the same time. It is good practice to call [`git pull`](https://www.atlassian.com/git/tutorials/syncing/git-pull) before you start working and commit changes to stay up to date.
+    
+When you are satisfied with the edits to the site, you need to `git commit` your work. First, you must navigate your through the command line to the project folder. Using the `git` command, you will [`add`](https://www.atlassian.com/git/tutorials/saving-changes) all the relevant files, [`commit`](https://www.atlassian.com/git/tutorials/saving-changes/git-commit) the changes, and [`push`](https://www.atlassian.com/git/tutorials/syncing/git-push) the work to GitHub.
 
-```shell
+```bash
 # Navigate to project directory
-$ cd /path/to/project
+cd /path/to/project
 
-# Add files one at a time
-$ git add mkdocs.yml appendix/site-settings.md appendix/site-config.md
+# Add one file at a time
+git add mkdocs.yml docs/index.md
 
-# Add multiple files 
-$ git add mkdocs.yml docs/appendix/*.md
+# Adding mkdocs.yml and all .md files in appendix/ directory
+git add mkdocs.yml docs/appendix/*.md
 
 # Commit changes with a message
-$ git commit -m "Editing the appendix pages"
+git commit -m "Editing the appendix pages"
+
+# Push commits to GitHub
+git push origin master
 ```
+
+All work should be committed such that when the command `git status` is ran, you should get the following message.
+
+```shell
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
+
+??? info
+    This documentation walks through the git `add` and `commit` process assuming all work is completed on the `master` branch. This does **not** need to be the case. If you prefer working on a separate branch and then performing `git merge`, this also a viable option.
+
+
+The `mkdocs` makes it incredibly easy to [deploy the site](https://www.mkdocs.org/user-guide/deploying-your-docs/) with [GitHub Pages](https://pages.github.com/).
+
+Navigate to the `master` branch and issue the command:
+
+```shell
+$ mkdocs gh-deploy
+```
+
+And you have successfully update this website!
