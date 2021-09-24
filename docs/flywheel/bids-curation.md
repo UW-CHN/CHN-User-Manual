@@ -4,17 +4,31 @@ The Brain Imaging Data Structure (BIDS) is a methods of organizing neuroimaging 
 
 To read more about the latest BIDS standard, go to the [BIDS Homepage](https://bids.neuroimaging.io/index.html) or the [BIDS Documentation](https://bids-specification.readthedocs.io/en/stable/).
 
-## Flywheel + BIDS
+## Flywheel and BIDS
+
+There is a weird relationship between the two. 
+
+- explain the process that went into the SciTran classifier, dcm2niix
+- CMRR gear for physio if applicable
+- explain the `acquision.label` on Flywheel and relationship with ReproIn (NEED WEBSITE LINK)
+- 
 
 ## BIDS Curation Gear
 
-[important!](https://docs.flywheel.io/hc/en-us/articles/360053720853-Webinar-BIDS-Templating)
-
-[gitlab site](https://gitlab.com/flywheel-io/flywheel-apps/curate-bids)
+[gitlab repo](https://gitlab.com/flywheel-io/flywheel-apps/curate-bids)
 
 ## BIDS Curation Template File
 
+[flywheel documentation on bids](https://docs.flywheel.io/hc/en-us/articles/360053720853-Webinar-BIDS-Templating)
+
 ## BIDS Curation Process
+
+1. Run BIDS Curation gear
+    - configuration
+
+2. Check BIDS View
+3. If error, check log, check metadata
+4. Repeat steps 1 - 3 until BIDS-ified
 
 ## Exporting Data in BIDS Format
 
