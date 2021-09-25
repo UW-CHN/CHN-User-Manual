@@ -3,12 +3,12 @@
 site_name: CHN User Manual
 site_url: https://uw-chn.github.io/CHN-User-Manual/
 site_description: This is a description that ends up in the meta tag
-site_author: Kelly Chang and John Pyles
+site_author: Center for Human Neuroscience
 
 repo_name: "CHN User Manual"
 repo_url: https://github.com/UW-CHN/CHN-User-Manual/
 
-copyright: Copyright &copy; 2021 CHN
+copyright: Copyright &copy; 2021 Center for Human Neuroscience
 
 # Documentation Layout
 
@@ -27,9 +27,11 @@ nav:
     - Mock Scanner: peripherals/mock-scanner.md
     - Sensimetrics S14: peripherals/sensimetrics-s14.md
     - Physiology: peripherals/physiology.md
-  - COMPUTATIONAL_RESOURCES: computational-resources/computational-resources.md
+  - COMPUTATIONAL RESOURCES: 
+    - Overview: computational-resources/overview.md
     - Hyak: computational-resources/hyak.md
     - Cloud: computational-resources/cloud.md
+    - IBIC: computational-resources/ibic.md
   - FLYWHEEL:
     - General: flywheel/general.md
     - BIDS Curation: flywheel/bids-curation.md
