@@ -27,6 +27,9 @@ nav:
     - Mock Scanner: peripherals/mock-scanner.md
     - Sensimetrics S14: peripherals/sensimetrics-s14.md
     - Physiology: peripherals/physiology.md
+  - COMPUTATIONAL_RESOURCES: computational-resources/computational-resources.md
+    - Hyak: computational-resources/hyak.md
+    - Cloud: computational-resources/cloud.md
   - FLYWHEEL:
     - General: flywheel/general.md
     - BIDS Curation: flywheel/bids-curation.md
@@ -37,7 +40,6 @@ nav:
     - Documentation: appendix/documentation.md
     - Contacts: appendix/contact.md
   
-
 # Build Directories
 
 theme:
