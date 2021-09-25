@@ -1,23 +1,20 @@
 # Project Information
 
 site_name: CHN User Manual
-site_url: 127.0.0.1:8000/
+site_url: https://uw-chn.github.io/CHN-User-Manual/
 site_description: This is a description that ends up in the meta tag
-site_author: Kelly Chang
-copyright: null
+site_author: Kelly Chang and John Pyles
 
-repo_url: https://github.com/example/repo/
-repo_name: "GitHub"
-remote_branch: gh-pages
-remote_name: origin
+repo_name: "CHN User Manual"
+repo_url: https://github.com/UW-CHN/CHN-User-Manual/
 
-google_analytics: null
+copyright: Copyright &copy; 2021 CHN
 
 # Documentation Layout
 
 nav:
   - HOME: index.md
-  - SIEMENS PRISMA 3T SCANNER:
+  - SIEMENS PRISMA 3T:
     - Setting Up and Acquiring Scans: siemens-prisma/setting-up.md
     - "EPI: Basic Parameter and Sequence Issues": siemens-prisma/epi-basic.md
     - "EPI: Advanced Parameter and Sequence Issues": siemens-prisma/epi-advanced.md
@@ -33,31 +30,42 @@ nav:
   - COMPUTATIONAL_RESOURCES: computational-resources/computational-resources.md
     - Hyak: computational-resources/hyak.md
     - Cloud: computational-resources/cloud.md
-  - FORMS: forms.md
-  - CONTACT: contact.md
+  - FLYWHEEL:
+    - General: flywheel/general.md
+    - BIDS Curation: flywheel/bids-curation.md
+    - FreeSurfer recon-all: flywheel/freesurfer-recon-all.md
   - APPENDIX:
     - Normal Operations Checklist: appendix/normal-checklist.md
     - Emergency Checklist: appendix/emergency-checklist.md
-
+    - Documentation: appendix/documentation.md
+    - Contacts: appendix/contact.md
+  
 # Build Directories
 
 theme:
-  name: readthedocs
+  name: material
   navigation_depth: 3
 
 docs_dir: 'docs'
 site_dir: 'site'
 
+extra_javascript: 
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js
+  - js/config.js
+
 extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css
   - css/custom.css
 
-extra_javascript: []
 extra_templates: []
 
 # Formatting Options
 
 markdown_extensions:
   - admonition
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.highlight
   - toc:
       permalink: True
       toc_depth: 2
@@ -66,3 +74,4 @@ plugins:
   - search:
       separator: '[\s\-\.]+'
       min_search_length: 2
+  - git-revision-date-localized
