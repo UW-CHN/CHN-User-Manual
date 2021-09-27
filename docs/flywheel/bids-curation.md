@@ -1,48 +1,95 @@
 # BIDS Curation
 
-The Brain Imaging Data Structure (BIDS) is a methods of organizing neuroimaging and behavioral data. The BIDS specficiation has become more widespread as it provides a standard directory structure for complicated neuroimaging data. It also facilitates data sharing across sites and labs.
+The Brain Imaging Data Structure (BIDS) is a methods of organizing neuroimaging and behavioral data. The BIDS specification has become more widespread as it provides a standard directory structure for complicated neuroimaging data. It also facilitates data sharing across sites and labs.
 
 To read more about the latest BIDS standard, go to the [BIDS Homepage](https://bids.neuroimaging.io/index.html) or the [BIDS Documentation](https://bids-specification.readthedocs.io/en/stable/).
 
 ## Flywheel and BIDS
 
-There is a weird relationship between the two. 
-
-- explain the process that went into the SciTran classifier, dcm2niix
-- CMRR gear for physio if applicable
-- explain the `acquision.label` on Flywheel and relationship with ReproIn (NEED WEBSITE LINK)
-- 
+TBD
 
 ## BIDS Curation Gear
 
-[gitlab repo](https://gitlab.com/flywheel-io/flywheel-apps/curate-bids)
+The [BIDS Curation Gear](https://gitlab.com/flywheel-io/flywheel-apps/curate-bids) is software developed by Flywheel to help translate Flywheel metadata to BIDS compliant metadata. This allows the data to be downloaded from Flywheel in BIDS standard. Flywheel's [BIDS Curation Gear Documentation](https://docs.flywheel.io/hc/en-us/articles/1500006525322-BIDS-Curation-Gear) also provides additional information about the gear.
 
-## BIDS Curation Template File
+If you have a Project on Flywheel, navigate to the "Sessions" tab. From here you can check if the BIDS Curation Gear is available for your project by the following steps on Flywheel.
 
-[flywheel documentation on bids](https://docs.flywheel.io/hc/en-us/articles/360053720853-Webinar-BIDS-Templating)
+1. **Select the "Run Gear" button.** The button is located under the "Acquisitions" tab in the upper right hand corner.
+
+    <figure class="double-border">
+        <img src="../../img/bids-curation-run-gear.jpg" alt="BIDS Curation Run Gear button">
+    </figure>
+
+2. A pop-up will appear, **select "Utility Gear"**.
+
+    <figure class="double-border">
+        <img src="../../img/bids-curation-utility-gear.jpg" alt="BIDS Curation Utility Gear button">
+    </figure>
+
+3. In the "Select Gear" dropdown menu, there should be a **"BIDS Curation"** option.
+
+    <figure class="double-border">
+        <img src="../../img/bids-curation-select-gear.jpg" alt="BIDS Curation Gear in the dropdown menu">
+    </figure>
+
+If the BIDS Curation Gear does not exist for your project and it should, please contact John Pyles at <johnp@uw.edu>.
+
+## BIDS Template File
+
+The BIDS Curation Gear works because of the [BIDS Template File](https://docs.flywheel.io/hc/en-us/articles/1500006476961-The-BIDS-template-file). The BIDS template file is a JSON file that the BIDS Curation Gear uses to translate Flywheel metadata to BIDS compliant metadata.
+
+To learn more information about the BIDS Curation process and BIDS template, a good introduction would be to watch [Flywheel's BIDS Templating Webinar](https://docs.flywheel.io/hc/en-us/articles/360053720853-Webinar-BIDS-Templating). Further reading of Flywheel's documentation about how the template engine performs its processing is detailed [here](https://docs.flywheel.io/hc/en-us/articles/1500006476941-How-the-BIDS-template-engine-processes-data) and a breakdown of the template file's definitions, rules, and syntax are explained [here](https://docs.flywheel.io/hc/en-us/articles/1500006476961-The-BIDS-template-file).
+
+### CHN ReproIn Extension Template
+
+At CHN, we have a custom BIDS template file, which was an extension of the [ReproIn](https://github.com/repronim/reproin) template, that satisfies the most common acquisitions the center collects. This template file can be downloaded <a href="../../files/chn-reproin-extension-project-template.json" download>here</a>.
+
+Custom template files should be attached as a the Project level file. This can be achieved by going to the Project's "Information" tab. There is an "Attachments" section where files can be uploaded.
+
+<figure class="double-border">
+    <img src="../../img/bids-curation-project-file.jpg" alt="BIDS template file attached as a Project level file">
+    <figcaption class="margin-1em">
+    Example of the `chn-reproin-extension-project-template.json` file attached at the Project level.
+    </figcaption>
+</figure>
 
 ## BIDS Curation Process
 
-1. Run BIDS Curation gear
-    - configuration
+The BIDs curation process is well documented by Flywheel as a tutorial and is highly recommended that users read it before attempting on their own. Each step below links to the relevant documentation, but this page will attempt to highlight the main points of each stage.
 
-2. Check BIDS View
-3. If error, check log, check metadata
-4. Repeat steps 1 - 3 until BIDS-ified
+1. [Prepare the data](https://docs.flywheel.io/hc/en-us/articles/1500006508722-BIDS-curation-tutorial-part-1-preparing-data)
+    1. Run the [SciTran: DICOM MR Classifier Gear](https://github.com/scitran-apps/dicom-mr-classifier).
+    2. Run the [dcm2niix: DICOM to NIfTI conversion Gear](https://github.com/flywheel-apps/dcm2niix)
+    3. (*Optional*) Run the [CMRR: Extract CMRR Physio Gear](https://github.com/flywheel-apps/extract-cmrr-physio)
+
+2. [Run the BIDS Curation Gear](https://docs.flywheel.io/hc/en-us/articles/1500012005281-BIDS-curation-tutorial-part-2-running-the-BIDS-Curation-gear)
+    1. Run the BIDS Curation gear with desired configurations
+    2. Review "Provenance" for curation success or failure
+    3. Review BIDS curated acquisitions with "BIDS View"
+
+3. (*Optional, unless curation failed*) [Troubleshooting](https://docs.flywheel.io/hc/en-us/articles/4402385363859-BIDS-curation-tutorial-part-3-troubleshooting-and-debugging)
+    1. Identifying a curation failure and read the curation log
+    2. Adjust the BIDS Curation template to capture the error, either by:
+        1. Modify the template to suit your needs <br>
+        (and consider sharing a successful template fix with the CHN).
+        2. Contacting Kelly at for help.
+    3. Re-run the BIDS Curation gear
+
+For further support regarding the BIDS curation process, please contact Kelly at <kchang4@uw.edu>.
 
 ## Exporting Data in BIDS Format
 
-### Flywheel Command-Line Interface (CLI) 
+### Flywheel Command-Line Interface (CLI)
 
 Currently, the only method of download data from Flywheel in BIDS format is through the Flywheel Command-Line Interface (CLI). The CLI is an additional Flywheel program that can be used from the computer's Command Prompt (Windows) or Terminal (Mac). To install the Flywheel CLI, go to [Flywheel's CLI Installation](https://docs.flywheel.io/hc/en-us/articles/360008162214) page.
 
 ### Exporting Data in BIDS Format with the Flywheel CLI
 
-Once the CLI has been installed successfully, you can download your data in BIDS format from the Command Prompt or Terminal. 
+Once the CLI has been installed successfully, you can download your data in BIDS format from the Command Prompt or Terminal.
 
-The main command will take the form: 
+The main command will take the form:
 
-```
+```bash
 fw export bids [optional flags] --project [project label] [dest folder]
 ```
 
@@ -50,24 +97,24 @@ The [Flywheel's BIDS Export Documentation](https://docs.flywheel.io/hc/en-us/art
 
 #### Common Commands
 
-Export an entire project: 
+Export an entire project:
 
-```
+```bash
 fw export bids --project "project_label" /path/to/project_folder
 ```
 
-Exporting by session (`\` allows for multiline commands): 
+Exporting by session (`\` allows for multiline commands):
 
-```
+```bash
 fw export bids \
     --project "project_label" \
     --session "ses-01" \
     path/to/project_folder
 ```
 
-Exporting by subject: 
+Exporting by subject:
 
-```
+```bash
 fw export bids \
     --project "project_label" \
     --subject "sub-01" \
@@ -76,7 +123,7 @@ fw export bids \
 
 Exporting by subject and data types:
 
-```
+```bash
 fw export bids \
     --project "project_label" \
     --subject "sub-01" \
@@ -87,6 +134,6 @@ fw export bids \
 
 ## BIDS Validation
 
-Downloading the data from Flywheel does not guarantee that it is up-to-date with the *latest* BIDS specification. The BIDS standard updates regularly, which causes software based on a previous BIDS version to have to update as well. 
+Downloading the data from Flywheel does not guarantee that it is up-to-date with the *latest* BIDS specification. The BIDS standard updates regularly, which causes software, such as the BIDS Curation Gear, based on a previous BIDS version to lag behind in updating.
 
-It is good practice to use the [BIDS Validator](https://github.com/bids-standard/bids-validator) to ensure compliance with the latest BIDS version. There are multiple implementations of the validator (read the validator's documentation), but the [online version](https://bids-standard.github.io/bids-validator/) is probably the easiest and fastest to use.
+Therefore, it is good practice to use the [BIDS Validator](https://github.com/bids-standard/bids-validator) to ensure compliance with the latest BIDS version. There are multiple implementations of the validator (read the validator's documentation), but the [online version](https://bids-standard.github.io/bids-validator/) is probably the easiest and fastest to use.

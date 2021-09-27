@@ -13,8 +13,9 @@ figure img {
 
 figcaption.margin-1em {
   margin: 1em auto;
+  max-width: 30rem;
 }
 
-figure.border img {
-  border-style: double; 
+figure.double-border img {
+  border-style: double;
 }
