@@ -4,13 +4,45 @@ The Brain Imaging Data Structure (BIDS) is a methods of organizing neuroimaging 
 
 To read more about the latest BIDS standard, go to the [BIDS Homepage](https://bids.neuroimaging.io/index.html) or the [BIDS Documentation](https://bids-specification.readthedocs.io/en/stable/).
 
-## Flywheel and BIDS
+## Data on Flywheel
 
-TBD
+The raw DICOMs that come off the scanner are automatically uploaded to Flywheel via a [connector](https://docs.flywheel.io/hc/en-us/articles/360016798554) located within the console room. Users are still able to [manually upload](https://docs.flywheel.io/hc/en-us/articles/360008109094) data to Flywheel, but unless it is a small dataset, it is not recommended.
+
+The DICOMs are sorted by [Flywheel's data hierarchy](https://docs.flywheel.io/hc/en-us/articles/4403390307475). The heirachy is organized as follows: 
+
+1. Site - The institution's Flywheel installation 
+2. Group - The PI, Lab, or virtual team
+3. Project - An experiement or other collection of data 
+4. Subject - A research participant / patient, animal, or phantom 
+5. Session - A subject's visit or interaction with a modality to perform an evaluation
+6. Acquisition - Unit of data collected during a session
+7. File - The actual scan files (e.g., .dicom, .nii.gz) underneath an acquistion label
+
+At the scanner console, the naming convention of the Project, Subject, and Session label will be established. For example if the scan was apart of a Project named `ProtocolTests` for Subject `S01` and Session `01`. The data will be show up on Flywheel named and located correspondingly. Commonly, you will be only interacting with the data starting from the Project level and downwards. 
+
+Each acquisition is titled as they are listed on the scanner console. For example, a T1 weighted MPRAGE acquisition may be labeled `anat-T1w_acq-mprage` (according to [ReproIn's](https://github.com/repronim/reproin) naming convention) and will appear as such in Flywheel. The DICOM file(s) associated with the acquisition will be named based on instance UID (e.g., `1.3.12.2.1107.5.2.43.166210.2021060415181758435031308.0.0.0.dicom.zip`). Any processed files will also appear nested under the acquisition label, such as the `dcm2niix` converted `.nii.gz` file show in the figure below. 
+
+<figure class="double-border">
+    <img src="../../img/bids-curation-acquisition.jpg" alt="Example of an aquisition label and its files">
+    <figcaption class="margin-1em">
+    An acqusition label "anat-T1w_acq-mprage" and its dicom and nifti files.
+    </figcption>
+</figure>
+
+When the DICOM is uploaded, Flywheel will also populate its metadata fields. The metadata can be viewed by clicking on the "Information" icon for a file (or any type of Flywheel data). 
+
+<figure class="double-border">
+    <img src="../../img/bids-curation-flywheel-metadata.jpg" alt="Example of Flywheel metadata">
+    <figcaption class="margin-1em">
+    Example of Flywheel metadata for a DICOM file.
+    </figcaption>
+</figure>
+
+Exporting data at this stage will result in the a directory structure that follows Flywheel's data heirarchy and the files will retain their UID naming. This is typically not ideal as UID names are not human readable without training. Therefore, it is preferable to use the BIDS Curation gear, which helps rename the data files when you are exporting them from Flywheel. 
 
 ## BIDS Curation Gear
 
-The [BIDS Curation Gear](https://gitlab.com/flywheel-io/flywheel-apps/curate-bids) is software developed by Flywheel to help translate Flywheel metadata to BIDS compliant metadata. This allows the data to be downloaded from Flywheel in BIDS standard. Flywheel's [BIDS Curation Gear Documentation](https://docs.flywheel.io/hc/en-us/articles/1500006525322-BIDS-Curation-Gear) also provides additional information about the gear.
+The [BIDS Curation Gear](https://gitlab.com/flywheel-io/flywheel-apps/curate-bids) is software developed by Flywheel to help translate Flywheel metadata to BIDS compliant metadata. This allows the data to be downloaded from Flywheel in BIDS standard and allows other softare packages (e.g., [fmriPrep](https://fmriprep.org/en/stable/)) to easily process the data. Flywheel's [BIDS Curation Gear Documentation](https://docs.flywheel.io/hc/en-us/articles/1500006525322-BIDS-Curation-Gear) also provides additional information about the gear.
 
 If you have a Project on Flywheel, navigate to the "Sessions" tab. From here you can check if the BIDS Curation Gear is available for your project by the following steps on Flywheel.
 
