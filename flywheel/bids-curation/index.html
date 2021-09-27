@@ -662,8 +662,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#flywheel-and-bids" class="md-nav__link">
-    Flywheel and BIDS
+  <a href="#data-on-flywheel" class="md-nav__link">
+    Data on Flywheel
   </a>
   
 </li>
@@ -858,8 +858,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#flywheel-and-bids" class="md-nav__link">
-    Flywheel and BIDS
+  <a href="#data-on-flywheel" class="md-nav__link">
+    Data on Flywheel
   </a>
   
 </li>
@@ -919,10 +919,38 @@
                 <h1 id="bids-curation">BIDS Curation<a class="headerlink" href="#bids-curation" title="Permanent link">&para;</a></h1>
 <p>The Brain Imaging Data Structure (BIDS) is a methods of organizing neuroimaging and behavioral data. The BIDS specification has become more widespread as it provides a standard directory structure for complicated neuroimaging data. It also facilitates data sharing across sites and labs.</p>
 <p>To read more about the latest BIDS standard, go to the <a href="https://bids.neuroimaging.io/index.html">BIDS Homepage</a> or the <a href="https://bids-specification.readthedocs.io/en/stable/">BIDS Documentation</a>.</p>
-<h2 id="flywheel-and-bids">Flywheel and BIDS<a class="headerlink" href="#flywheel-and-bids" title="Permanent link">&para;</a></h2>
-<p>TBD</p>
+<h2 id="data-on-flywheel">Data on Flywheel<a class="headerlink" href="#data-on-flywheel" title="Permanent link">&para;</a></h2>
+<p>The raw DICOMs that come off the scanner are automatically uploaded to Flywheel via a <a href="https://docs.flywheel.io/hc/en-us/articles/360016798554">connector</a> located within the console room. Users are still able to <a href="https://docs.flywheel.io/hc/en-us/articles/360008109094">manually upload</a> data to Flywheel, but unless it is a small dataset, it is not recommended.</p>
+<p>The DICOMs are sorted by <a href="https://docs.flywheel.io/hc/en-us/articles/4403390307475">Flywheel's data hierarchy</a>. The heirachy is organized as follows: </p>
+<ol>
+<li>Site - The institution's Flywheel installation </li>
+<li>Group - The PI, Lab, or virtual team</li>
+<li>Project - An experiement or other collection of data </li>
+<li>Subject - A research participant / patient, animal, or phantom </li>
+<li>Session - A subject's visit or interaction with a modality to perform an evaluation</li>
+<li>Acquisition - Unit of data collected during a session</li>
+<li>File - The actual scan files (e.g., .dicom, .nii.gz) underneath an acquistion label</li>
+</ol>
+<p>At the scanner console, the naming convention of the Project, Subject, and Session label will be established. For example if the scan was apart of a Project named <code>ProtocolTests</code> for Subject <code>S01</code> and Session <code>01</code>. The data will be show up on Flywheel named and located correspondingly. Commonly, you will be only interacting with the data starting from the Project level and downwards. </p>
+<p>Each acquisition is titled as they are listed on the scanner console. For example, a T1 weighted MPRAGE acquisition may be labeled <code>anat-T1w_acq-mprage</code> (according to <a href="https://github.com/repronim/reproin">ReproIn's</a> naming convention) and will appear as such in Flywheel. The DICOM file(s) associated with the acquisition will be named based on instance UID (e.g., <code>1.3.12.2.1107.5.2.43.166210.2021060415181758435031308.0.0.0.dicom.zip</code>). Any processed files will also appear nested under the acquisition label, such as the <code>dcm2niix</code> converted <code>.nii.gz</code> file show in the figure below. </p>
+<figure class="double-border">
+    <img src="../../img/bids-curation-acquisition.jpg" alt="Example of an aquisition label and its files">
+    <figcaption class="margin-1em">
+    An acqusition label "anat-T1w_acq-mprage" and its dicom and nifti files.
+    </figcption>
+</figure>
+
+<p>When the DICOM is uploaded, Flywheel will also populate its metadata fields. The metadata can be viewed by clicking on the "Information" icon for a file (or any type of Flywheel data). </p>
+<figure class="double-border">
+    <img src="../../img/bids-curation-flywheel-metadata.jpg" alt="Example of Flywheel metadata">
+    <figcaption class="margin-1em">
+    Example of Flywheel metadata for a DICOM file.
+    </figcaption>
+</figure>
+
+<p>Exporting data at this stage will result in the a directory structure that follows Flywheel's data heirarchy and the files will retain their UID naming. This is typically not ideal as UID names are not human readable without training. Therefore, it is preferable to use the BIDS Curation gear, which helps rename the data files when you are exporting them from Flywheel. </p>
 <h2 id="bids-curation-gear">BIDS Curation Gear<a class="headerlink" href="#bids-curation-gear" title="Permanent link">&para;</a></h2>
-<p>The <a href="https://gitlab.com/flywheel-io/flywheel-apps/curate-bids">BIDS Curation Gear</a> is software developed by Flywheel to help translate Flywheel metadata to BIDS compliant metadata. This allows the data to be downloaded from Flywheel in BIDS standard. Flywheel's <a href="https://docs.flywheel.io/hc/en-us/articles/1500006525322-BIDS-Curation-Gear">BIDS Curation Gear Documentation</a> also provides additional information about the gear.</p>
+<p>The <a href="https://gitlab.com/flywheel-io/flywheel-apps/curate-bids">BIDS Curation Gear</a> is software developed by Flywheel to help translate Flywheel metadata to BIDS compliant metadata. This allows the data to be downloaded from Flywheel in BIDS standard and allows other softare packages (e.g., <a href="https://fmriprep.org/en/stable/">fmriPrep</a>) to easily process the data. Flywheel's <a href="https://docs.flywheel.io/hc/en-us/articles/1500006525322-BIDS-Curation-Gear">BIDS Curation Gear Documentation</a> also provides additional information about the gear.</p>
 <p>If you have a Project on Flywheel, navigate to the "Sessions" tab. From here you can check if the BIDS Curation Gear is available for your project by the following steps on Flywheel.</p>
 <ol>
 <li>
@@ -1036,7 +1064,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 27, 2021</span>
       
     
   </small>
