@@ -33,13 +33,13 @@ nav:
     - Cloud: computational-resources/cloud.md
     - IBIC: computational-resources/ibic.md
   - FLYWHEEL:
-    - General: flywheel/general.md
+    - flywheel/flywheel.md
     - BIDS Curation: flywheel/bids-curation.md
     - FreeSurfer recon-all: flywheel/freesurfer-recon-all.md
   - APPENDIX:
     - Normal Operations Checklist: appendix/normal-checklist.md
     - Emergency Checklist: appendix/emergency-checklist.md
-    - Documentation: appendix/documentation.md
+    - Site Documentation: appendix/site-documentation.md
     - Contacts: appendix/contact.md
 
 # Build Directories

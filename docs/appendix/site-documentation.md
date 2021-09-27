@@ -1,12 +1,12 @@
-# Documentation
+# Website Documentation
 
-This website was created using [MkDocs](https://www.mkdocs.org/) and [git](https://git-scm.com/). Therefore, writing documentation for the site requires installing both software on one's machine and an understanding of [Markdown](https://www.markdownguide.org/). For advanced users, an understanding of [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) and [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) would be beneficial. 
+This website was created using [MkDocs](https://www.mkdocs.org/) and [git](https://git-scm.com/). Therefore, writing documentation for the site requires installing both software on one's machine and an understanding of [Markdown](https://www.markdownguide.org/). For advanced users, an understanding of [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) and [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) would be beneficial.
 
 ## Software Installation
 
 ### MkDocs
 
-MkDocs provides a detailed [installation guide](https://www.mkdocs.org/user-guide/installation/). 
+MkDocs provides a detailed [installation guide](https://www.mkdocs.org/user-guide/installation/).
 
 You can check if the installation was successful from the command line with the following command:
 
@@ -26,7 +26,7 @@ $ git --version
 git version 2.31.1
 ```
 
-If this is your first time installing git on your machine, you will also need to configure git to know your GitHub user name and email. From the command line, the commands are: 
+If this is your first time installing git on your machine, you will also need to configure git to know your GitHub user name and email. From the command line, the commands are:
 
 ```shell
 $ git config --global user.name "John Doe"
@@ -81,19 +81,19 @@ Site navigation is defined in `nav` field. Each page (e.g., `page-1`, `page-2`) 
 The value of each page name field is the relative path to the markdown file (`.md`). That means that within the `docs` directory, there is a `page-1-markdown.md` that will be rendered as `page-1`. It also follows that `subpage-1` is rendered from the `subpage-1-markdown.md` file located within `docs/subfolder/`.
 
 ```yaml
-nav: 
+nav:
     - page-1: page-1-markdown.md
-    - page-2: 
+    - page-2:
         - subpage-1: subfolder/subpage-1-markdown.md
         - subpage-2: subfolder/subpage-2-markdown.md
 ```
 
-Using the [previously defined directory structure](#mkdocs-site-structure), this would produce a `nav` configuration as such: 
+Using the [previously defined directory structure](#mkdocs-site-structure), this would produce a `nav` configuration as such:
 
 ```yaml
 nav:
     - HOME: index.md
-    - APPENDIX: 
+    - APPENDIX:
         - Site Settings: appendix/site-settings.md
         - Site Configuration: appendix/site-config.md
 ```
@@ -107,8 +107,8 @@ MkDocs compliant Markdown files need to be saved with a `.md` extension and with
 ```md
 # Home
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-incididunt ut **labore et dolore magna aliqua** 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut **labore et dolore magna aliqua**
 
 * A unordered list
 * Second Item
@@ -116,15 +116,15 @@ incididunt ut **labore et dolore magna aliqua**
 
 ## Header 2
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua.
 
 ![This is an image!](img/picture-1.jpeg)
 ```
 
-The above code would produce a page like this: 
+The above code would produce a page like this:
 
-<figure class="border">
+<figure class="double-border">
     <img src="../../img/picture-1.jpg" alt="Example homepage rendered from markdown">
     <figcaption class="margin-1em">
     MkDocs site page rendered from a Markdown file.
@@ -138,7 +138,7 @@ The above code would produce a page like this:
 
 ## Live Site Building
 
-MkDocs allows user to write and edit their Markdown files live by hosting a server in a browser. Once the skeleton of your site has been developed, you can start the server with `mkdocs serve` in the command line: 
+MkDocs allows user to write and edit their Markdown files live by hosting a server in a browser. Once the skeleton of your site has been developed, you can start the server with `mkdocs serve` in the command line:
 
 ```shell
 $ mkdocs serve
@@ -154,7 +154,7 @@ Opening the server `http://127.0.0.1:8000/` in your favorite browser will displa
 
 !!! important
     Multiple people could be working on the site at the same time. It is good practice to call [`git pull`](https://www.atlassian.com/git/tutorials/syncing/git-pull) before you start working and commit changes to stay up to date.
-    
+
 When you are satisfied with the edits to the site, you need to `git commit` your work. First, you must navigate your through the command line to the project folder. Using the `git` command, you will [`add`](https://www.atlassian.com/git/tutorials/saving-changes) all the relevant files, [`commit`](https://www.atlassian.com/git/tutorials/saving-changes/git-commit) the changes, and [`push`](https://www.atlassian.com/git/tutorials/syncing/git-push) the work to GitHub.
 
 ```bash
