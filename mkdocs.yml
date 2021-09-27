@@ -27,8 +27,8 @@ nav:
     - Mock Scanner: peripherals/mock-scanner.md
     - Sensimetrics S14: peripherals/sensimetrics-s14.md
     - Physiology: peripherals/physiology.md
-  - COMPUTATIONAL RESOURCES: 
-    - Overview: computational-resources/overview.md
+  - COMPUTATIONAL RESOURCES:
+    - computational-resources/computational-resources.md
     - Hyak: computational-resources/hyak.md
     - Cloud: computational-resources/cloud.md
     - IBIC: computational-resources/ibic.md
@@ -41,17 +41,19 @@ nav:
     - Emergency Checklist: appendix/emergency-checklist.md
     - Documentation: appendix/documentation.md
     - Contacts: appendix/contact.md
-  
+
 # Build Directories
 
 theme:
   name: material
+  features:
+    - navigation.indexes
   navigation_depth: 3
 
 docs_dir: 'docs'
 site_dir: 'site'
 
-extra_javascript: 
+extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js
   - js/config.js
 
