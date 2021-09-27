@@ -238,6 +238,18 @@
       
       
       
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
       
         <label class="md-nav__link" for="__nav_2">
           SIEMENS PRISMA 3T
@@ -341,6 +353,20 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3">
@@ -460,6 +486,16 @@
       
       
       
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
       
         <label class="md-nav__link" for="__nav_4">
           COMPUTATIONAL RESOURCES
@@ -479,8 +515,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../computational-resources/overview/" class="md-nav__link">
-        Overview
+      <a href="../../computational-resources/computational-resources/" class="md-nav__link">
+        Computational Resources
       </a>
     </li>
   
@@ -552,6 +588,14 @@
       
       
       
+        
+          
+        
+          
+        
+          
+        
+      
       
         <label class="md-nav__link" for="__nav_5">
           FLYWHEEL
@@ -571,8 +615,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../general/" class="md-nav__link">
-        General
+      <a href="../flywheel/" class="md-nav__link">
+        Flywheel
       </a>
     </li>
   
@@ -632,8 +676,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bids-curation-template-file" class="md-nav__link">
-    BIDS Curation Template File
+  <a href="#bids-template-file" class="md-nav__link">
+    BIDS Template File
   </a>
   
 </li>
@@ -703,6 +747,16 @@
       
       
       
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
       
         <label class="md-nav__link" for="__nav_6">
           APPENDIX
@@ -750,8 +804,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../appendix/documentation/" class="md-nav__link">
-        Documentation
+      <a href="../../appendix/site-documentation/" class="md-nav__link">
+        Site Documentation
       </a>
     </li>
   
@@ -818,8 +872,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bids-curation-template-file" class="md-nav__link">
-    BIDS Curation Template File
+  <a href="#bids-template-file" class="md-nav__link">
+    BIDS Template File
   </a>
   
 </li>
@@ -863,61 +917,108 @@
                 
                 
                 <h1 id="bids-curation">BIDS Curation<a class="headerlink" href="#bids-curation" title="Permanent link">&para;</a></h1>
-<p>The Brain Imaging Data Structure (BIDS) is a methods of organizing neuroimaging and behavioral data. The BIDS specficiation has become more widespread as it provides a standard directory structure for complicated neuroimaging data. It also facilitates data sharing across sites and labs.</p>
+<p>The Brain Imaging Data Structure (BIDS) is a methods of organizing neuroimaging and behavioral data. The BIDS specification has become more widespread as it provides a standard directory structure for complicated neuroimaging data. It also facilitates data sharing across sites and labs.</p>
 <p>To read more about the latest BIDS standard, go to the <a href="https://bids.neuroimaging.io/index.html">BIDS Homepage</a> or the <a href="https://bids-specification.readthedocs.io/en/stable/">BIDS Documentation</a>.</p>
 <h2 id="flywheel-and-bids">Flywheel and BIDS<a class="headerlink" href="#flywheel-and-bids" title="Permanent link">&para;</a></h2>
-<p>There is a weird relationship between the two. </p>
-<ul>
-<li>explain the process that went into the SciTran classifier, dcm2niix</li>
-<li>CMRR gear for physio if applicable</li>
-<li>explain the <code>acquision.label</code> on Flywheel and relationship with ReproIn (NEED WEBSITE LINK)</li>
-<li></li>
-</ul>
+<p>TBD</p>
 <h2 id="bids-curation-gear">BIDS Curation Gear<a class="headerlink" href="#bids-curation-gear" title="Permanent link">&para;</a></h2>
-<p><a href="https://gitlab.com/flywheel-io/flywheel-apps/curate-bids">gitlab repo</a></p>
-<h2 id="bids-curation-template-file">BIDS Curation Template File<a class="headerlink" href="#bids-curation-template-file" title="Permanent link">&para;</a></h2>
-<p><a href="https://docs.flywheel.io/hc/en-us/articles/360053720853-Webinar-BIDS-Templating">flywheel documentation on bids</a></p>
-<h2 id="bids-curation-process">BIDS Curation Process<a class="headerlink" href="#bids-curation-process" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://gitlab.com/flywheel-io/flywheel-apps/curate-bids">BIDS Curation Gear</a> is software developed by Flywheel to help translate Flywheel metadata to BIDS compliant metadata. This allows the data to be downloaded from Flywheel in BIDS standard. Flywheel's <a href="https://docs.flywheel.io/hc/en-us/articles/1500006525322-BIDS-Curation-Gear">BIDS Curation Gear Documentation</a> also provides additional information about the gear.</p>
+<p>If you have a Project on Flywheel, navigate to the "Sessions" tab. From here you can check if the BIDS Curation Gear is available for your project by the following steps on Flywheel.</p>
 <ol>
 <li>
-<p>Run BIDS Curation gear</p>
-<ul>
-<li>configuration</li>
-</ul>
+<p><strong>Select the "Run Gear" button.</strong> The button is located under the "Acquisitions" tab in the upper right hand corner.</p>
+<p><figure class="double-border">
+    <img src="../../img/bids-curation-run-gear.jpg" alt="BIDS Curation Run Gear button">
+</figure></p>
 </li>
 <li>
-<p>Check BIDS View</p>
+<p>A pop-up will appear, <strong>select "Utility Gear"</strong>.</p>
+<p><figure class="double-border">
+    <img src="../../img/bids-curation-utility-gear.jpg" alt="BIDS Curation Utility Gear button">
+</figure></p>
 </li>
-<li>If error, check log, check metadata</li>
-<li>Repeat steps 1 - 3 until BIDS-ified</li>
+<li>
+<p>In the "Select Gear" dropdown menu, there should be a <strong>"BIDS Curation"</strong> option.</p>
+<p><figure class="double-border">
+    <img src="../../img/bids-curation-select-gear.jpg" alt="BIDS Curation Gear in the dropdown menu">
+</figure></p>
+</li>
 </ol>
+<p>If the BIDS Curation Gear does not exist for your project and it should, please contact John Pyles at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#104;&#110;&#112;&#64;&#117;&#119;&#46;&#101;&#100;&#117;">&#106;&#111;&#104;&#110;&#112;&#64;&#117;&#119;&#46;&#101;&#100;&#117;</a>.</p>
+<h2 id="bids-template-file">BIDS Template File<a class="headerlink" href="#bids-template-file" title="Permanent link">&para;</a></h2>
+<p>The BIDS Curation Gear works because of the <a href="https://docs.flywheel.io/hc/en-us/articles/1500006476961-The-BIDS-template-file">BIDS Template File</a>. The BIDS template file is a JSON file that the BIDS Curation Gear uses to translate Flywheel metadata to BIDS compliant metadata.</p>
+<p>To learn more information about the BIDS Curation process and BIDS template, a good introduction would be to watch <a href="https://docs.flywheel.io/hc/en-us/articles/360053720853-Webinar-BIDS-Templating">Flywheel's BIDS Templating Webinar</a>. Further reading of Flywheel's documentation about how the template engine performs its processing is detailed <a href="https://docs.flywheel.io/hc/en-us/articles/1500006476941-How-the-BIDS-template-engine-processes-data">here</a> and a breakdown of the template file's definitions, rules, and syntax are explained <a href="https://docs.flywheel.io/hc/en-us/articles/1500006476961-The-BIDS-template-file">here</a>.</p>
+<h3 id="chn-reproin-extension-template">CHN ReproIn Extension Template<a class="headerlink" href="#chn-reproin-extension-template" title="Permanent link">&para;</a></h3>
+<p>At CHN, we have a custom BIDS template file, which was an extension of the <a href="https://github.com/repronim/reproin">ReproIn</a> template, that satisfies the most common acquisitions the center collects. This template file can be downloaded <a href="../../files/chn-reproin-extension-project-template.json" download>here</a>.</p>
+<p>Custom template files should be attached as a the Project level file. This can be achieved by going to the Project's "Information" tab. There is an "Attachments" section where files can be uploaded.</p>
+<figure class="double-border">
+    <img src="../../img/bids-curation-project-file.jpg" alt="BIDS template file attached as a Project level file">
+    <figcaption class="margin-1em">
+    Example of the `chn-reproin-extension-project-template.json` file attached at the Project level.
+    </figcaption>
+</figure>
+
+<h2 id="bids-curation-process">BIDS Curation Process<a class="headerlink" href="#bids-curation-process" title="Permanent link">&para;</a></h2>
+<p>The BIDs curation process is well documented by Flywheel as a tutorial and is highly recommended that users read it before attempting on their own. Each step below links to the relevant documentation, but this page will attempt to highlight the main points of each stage.</p>
+<ol>
+<li>
+<p><a href="https://docs.flywheel.io/hc/en-us/articles/1500006508722-BIDS-curation-tutorial-part-1-preparing-data">Prepare the data</a></p>
+<ol>
+<li>Run the <a href="https://github.com/scitran-apps/dicom-mr-classifier">SciTran: DICOM MR Classifier Gear</a>.</li>
+<li>Run the <a href="https://github.com/flywheel-apps/dcm2niix">dcm2niix: DICOM to NIfTI conversion Gear</a></li>
+<li>(<em>Optional</em>) Run the <a href="https://github.com/flywheel-apps/extract-cmrr-physio">CMRR: Extract CMRR Physio Gear</a></li>
+</ol>
+</li>
+<li>
+<p><a href="https://docs.flywheel.io/hc/en-us/articles/1500012005281-BIDS-curation-tutorial-part-2-running-the-BIDS-Curation-gear">Run the BIDS Curation Gear</a></p>
+<ol>
+<li>Run the BIDS Curation gear with desired configurations</li>
+<li>Review "Provenance" for curation success or failure</li>
+<li>Review BIDS curated acquisitions with "BIDS View"</li>
+</ol>
+</li>
+<li>
+<p>(<em>Optional, unless curation failed</em>) <a href="https://docs.flywheel.io/hc/en-us/articles/4402385363859-BIDS-curation-tutorial-part-3-troubleshooting-and-debugging">Troubleshooting</a></p>
+<ol>
+<li>Identifying a curation failure and read the curation log</li>
+<li>Adjust the BIDS Curation template to capture the error, either by:<ol>
+<li>Modify the template to suit your needs <br>
+(and consider sharing a successful template fix with the CHN).</li>
+<li>Contacting Kelly at for help.</li>
+</ol>
+</li>
+<li>Re-run the BIDS Curation gear</li>
+</ol>
+</li>
+</ol>
+<p>For further support regarding the BIDS curation process, please contact Kelly at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#107;&#99;&#104;&#97;&#110;&#103;&#52;&#64;&#117;&#119;&#46;&#101;&#100;&#117;">&#107;&#99;&#104;&#97;&#110;&#103;&#52;&#64;&#117;&#119;&#46;&#101;&#100;&#117;</a>.</p>
 <h2 id="exporting-data-in-bids-format">Exporting Data in BIDS Format<a class="headerlink" href="#exporting-data-in-bids-format" title="Permanent link">&para;</a></h2>
 <h3 id="flywheel-command-line-interface-cli">Flywheel Command-Line Interface (CLI)<a class="headerlink" href="#flywheel-command-line-interface-cli" title="Permanent link">&para;</a></h3>
 <p>Currently, the only method of download data from Flywheel in BIDS format is through the Flywheel Command-Line Interface (CLI). The CLI is an additional Flywheel program that can be used from the computer's Command Prompt (Windows) or Terminal (Mac). To install the Flywheel CLI, go to <a href="https://docs.flywheel.io/hc/en-us/articles/360008162214">Flywheel's CLI Installation</a> page.</p>
 <h3 id="exporting-data-in-bids-format-with-the-flywheel-cli">Exporting Data in BIDS Format with the Flywheel CLI<a class="headerlink" href="#exporting-data-in-bids-format-with-the-flywheel-cli" title="Permanent link">&para;</a></h3>
-<p>Once the CLI has been installed successfully, you can download your data in BIDS format from the Command Prompt or Terminal. </p>
-<p>The main command will take the form: </p>
-<pre><code>fw export bids [optional flags] --project [project label] [dest folder]
+<p>Once the CLI has been installed successfully, you can download your data in BIDS format from the Command Prompt or Terminal.</p>
+<p>The main command will take the form:</p>
+<pre><code class="language-bash">fw export bids [optional flags] --project [project label] [dest folder]
 </code></pre>
 <p>The <a href="https://docs.flywheel.io/hc/en-us/articles/1500006477001">Flywheel's BIDS Export Documentation</a> explains the exporting process additional information and options available through the CLI.</p>
 <h4 id="common-commands">Common Commands<a class="headerlink" href="#common-commands" title="Permanent link">&para;</a></h4>
-<p>Export an entire project: </p>
-<pre><code>fw export bids --project &quot;project_label&quot; /path/to/project_folder
+<p>Export an entire project:</p>
+<pre><code class="language-bash">fw export bids --project &quot;project_label&quot; /path/to/project_folder
 </code></pre>
-<p>Exporting by session (<code>\</code> allows for multiline commands): </p>
-<pre><code>fw export bids \
+<p>Exporting by session (<code>\</code> allows for multiline commands):</p>
+<pre><code class="language-bash">fw export bids \
     --project &quot;project_label&quot; \
     --session &quot;ses-01&quot; \
     path/to/project_folder
 </code></pre>
-<p>Exporting by subject: </p>
-<pre><code>fw export bids \
+<p>Exporting by subject:</p>
+<pre><code class="language-bash">fw export bids \
     --project &quot;project_label&quot; \
     --subject &quot;sub-01&quot; \
     path/to/project_folder
 </code></pre>
 <p>Exporting by subject and data types:</p>
-<pre><code>fw export bids \
+<pre><code class="language-bash">fw export bids \
     --project &quot;project_label&quot; \
     --subject &quot;sub-01&quot; \
     --data-type &quot;anat&quot; \
@@ -925,8 +1026,8 @@
     path/to/project_folder
 </code></pre>
 <h2 id="bids-validation">BIDS Validation<a class="headerlink" href="#bids-validation" title="Permanent link">&para;</a></h2>
-<p>Downloading the data from Flywheel does not guarantee that it is up-to-date with the <em>latest</em> BIDS specification. The BIDS standard updates regularly, which causes software based on a previous BIDS version to have to update as well. </p>
-<p>It is good practice to use the <a href="https://github.com/bids-standard/bids-validator">BIDS Validator</a> to ensure compliance with the latest BIDS version. There are multiple implementations of the validator (read the validator's documentation), but the <a href="https://bids-standard.github.io/bids-validator/">online version</a> is probably the easiest and fastest to use.</p>
+<p>Downloading the data from Flywheel does not guarantee that it is up-to-date with the <em>latest</em> BIDS specification. The BIDS standard updates regularly, which causes software, such as the BIDS Curation Gear, based on a previous BIDS version to lag behind in updating.</p>
+<p>Therefore, it is good practice to use the <a href="https://github.com/bids-standard/bids-validator">BIDS Validator</a> to ensure compliance with the latest BIDS version. There are multiple implementations of the validator (read the validator's documentation), but the <a href="https://bids-standard.github.io/bids-validator/">online version</a> is probably the easiest and fastest to use.</p>
                 
                   
                     
@@ -935,7 +1036,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 24, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2021</span>
       
     
   </small>
@@ -960,7 +1061,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../general/" class="md-footer__link md-footer__link--prev" aria-label="Previous: General" rel="prev">
+        <a href="../flywheel/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Flywheel" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -969,7 +1070,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              General
+              Flywheel
             </div>
           </div>
         </a>
@@ -1017,7 +1118,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
