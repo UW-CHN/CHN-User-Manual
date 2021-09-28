@@ -2,117 +2,122 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/appendix/contact/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/appendix/emergency-checklist/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/appendix/normal-checklist/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/appendix/site-documentation/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/computational-resources/cloud/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/computational-resources/computational-resources/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/computational-resources/hyak/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/computational-resources/ibic/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/flywheel/bids-curation/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://uw-chn.github.io/CHN-User-Manual/flywheel/exporting-in-bids/</loc>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/flywheel/flywheel/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/flywheel/freesurfer-recon-all/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/peripherals/boldscreen/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/peripherals/button-boxes/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/peripherals/eyelink1000-plus/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/peripherals/mock-scanner/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/peripherals/physiology/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/peripherals/sensimetrics-s14/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/siemens-prisma/epi-advanced/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/siemens-prisma/epi-artifacts/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/siemens-prisma/epi-basic/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/siemens-prisma/miscellaneous/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uw-chn.github.io/CHN-User-Manual/siemens-prisma/setting-up/</loc>
-         <lastmod>2021-09-27</lastmod>
+         <lastmod>2021-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
