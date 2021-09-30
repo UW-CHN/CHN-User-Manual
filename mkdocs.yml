@@ -37,6 +37,7 @@ nav:
     - BIDS Curation: flywheel/bids-curation.md
     - Exporting Data in BIDS: flywheel/exporting-in-bids.md
     - FreeSurfer recon-all: flywheel/freesurfer-recon-all.md
+    - BIDS fMRIPrep: flywheel/bids-fmriprep.md
   - APPENDIX:
     - Normal Operations Checklist: appendix/normal-checklist.md
     - Emergency Checklist: appendix/emergency-checklist.md
