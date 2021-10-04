@@ -42,7 +42,7 @@ nav:
     - Normal Operations Checklist: appendix/normal-checklist.md
     - Emergency Checklist: appendix/emergency-checklist.md
     - Site Documentation: appendix/site-documentation.md
-    - Contacts: appendix/contact.md
+    - Contacts: appendix/contacts.md
 
 # Build Directories
 
@@ -56,6 +56,8 @@ docs_dir: 'docs'
 site_dir: 'site'
 
 extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js
   - js/config.js
 
@@ -72,6 +74,8 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.inlinehilite
   - pymdownx.highlight
+  - pymdownx.arithmatex:
+      generic: true
   - toc:
       permalink: True
       toc_depth: 2

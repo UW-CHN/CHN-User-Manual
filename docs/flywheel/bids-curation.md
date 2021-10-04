@@ -49,7 +49,7 @@ If you have a Project on Flywheel, navigate to the "Sessions" tab. From here you
 1. **Select the "Run Gear" button.** The button is located under the "Acquisitions" tab in the upper right hand corner.
 
     <figure class="double-border">
-        <img src="../../img/bids-curation-run-gear.jpg" alt="BIDS Curation Run Gear button">
+        <img src="../../img/flywheel-run-gear.jpg" alt="BIDS Curation Run Gear button">
     </figure>
 
 2. A pop-up will appear, **select "Utility Gear"**.
@@ -64,7 +64,7 @@ If you have a Project on Flywheel, navigate to the "Sessions" tab. From here you
         <img src="../../img/bids-curation-select-gear.jpg" alt="BIDS Curation Gear in the dropdown menu">
     </figure>
 
-If the BIDS Curation Gear does not exist for your project and it should, please contact John Pyles at <johnp@uw.edu>.
+    If the BIDS Curation Gear does not exist for your project and it should, please contact John Pyles at <johnp@uw.edu>.
 
 ## BIDS Template File
 
@@ -79,7 +79,7 @@ At CHN, we have a custom BIDS template file, which was an extension of the [Repr
 Custom template files should be attached as a the Project level file. This can be achieved by going to the Project's "Information" tab. There is an "Attachments" section where files can be uploaded.
 
 <figure class="double-border">
-    <img src="../../img/bids-curation-project-file.jpg" alt="BIDS template file attached as a Project level file">
+    <img src="../../img/flywheel-project-files.jpg" alt="BIDS template file attached as a Project level file">
     <figcaption class="margin-1em">
     Example of the `chn-reproin-extension-project-template.json` file attached at the Project level.
     </figcaption>
