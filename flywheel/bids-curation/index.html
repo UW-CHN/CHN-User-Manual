@@ -597,6 +597,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5">
@@ -728,6 +730,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bids-fmriprep/" class="md-nav__link">
+        BIDS fMRIPrep
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -820,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../appendix/contact/" class="md-nav__link">
+      <a href="../../appendix/contacts/" class="md-nav__link">
         Contacts
       </a>
     </li>
@@ -944,7 +960,7 @@
 <li>
 <p><strong>Select the "Run Gear" button.</strong> The button is located under the "Acquisitions" tab in the upper right hand corner.</p>
 <p><figure class="double-border">
-    <img src="../../img/bids-curation-run-gear.jpg" alt="BIDS Curation Run Gear button">
+    <img src="../../img/flywheel-run-gear.jpg" alt="BIDS Curation Run Gear button">
 </figure></p>
 </li>
 <li>
@@ -958,9 +974,9 @@
 <p><figure class="double-border">
     <img src="../../img/bids-curation-select-gear.jpg" alt="BIDS Curation Gear in the dropdown menu">
 </figure></p>
+<p>If the BIDS Curation Gear does not exist for your project and it should, please contact John Pyles at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#104;&#110;&#112;&#64;&#117;&#119;&#46;&#101;&#100;&#117;">&#106;&#111;&#104;&#110;&#112;&#64;&#117;&#119;&#46;&#101;&#100;&#117;</a>.</p>
 </li>
 </ol>
-<p>If the BIDS Curation Gear does not exist for your project and it should, please contact John Pyles at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#104;&#110;&#112;&#64;&#117;&#119;&#46;&#101;&#100;&#117;">&#106;&#111;&#104;&#110;&#112;&#64;&#117;&#119;&#46;&#101;&#100;&#117;</a>.</p>
 <h2 id="bids-template-file">BIDS Template File<a class="headerlink" href="#bids-template-file" title="Permanent link">&para;</a></h2>
 <p>The BIDS Curation Gear works because of the <a href="https://docs.flywheel.io/hc/en-us/articles/1500006476961-The-BIDS-template-file">BIDS Template File</a>. The BIDS template file is a JSON file that the BIDS Curation Gear uses to translate Flywheel metadata to BIDS compliant metadata.</p>
 <p>To learn more information about the BIDS Curation process and BIDS template, a good introduction would be to watch <a href="https://docs.flywheel.io/hc/en-us/articles/360053720853-Webinar-BIDS-Templating">Flywheel's BIDS Templating Webinar</a>. Further reading of Flywheel's documentation about how the template engine performs its processing is detailed <a href="https://docs.flywheel.io/hc/en-us/articles/1500006476941-How-the-BIDS-template-engine-processes-data">here</a> and a breakdown of the template file's definitions, rules, and syntax are explained <a href="https://docs.flywheel.io/hc/en-us/articles/1500006476961-The-BIDS-template-file">here</a>.</p>
@@ -968,7 +984,7 @@
 <p>At CHN, we have a custom BIDS template file, which was an extension of the <a href="https://github.com/repronim/reproin">ReproIn</a> template, that satisfies the most common acquisitions the center collects. This template file can be downloaded <a href="../../files/chn-reproin-extension-project-template.json" download>here</a>.</p>
 <p>Custom template files should be attached as a the Project level file. This can be achieved by going to the Project's "Information" tab. There is an "Attachments" section where files can be uploaded.</p>
 <figure class="double-border">
-    <img src="../../img/bids-curation-project-file.jpg" alt="BIDS template file attached as a Project level file">
+    <img src="../../img/flywheel-project-files.jpg" alt="BIDS template file attached as a Project level file">
     <figcaption class="margin-1em">
     Example of the `chn-reproin-extension-project-template.json` file attached at the Project level.
     </figcaption>
@@ -1016,7 +1032,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 28, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 4, 2021</span>
       
     
   </small>
@@ -1102,6 +1118,10 @@
     
     
       <script src="../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       

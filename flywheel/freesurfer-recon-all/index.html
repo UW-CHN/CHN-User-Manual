@@ -597,6 +597,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5">
@@ -668,10 +670,82 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          FreeSurfer recon-all
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         FreeSurfer recon-all
       </a>
       
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recon-all" class="md-nav__link">
+    recon-all
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-of-recon-all" class="md-nav__link">
+    Output of recon-all
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recon-all-on-flywheel" class="md-nav__link">
+    recon-all on Flywheel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recon-all-output-on-flywheel" class="md-nav__link">
+    recon-all Output on Flywheel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reconstruction-quality-metrics" class="md-nav__link">
+    Reconstruction Quality Metrics
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bids-fmriprep/" class="md-nav__link">
+        BIDS fMRIPrep
+      </a>
     </li>
   
 
@@ -769,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../appendix/contact/" class="md-nav__link">
+      <a href="../../appendix/contacts/" class="md-nav__link">
         Contacts
       </a>
     </li>
@@ -802,6 +876,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recon-all" class="md-nav__link">
+    recon-all
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-of-recon-all" class="md-nav__link">
+    Output of recon-all
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recon-all-on-flywheel" class="md-nav__link">
+    recon-all on Flywheel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recon-all-output-on-flywheel" class="md-nav__link">
+    recon-all Output on Flywheel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reconstruction-quality-metrics" class="md-nav__link">
+    Reconstruction Quality Metrics
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -817,8 +934,144 @@
                   </a>
                 
                 
-                <h1 id="freesurfer-recon-all">FreeSurfer recon-all<a class="headerlink" href="#freesurfer-recon-all" title="Permanent link">&para;</a></h1>
-<p>This is the page for FreeSurfer recon-all</p>
+                <h1 id="freesurfer-recon-all">FreeSurfer <code>recon-all</code><a class="headerlink" href="#freesurfer-recon-all" title="Permanent link">&para;</a></h1>
+<p><a href="https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferWiki">FreeSurfer</a> is a software package that analyzes and visualizes structural and functional neuroimaging data. It is a reputable software known for its structural MRI analysis.</p>
+<p>FreeSurfer commands are called from the command line, so having some familiarity is recommended. To download and install FreeSurfer onto your preferred local machine, follow their documentation <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall">here</a>. </p>
+<p>An important step in the installation process is obtaining a <a href="https://surfer.nmr.mgh.harvard.edu/registration.html">license key</a>. This step is critical because the license key file is required in order to use Freesurfer on Flywheel.</p>
+<h2 id="recon-all"><code>recon-all</code><a class="headerlink" href="#recon-all" title="Permanent link">&para;</a></h2>
+<p><a href="https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all"><code>recon-all</code></a> is the command that implements FreeSurfer's cortical reconstruction process. The reconstruction process is multi-stepped and the details are explained on FreeSurfer's <code>recon-all</code> <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/ReconAllDevTable">process flow</a> page.</p>
+<h3 id="common-commands">Common Commands<a class="headerlink" href="#common-commands" title="Permanent link">&para;</a></h3>
+<p>Users are able to have <code>recon-all</code> perform any part of the cortical reconstruction pipeline with additional arguments. But most commonly, users specify <code>recon-all</code> to perform <em>all</em> parts of the cortical reconstruction.Below are common commands one would use to call <code>recon-all</code>.</p>
+<p>Command to perform all parts of cortical reconstruction on a T1-weighted image.</p>
+<pre><code class="language-bash">recon-all \
+    -s &quot;output_directory_name&quot; \
+    -sd &quot;/path/to/output/directory&quot; \
+    -i &quot;/path/to/t1/weighted/image/file&quot; \
+    -all
+</code></pre>
+<p>Command to perform all parts of cortical reconstruction on a T1-weighted image while also <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all#UsingT2orFLAIRdatatoimprovepialsurfaces">specifying a T2-weighted image to improve pial surfaces</a>.</p>
+<pre><code class="language-bash">recon-all \
+    -s &quot;output_directory_name&quot; \
+    -sd &quot;/path/to/output/directory&quot; \
+    -i &quot;/path/to/t1/weighted/image/file&quot; \
+    -T2 &quot;/path/to/t2/weighted/image/file&quot; \
+    -T2pial \
+    -all
+</code></pre>
+<h2 id="output-of-recon-all">Output of <code>recon-all</code><a class="headerlink" href="#output-of-recon-all" title="Permanent link">&para;</a></h2>
+<p>When <code>recon-all</code> finishes processing, the resulting output directory (with a few notable files) is shown in the following diagram:</p>
+<pre><code class="language-plaintext">output_directory
+├── label
+├── mri
+│   ├── brain.mgz
+│   ├── orig.mgz
+│   └── ...
+├── scripts
+│   ├── recon-all.log
+│   └── ...
+├── stats
+├── surf
+│   ├── ?h.inflated
+│   ├── ?h.orig
+│   └── ...
+├── tmp
+├── touch
+└── trash
+</code></pre>
+<h2 id="recon-all-on-flywheel"><code>recon-all</code> on Flywheel<a class="headerlink" href="#recon-all-on-flywheel" title="Permanent link">&para;</a></h2>
+<p>A good question to ask is why you should run <code>recon-all</code> on Flywheel when it can be performed locally? Well, <code>recon-all</code> is a notoriously time consuming computational process. It has been documented that processing one subject could take 6 - 24 hours depending on the computer's processor. Whereas, performing <code>recon-all</code> through Flywheel would use the (cloud) processors Flywheel is hosted on. This not only potentially speeds up the whole process, but also frees up the computational load from your local machine.</p>
+<h3 id="run-the-gear">Run the Gear<a class="headerlink" href="#run-the-gear" title="Permanent link">&para;</a></h3>
+<p>Below are the steps to run <code>recon-all</code> through Flywheel's gear mechanism.</p>
+<ol>
+<li>
+<p><a href="https://docs.flywheel.io/hc/en-us/articles/360013235453"><strong>Attach your FreeSurfer license file to the Project</strong></a>. A valid FreeSurfer license <em>must</em> be available in order to use the <code>recon-all</code> gear.</p>
+<p><figure class="double-border">
+    <img src="../../img/flywheel-project-files.jpg" alt="Example of a license.txt file attached at the Project level.">          <br />
+</figure></p>
+</li>
+<li>
+<p><strong>Select the "Run Gear" button.</strong> The button is located under the "Acquisitions" tab in the upper right hand corner.</p>
+<p><figure class="double-border">
+    <img src="../../img/flywheel-run-gear.jpg" alt="BIDS Curation Run Gear button">
+</figure></p>
+</li>
+<li>
+<p>A pop-up will appear, <strong>select "Analysis Gear"</strong>.</p>
+<p><figure class="double-border">
+    <img src="../../img/flywheel-analysis-gear.jpg" alt="BIDS Curation Analysis Gear button">
+</figure></p>
+</li>
+<li>
+<p>In the "Select Gear" dropdown menu, there should be a <strong>"FreeSurfer 7.X.X: run recon-all"</strong> option. </p>
+<p><figure class="double-border">
+    <img src="../../img/freesurfer-recon-all.jpg" alt="FreeSurfer recon-all gear in the gear selection dropdown menu">
+</figure></p>
+<p>If the FreeSurfer <code>recon-all</code> gear does not exist for your project and it should, please contact John Pyles at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#104;&#110;&#112;&#64;&#117;&#119;&#46;&#101;&#100;&#117;">&#106;&#111;&#104;&#110;&#112;&#64;&#117;&#119;&#46;&#101;&#100;&#117;</a>.</p>
+</li>
+<li>
+<p>In the "Inputs" tab, <strong>select the "Choose Input"</strong> button for the: </p>
+<ol>
+<li><code>anatomical</code>: i.e., T1-weighted image file</li>
+<li><code>freesurfer_license</code>: the FreeSurfer <code>license.txt</code> file</li>
+<li>(<em>Optional</em>) <code>t2w_anatomical</code>: i.e., T2-weighted image file</li>
+</ol>
+<p><figure class="double-border">
+    <img src="../../img/freesurfer-recon-all-inputs.jpg" alt="Example of FreeSurfer recon-all's input dialog menu">
+</figure></p>
+<p>Also consider re-naming the "Analysis Label" section with additional information beyond the processing start time, such as the T1-weighted image file name. </p>
+</li>
+<li>
+<p>In the <strong>"Configuration" tab</strong>, modify the desired <code>recon-all</code> options.</p>
+<p><figure class="double-border">
+    <img src="../../img/freesurfer-recon-all-config.jpg" alt="Example of FreeSurfer recon-all's configuration options">
+</figure></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It is highly recommended to use the "parallel" option. This allows <code>recon-all</code> to process in parallel, which greatly speeds up the computational processing time. The default is to have the parallel selected, but checking the configuration options is good practice.</p>
+</div>
+</li>
+<li>
+<p>Select <strong>"Run Gear"</strong> in the bottom right-hand corner and wait &gt; 6 hours.</p>
+</li>
+</ol>
+<h2 id="recon-all-output-on-flywheel"><code>recon-all</code> Output on Flywheel<a class="headerlink" href="#recon-all-output-on-flywheel" title="Permanent link">&para;</a></h2>
+<p>Once <code>recon-all</code> is finished, the results will appear in the session's "Analyses" tab. Refer to the <a href="https://docs.flywheel.io/hc/en-us/articles/360015505453">Analysis Gear documentation</a> for images and more details about analysis gears on Flywheel.</p>
+<p>Here is an example output from <code>recon-all</code>. The image has been truncated and does not show every output file created by the <code>recon-all</code> gear. All output files can be downloaded as apart of the entire analysis or individually by selecting the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path d="M96 184c39.8 0 72 32.2 72 72s-32.2 72-72 72-72-32.2-72-72 32.2-72 72-72zM24 80c0 39.8 32.2 72 72 72s72-32.2 72-72S135.8 8 96 8 24 40.2 24 80zm0 352c0 39.8 32.2 72 72 72s72-32.2 72-72-32.2-72-72-72-72 32.2-72 72z"/></svg></span> icon.</p>
+<figure class="double-border">
+    <img src="../../img/freesurfer-recon-all-output-1.jpg" alt="Example of FreeSurfer recon-all analysis gear output">
+</figure>
+
+<p>There will be a zip file located within the output files (see below). Unzipping the archived file will produce the usual <code>recon-all</code> <a href="#output-of-recon-all">output</a>.</p>
+<figure class="double-border">
+    <img src="../../img/freesurfer-recon-all-output-2.jpg" alt="Example of FreeSurfer recon-all analysis gear output zip file">
+</figure>
+
+<h2 id="reconstruction-quality-metrics">Reconstruction Quality Metrics<a class="headerlink" href="#reconstruction-quality-metrics" title="Permanent link">&para;</a></h2>
+<p>There are a few metrics that FreeSurfer is capable of calculating that may be of interest to people attempting to quantitatively assess the reconstruction results. </p>
+<h3 id="euler-number">Euler Number<a class="headerlink" href="#euler-number" title="Permanent link">&para;</a></h3>
+<p>The <a href="https://bookdown.org/u0243256/tbicc/freesurfer.html#euler">euler number</a> describes the topographical complexity of the reconstructed cortical surface. The formula for the euler number is <span class="arithmatex">\(\mathrm{euler} = 2 - 2g\)</span>, where <span class="arithmatex">\(g\)</span> is the number of holes in the surface. Therefore, the euler number for a flat and smooth surface with no holes (<span class="arithmatex">\(g = 0\)</span>) is 2. </p>
+<p>A good surface reconstruction algorithm aims to minimize the number of holes, <span class="arithmatex">\(g\)</span>, in the surface. This means the closer the surface's euler number comes to 2, the better the reconstruction, which implies better data quality (see <a href="https://doi.org/10.1016/j.neuroimage.2017.12.059">Rosen et al., 2018)</a>). </p>
+<p>The following command can be called from the command line to find the euler number and number of holes for each hemisphere: </p>
+<pre><code class="language-shell">$ grep -A2 &quot;Computing euler&quot; &quot;/path/to/.../scripts/recon-all.log&quot;
+Computing euler number
+orig.nofix lheno =  -20, rheno = -34
+orig.nofix lhholes =   11, rhholes = 18
+</code></pre>
+<h3 id="contrast-to-noise-ratios">Contrast-to-Noise Ratios<a class="headerlink" href="#contrast-to-noise-ratios" title="Permanent link">&para;</a></h3>
+<p>Contrast-to-noise ratio (CNR) is the difference in signal intensities between regions classified as different tissues types vs. the background (noise). Therefore, the greater the CNR value, the greater the contrast (and algorithmic separability) between the two tissues types.</p>
+<p>FreeSurfer calculates the gray/white matter and gray matter/cerebral spinal fluid (CSF) CNR values for each hemisphere with the <code>mri_cnr</code> command.</p>
+<pre><code class="language-shell">$ mri_cnr &quot;/path/to/.../surf&quot; &quot;path/to/.../mri/norm.mgz&quot;
+processing MRI volume /.../freesurfer/7.X.X/.../mri/norm.mgz...
+    white = 96.8+-6.1, gray = 76.0+-13.6, csf = 56.0+-16.6
+    gray/white CNR = 1.921, gray/csf CNR = 0.871
+lh CNR = 1.396
+    white = 96.7+-6.3, gray = 76.4+-13.4, csf = 56.3+-16.2
+    gray/white CNR = 1.880, gray/csf CNR = 0.905
+rh CNR = 1.392
+total CNR = 1.394
+</code></pre>
+<p>Each hemisphere's CNR value is the average of the hemisphere's gray/white and gray/CSF CNR values, and the total CNR value is the average of the two hemisphere's CNR values.</p>
+<p>For comparisons of CNR values, see <a href="https://doi.org/10.1186/1471-2342-12-27">Chalavi et al. (2012)</a>.</p>
                 
                   
                     
@@ -827,7 +1080,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 23, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 4, 2021</span>
       
     
   </small>
@@ -868,13 +1121,13 @@
       
       
         
-        <a href="../../appendix/normal-checklist/" class="md-footer__link md-footer__link--next" aria-label="Next: Normal Operations Checklist" rel="next">
+        <a href="../bids-fmriprep/" class="md-footer__link md-footer__link--next" aria-label="Next: BIDS fMRIPrep" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Normal Operations Checklist
+              BIDS fMRIPrep
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -913,6 +1166,10 @@
     
     
       <script src="../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
