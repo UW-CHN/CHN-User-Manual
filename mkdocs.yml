@@ -34,10 +34,13 @@ nav:
     - IBIC: computational-resources/ibic.md
   - FLYWHEEL:
     - flywheel/flywheel.md
+    - CMRR Physio: flywheel/cmrr-physio.md
+    - MRIQC: flywheel/mriqc.md
     - BIDS Curation: flywheel/bids-curation.md
     - Exporting Data in BIDS: flywheel/exporting-in-bids.md
     - FreeSurfer recon-all: flywheel/freesurfer-recon-all.md
-    - BIDS fMRIPrep: flywheel/bids-fmriprep.md
+    - fMRIPrep: flywheel/fmriprep.md
+    - qsiprep: flywheel/qsiprep.md
   - APPENDIX:
     - Normal Operations Checklist: appendix/normal-checklist.md
     - Emergency Checklist: appendix/emergency-checklist.md
