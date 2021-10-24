@@ -2,7 +2,7 @@
 
 [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferWiki) is a software package that analyzes and visualizes structural and functional neuroimaging data. It is a reputable software known for its structural MRI analysis.
 
-FreeSurfer commands are called from the command line, so having some familiarity is recommended. To download and install FreeSurfer onto your preferred local machine, follow their documentation [here](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall). 
+FreeSurfer commands are called from the command line, so having some familiarity is recommended. To download and install FreeSurfer onto your preferred local machine, follow their documentation [here](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall).
 
 An important step in the installation process is obtaining a [license key](https://surfer.nmr.mgh.harvard.edu/registration.html). This step is critical because the license key file is required in order to use Freesurfer on Flywheel.
 
@@ -35,7 +35,7 @@ recon-all \
     -T2pial \
     -all
 ```
-## Output of `recon-all` 
+## Output of `recon-all`
 
 When `recon-all` finishes processing, the resulting output directory (with a few notable files) is shown in the following diagram:
 
@@ -70,7 +70,7 @@ Below are the steps to run `recon-all` through Flywheel's gear mechanism.
 1. [**Attach your FreeSurfer license file to the Project**](https://docs.flywheel.io/hc/en-us/articles/360013235453). A valid FreeSurfer license *must* be available in order to use the `recon-all` gear.
 
     <figure class="double-border">
-        <img src="../../img/flywheel-project-files.jpg" alt="Example of a license.txt file attached at the Project level.">            
+        <img src="../../img/flywheel-project-files.jpg" alt="Example of a license.txt file attached at the Project level.">
     </figure>
 
 
@@ -86,7 +86,7 @@ Below are the steps to run `recon-all` through Flywheel's gear mechanism.
         <img src="../../img/flywheel-analysis-gear.jpg" alt="BIDS Curation Analysis Gear button">
     </figure>
 
-4. In the "Select Gear" dropdown menu, there should be a **"FreeSurfer 7.X.X: run recon-all"** option. 
+4. In the "Select Gear" dropdown menu, there should be a **"FreeSurfer 7.X.X: run recon-all"** option.
 
     <figure class="double-border">
         <img src="../../img/freesurfer-recon-all.jpg" alt="FreeSurfer recon-all gear in the gear selection dropdown menu">
@@ -94,7 +94,7 @@ Below are the steps to run `recon-all` through Flywheel's gear mechanism.
 
     If the FreeSurfer `recon-all` gear does not exist for your project and it should, please contact John Pyles at <johnp@uw.edu>.
 
-5. In the "Inputs" tab, **select the "Choose Input"** button for the: 
+5. In the "Inputs" tab, **select the "Choose Input"** button for the:
     1. `anatomical`: i.e., T1-weighted image file
     2. `freesurfer_license`: the FreeSurfer `license.txt` file
     3. (*Optional*) `t2w_anatomical`: i.e., T2-weighted image file
@@ -103,7 +103,7 @@ Below are the steps to run `recon-all` through Flywheel's gear mechanism.
         <img src="../../img/freesurfer-recon-all-inputs.jpg" alt="Example of FreeSurfer recon-all's input dialog menu">
     </figure>
 
-    Also consider re-naming the "Analysis Label" section with additional information beyond the processing start time, such as the T1-weighted image file name. 
+    Also consider re-naming the "Analysis Label" section with additional information beyond the processing start time, such as the T1-weighted image file name.
 
 6. In the **"Configuration" tab**, modify the desired `recon-all` options.
 
@@ -135,15 +135,15 @@ There will be a zip file located within the output files (see below). Unzipping 
 
 ## Reconstruction Quality Metrics
 
-There are a few metrics that FreeSurfer is capable of calculating that may be of interest to people attempting to quantitatively assess the reconstruction results. 
+There are a few metrics that FreeSurfer is capable of calculating that may be of interest to people attempting to quantitatively assess the reconstruction results.
 
 ### Euler Number
 
-The [euler number](https://bookdown.org/u0243256/tbicc/freesurfer.html#euler) describes the topographical complexity of the reconstructed cortical surface. The formula for the euler number is $\mathrm{euler} = 2 - 2g$, where $g$ is the number of holes in the surface. Therefore, the euler number for a flat and smooth surface with no holes ($g = 0$) is 2. 
+The [euler number](https://bookdown.org/u0243256/tbicc/freesurfer.html#euler) describes the topographical complexity of the reconstructed cortical surface. The formula for the euler number is $\mathrm{euler} = 2 - 2g$, where $g$ is the number of holes in the surface. Therefore, the euler number for a flat and smooth surface with no holes ($g = 0$) is 2.
 
-A good surface reconstruction algorithm aims to minimize the number of holes, $g$, in the surface. This means the closer the surface's euler number comes to 2, the better the reconstruction, which implies better data quality (see [Rosen et al., 2018)](https://doi.org/10.1016/j.neuroimage.2017.12.059)). 
+A good surface reconstruction algorithm aims to minimize the number of holes, $g$, in the surface. This means the closer the surface's euler number comes to 2, the better the reconstruction, which implies better data quality (see [Rosen et al., 2018](https://doi.org/10.1016/j.neuroimage.2017.12.059)).
 
-The following command can be called from the command line to find the euler number and number of holes for each hemisphere: 
+The following command can be called from the command line to find the euler number and number of holes for each hemisphere:
 
 ```shell
 $ grep -A2 "Computing euler" "/path/to/.../scripts/recon-all.log"

@@ -51,7 +51,6 @@ $ git clone https://github.com/UW-CHN/CHN-User-Manual.git
 
 This will download the [website's GitHub repository](https://github.com/UW-CHN/CHN-User-Manual) to your current working directory. You will need to run this command only once.
 
-
 ## MkDocs Site Structure
 
 The MkDocs documentation has a helpful [getting started guide](https://www.mkdocs.org/getting-started/?#getting-started-with-mkdocs).
