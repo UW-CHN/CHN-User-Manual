@@ -15,6 +15,15 @@ $ mkdocs --version
 mkdocs, version 1.2.2 from /usr/local/lib/python3.8/site-packages/mkdocs (Python 3.8)
 ```
 
+### MkDocs Markdown Extensions
+
+MkDocs also provides a lot of flexibility to site rendering by allowing users to use markdown extensions. The desired extensions can be specified in the [`mkdocs.yml`](#mkdocsyml) configuration file. Details about how to add markdown extensions can be found on the [MkDocs documentation page](https://www.mkdocs.org/user-guide/configuration/#markdown_extensions).
+
+This site requires some popular markdown extensions that will also need to be installed onto the local machine in order to render site. Here is the list of extensions that need be installed:
+
+* [Material](https://squidfunk.github.io/mkdocs-material/getting-started/)
+* [PyMdown Extensions](https://facelessuser.github.io/pymdown-extensions/installation/)
+
 ### Git
 
 Download and install the proper [git](https://git-scm.com/downloads) distribution based on your operating system.
