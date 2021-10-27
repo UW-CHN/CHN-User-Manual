@@ -15,6 +15,21 @@ $ mkdocs --version
 mkdocs, version 1.2.2 from /usr/local/lib/python3.8/site-packages/mkdocs (Python 3.8)
 ```
 
+### MkDocs External Dependencies
+
+MkDocs also provides a lot of flexibility to site rendering by allowing users to use [markdown extensions](https://www.mkdocs.org/user-guide/configuration/#markdown_extensions) and [plugins](https://www.mkdocs.org/dev-guide/plugins/). The dependencies can be specified in the [`mkdocs.yml`](#mkdocsyml) configuration file.
+
+This site requires some popular markdown extensions and plugins that will also need to be installed onto the local machine in order to render site. Here is the list of extensions that need be installed:
+
+**Markdown Extensions**
+
+* [Material](https://squidfunk.github.io/mkdocs-material/getting-started/)
+* [PyMdown Extensions](https://facelessuser.github.io/pymdown-extensions/installation/)
+
+**Plugins**
+
+* [`git-revision-date-localized`](https://pypi.org/project/mkdocs-git-revision-date-localized-plugin/)
+
 ### Git
 
 Download and install the proper [git](https://git-scm.com/downloads) distribution based on your operating system.
