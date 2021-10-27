@@ -29,7 +29,7 @@ Each acquisition is titled as they are listed on the scanner console. For exampl
     </figcption>
 </figure>
 
-When the DICOM is uploaded, Flywheel will also populate its metadata fields. The metadata can be viewed by clicking on the "Information" icon for a file (or any type of Flywheel data). 
+When the DICOM is uploaded, Flywheel will also populate its metadata fields. The metadata can be viewed by clicking on the "Information" icon, :material-information:, for a file (or any type of Flywheel data). 
 
 <figure class="double-border">
     <img src="../../img/bids-curation-flywheel-metadata.jpg" alt="Example of Flywheel metadata">
@@ -42,7 +42,7 @@ Exporting data at this stage will result in the a directory structure that follo
 
 ## BIDS Curation Gear
 
-The [BIDS Curation Gear](https://gitlab.com/flywheel-io/flywheel-apps/curate-bids) is software developed by Flywheel to help translate Flywheel metadata to BIDS compliant metadata. This allows the data to be downloaded from Flywheel in BIDS standard and allows other softare packages (e.g., [fmriPrep](https://fmriprep.org/en/stable/)) to easily process the data. Flywheel's [BIDS Curation Gear Documentation](https://docs.flywheel.io/hc/en-us/articles/1500006525322-BIDS-Curation-Gear) also provides additional information about the gear.
+The [BIDS Curation Gear](https://gitlab.com/flywheel-io/flywheel-apps/curate-bids) is software developed by Flywheel to help translate Flywheel metadata to BIDS compliant metadata. This allows the data to be downloaded from Flywheel in BIDS standard and allows other softare packages (e.g., [fMRIPrep](https://fmriprep.org/en/stable/)) to easily process the data. Flywheel's [BIDS Curation Gear Documentation](https://docs.flywheel.io/hc/en-us/articles/1500006525322-BIDS-Curation-Gear) also provides additional information about the gear.
 
 If you have a Project on Flywheel, navigate to the "Sessions" tab. From here you can check if the BIDS Curation Gear is available for your project by the following steps on Flywheel.
 
@@ -52,10 +52,10 @@ If you have a Project on Flywheel, navigate to the "Sessions" tab. From here you
         <img src="../../img/flywheel-run-gear.jpg" alt="BIDS Curation Run Gear button">
     </figure>
 
-2. A pop-up will appear, **select "Utility Gear"**.
+2. A pop-up will appear, **select "Analysis Gear"**.
 
     <figure class="double-border">
-        <img src="../../img/bids-curation-utility-gear.jpg" alt="BIDS Curation Utility Gear button">
+        <img src="../../img/flywheel-analysis-gear.jpg" alt="BIDS Curation Analysis Gear button">
     </figure>
 
 3. In the "Select Gear" dropdown menu, there should be a **"BIDS Curation"** option.
@@ -85,6 +85,15 @@ Custom template files should be attached as a the Project level file. This can b
     </figcaption>
 </figure>
 
+During [BIDS Curation Process at Step 2](bids-curation.md#bids-curation-process), you will have the opportunity to supply the "template" to be used during the curation process. The template file can be navigated to with Flywheel's file navigation system, similarly to this [example](https://docs.flywheel.io/hc/en-us/articles/360013235453). 
+
+<figure class="double-border">
+    <img src="../../img/bids-curation-config.jpg" alt="BIDS Curation Gear Configuration Menu">
+    <figcaption class="margin-1em">
+        Example of the BIDS Curation gear configuration menu.
+    </figcaption>
+</figure>
+
 ## BIDS Curation Process
 
 The BIDs curation process is well documented by Flywheel as a tutorial and is highly recommended that users read it before attempting on their own. Each step below links to the relevant documentation, but this page will attempt to highlight the main points of each stage.
@@ -94,17 +103,22 @@ The BIDs curation process is well documented by Flywheel as a tutorial and is hi
     2. Run the [dcm2niix: DICOM to NIfTI conversion Gear](https://github.com/flywheel-apps/dcm2niix)
     3. (*Optional*) Run the [CMRR: Extract CMRR Physio Gear](https://github.com/flywheel-apps/extract-cmrr-physio)
 
-2. [Run the BIDS Curation Gear](https://docs.flywheel.io/hc/en-us/articles/1500012005281-BIDS-curation-tutorial-part-2-running-the-BIDS-Curation-gear)
-    1. Run the BIDS Curation gear with desired configurations
+2. [Run the BIDS Curation Gear](https://docs.flywheel.io/hc/en-us/articles/1500012005281-BIDS-curation-tutorial-part-2-running-the-BIDS-Curation-gear#h_01FJCEKPWE9WBBV81VKTSFZ8ZD)
+    1. Run the BIDS Curation gear with desired configurations  
     2. Review "Provenance" for curation success or failure
     3. Review BIDS curated acquisitions with "BIDS View"
 
-3. (*Optional, unless curation failed*) [Troubleshooting](https://docs.flywheel.io/hc/en-us/articles/4402385363859-BIDS-curation-tutorial-part-3-troubleshooting-and-debugging)
+3. [Review the Curation Reports](https://docs.flywheel.io/hc/en-us/articles/4405065304723-BIDS-curation-tutorial-part-4-interpreting-the-curation-report)
+    1. Review the NIfTI spreadsheet (i.e., `*_niftis.csv`)
+    2. Review the Acquisitions spreadsheets (i.e., `*_acquisitions*.csv`)
+    3. (*Optional, if fmaps were collected*) Review the IntendedFor spreadsheet (i.e., `*_intendedfors.csv`)
+
+4. (*Optional, unless curation failed*) [Troubleshooting](https://docs.flywheel.io/hc/en-us/articles/4402385363859-BIDS-curation-tutorial-part-3-troubleshooting-and-debugging)
     1. Identifying a curation failure and read the curation log
     2. Adjust the BIDS Curation template to capture the error, either by:
         1. Modify the template to suit your needs <br>
         (and consider sharing a successful template fix with the CHN).
-        2. Contacting Kelly at for help.
-    3. Re-run the BIDS Curation gear
+        2. Contacting Kelly for help.
+    3. Repeat Steps 2 and 3.
 
 For further support regarding the BIDS curation process, please contact Kelly at <kchang4@uw.edu>.
