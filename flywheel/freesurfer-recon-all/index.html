@@ -984,7 +984,7 @@
                 
                 <h1 id="freesurfer-recon-all">FreeSurfer <code>recon-all</code><a class="headerlink" href="#freesurfer-recon-all" title="Permanent link">&para;</a></h1>
 <p><a href="https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferWiki">FreeSurfer</a> is a software package that analyzes and visualizes structural and functional neuroimaging data. It is a reputable software known for its structural MRI analysis.</p>
-<p>FreeSurfer commands are called from the command line, so having some familiarity is recommended. To download and install FreeSurfer onto your preferred local machine, follow their documentation <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall">here</a>. </p>
+<p>FreeSurfer commands are called from the command line, so having some familiarity is recommended. To download and install FreeSurfer onto your preferred local machine, follow their documentation <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall">here</a>.</p>
 <p>An important step in the installation process is obtaining a <a href="https://surfer.nmr.mgh.harvard.edu/registration.html">license key</a>. This step is critical because the license key file is required in order to use Freesurfer on Flywheel.</p>
 <h2 id="recon-all"><code>recon-all</code><a class="headerlink" href="#recon-all" title="Permanent link">&para;</a></h2>
 <p><a href="https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all"><code>recon-all</code></a> is the command that implements FreeSurfer's cortical reconstruction process. The reconstruction process is multi-stepped and the details are explained on FreeSurfer's <code>recon-all</code> <a href="https://surfer.nmr.mgh.harvard.edu/fswiki/ReconAllDevTable">process flow</a> page.</p>
@@ -1034,7 +1034,7 @@
 <li>
 <p><a href="https://docs.flywheel.io/hc/en-us/articles/360013235453"><strong>Attach your FreeSurfer license file to the Project</strong></a>. A valid FreeSurfer license <em>must</em> be available in order to use the <code>recon-all</code> gear.</p>
 <p><figure class="double-border">
-    <img src="../../img/flywheel-project-files.jpg" alt="Example of a license.txt file attached at the Project level.">          <br />
+    <img src="../../img/flywheel-project-files.jpg" alt="Example of a license.txt file attached at the Project level.">
 </figure></p>
 </li>
 <li>
@@ -1050,14 +1050,14 @@
 </figure></p>
 </li>
 <li>
-<p>In the "Select Gear" dropdown menu, there should be a <strong>"FreeSurfer 7.X.X: run recon-all"</strong> option. </p>
+<p>In the "Select Gear" dropdown menu, there should be a <strong>"FreeSurfer 7.X.X: run recon-all"</strong> option.</p>
 <p><figure class="double-border">
     <img src="../../img/freesurfer-recon-all.jpg" alt="FreeSurfer recon-all gear in the gear selection dropdown menu">
 </figure></p>
 <p>If the FreeSurfer <code>recon-all</code> gear does not exist for your project and it should, please contact John Pyles at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#104;&#110;&#112;&#64;&#117;&#119;&#46;&#101;&#100;&#117;">&#106;&#111;&#104;&#110;&#112;&#64;&#117;&#119;&#46;&#101;&#100;&#117;</a>.</p>
 </li>
 <li>
-<p>In the "Inputs" tab, <strong>select the "Choose Input"</strong> button for the: </p>
+<p>In the "Inputs" tab, <strong>select the "Choose Input"</strong> button for the:</p>
 <ol>
 <li><code>anatomical</code>: i.e., T1-weighted image file</li>
 <li><code>freesurfer_license</code>: the FreeSurfer <code>license.txt</code> file</li>
@@ -1066,7 +1066,7 @@
 <p><figure class="double-border">
     <img src="../../img/freesurfer-recon-all-inputs.jpg" alt="Example of FreeSurfer recon-all's input dialog menu">
 </figure></p>
-<p>Also consider re-naming the "Analysis Label" section with additional information beyond the processing start time, such as the T1-weighted image file name. </p>
+<p>Also consider re-naming the "Analysis Label" section with additional information beyond the processing start time, such as the T1-weighted image file name.</p>
 </li>
 <li>
 <p>In the <strong>"Configuration" tab</strong>, modify the desired <code>recon-all</code> options.</p>
@@ -1095,11 +1095,11 @@
 </figure>
 
 <h2 id="reconstruction-quality-metrics">Reconstruction Quality Metrics<a class="headerlink" href="#reconstruction-quality-metrics" title="Permanent link">&para;</a></h2>
-<p>There are a few metrics that FreeSurfer is capable of calculating that may be of interest to people attempting to quantitatively assess the reconstruction results. </p>
+<p>There are a few metrics that FreeSurfer is capable of calculating that may be of interest to people attempting to quantitatively assess the reconstruction results.</p>
 <h3 id="euler-number">Euler Number<a class="headerlink" href="#euler-number" title="Permanent link">&para;</a></h3>
-<p>The <a href="https://bookdown.org/u0243256/tbicc/freesurfer.html#euler">euler number</a> describes the topographical complexity of the reconstructed cortical surface. The formula for the euler number is <span class="arithmatex">\(\mathrm{euler} = 2 - 2g\)</span>, where <span class="arithmatex">\(g\)</span> is the number of holes in the surface. Therefore, the euler number for a flat and smooth surface with no holes (<span class="arithmatex">\(g = 0\)</span>) is 2. </p>
-<p>A good surface reconstruction algorithm aims to minimize the number of holes, <span class="arithmatex">\(g\)</span>, in the surface. This means the closer the surface's euler number comes to 2, the better the reconstruction, which implies better data quality (see <a href="https://doi.org/10.1016/j.neuroimage.2017.12.059">Rosen et al., 2018)</a>). </p>
-<p>The following command can be called from the command line to find the euler number and number of holes for each hemisphere: </p>
+<p>The <a href="https://bookdown.org/u0243256/tbicc/freesurfer.html#euler">euler number</a> describes the topographical complexity of the reconstructed cortical surface. The formula for the euler number is <span class="arithmatex">\(\mathrm{euler} = 2 - 2g\)</span>, where <span class="arithmatex">\(g\)</span> is the number of holes in the surface. Therefore, the euler number for a flat and smooth surface with no holes (<span class="arithmatex">\(g = 0\)</span>) is 2.</p>
+<p>A good surface reconstruction algorithm aims to minimize the number of holes, <span class="arithmatex">\(g\)</span>, in the surface. This means the closer the surface's euler number comes to 2, the better the reconstruction, which implies better data quality (see <a href="https://doi.org/10.1016/j.neuroimage.2017.12.059">Rosen et al., 2018</a>).</p>
+<p>The following command can be called from the command line to find the euler number and number of holes for each hemisphere:</p>
 <pre><code class="language-shell">$ grep -A2 &quot;Computing euler&quot; &quot;/path/to/.../scripts/recon-all.log&quot;
 Computing euler number
 orig.nofix lheno =  -20, rheno = -34
@@ -1128,7 +1128,7 @@ total CNR = 1.394
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 4, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2021</span>
       
     
   </small>

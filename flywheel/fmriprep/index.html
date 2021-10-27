@@ -742,8 +742,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#local-fmriprep" class="md-nav__link">
-    Local fmriprep
+  <a href="#fmriprep_1" class="md-nav__link">
+    fMRIPrep
   </a>
   
 </li>
@@ -758,13 +758,6 @@
         <li class="md-nav__item">
   <a href="#fmriprep-output-on-flywheel" class="md-nav__link">
     fMRIPRep Output on Flywheel
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reconstruction-quality" class="md-nav__link">
-    Reconstruction Quality?
   </a>
   
 </li>
@@ -924,8 +917,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#local-fmriprep" class="md-nav__link">
-    Local fmriprep
+  <a href="#fmriprep_1" class="md-nav__link">
+    fMRIPrep
   </a>
   
 </li>
@@ -940,13 +933,6 @@
         <li class="md-nav__item">
   <a href="#fmriprep-output-on-flywheel" class="md-nav__link">
     fMRIPRep Output on Flywheel
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reconstruction-quality" class="md-nav__link">
-    Reconstruction Quality?
   </a>
   
 </li>
@@ -969,12 +955,86 @@
                 
                 
                 <h1 id="fmriprep">fMRIPrep<a class="headerlink" href="#fmriprep" title="Permanent link">&para;</a></h1>
-<p>background</p>
-<h2 id="local-fmriprep">Local fmriprep<a class="headerlink" href="#local-fmriprep" title="Permanent link">&para;</a></h2>
+<p>According to <a href="https://fmriprep.org/en/20.2.5/index.html">fMRIPrep's documentation</a>:</p>
+<blockquote>
+<p>fMRIPrep is a functional magnetic resonance imaging (fMRI) data preprocessing pipeline that is designed to provide an easily accessible, state-of-the-art interface that is robust to variations in scan acquisition protocols and that requires minimal user input, while providing easily interpretable and comprehensive error and output reporting. It performs basic processing steps (coregistration, normalization, unwarping, noise component extraction, segmentation, skullstripping, etc.) providing outputs that can be easily submitted to a variety of group level analyses, including task-based or resting-state fMRI, graph theory measures, surface or volume-based statistics, etc.</p>
+<p>The fMRIPrep pipeline uses a combination of tools from well-known software packages, including <a href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/">FSL</a>, <a href="https://stnava.github.io/ANTs/">ANTs</a>, <a href="https://surfer.nmr.mgh.harvard.edu/">FreeSurfer</a> and <a href="https://afni.nimh.nih.gov/">AFNI</a>. This pipeline was designed to provide the best software implementation for each state of preprocessing, and will be updated as newer and better neuroimaging software become available.</p>
+</blockquote>
+<p>It is recommended to implement fMRIPrep as a containerized execution with <a href="https://www.docker.com/">Docker</a> on one's local machine. And the <a href="https://github.com/flywheel-apps/bids-fmriprep">fMRIPrep's Flywheel gear</a> is able to operate perform the same operations on Flywheel's host server.</p>
+<h2 id="fmriprep_1">fMRIPrep<a class="headerlink" href="#fmriprep_1" title="Permanent link">&para;</a></h2>
+<p><a href="https://fmriprep.org/en/20.2.5/usage.html">usage notes</a></p>
+<h3 id="install-docker">Install Docker<a class="headerlink" href="#install-docker" title="Permanent link">&para;</a></h3>
+<p><a href="https://docs.docker.com/get-docker/">Install Docker</a>.
+Once the Docker Desktop has been installed, you should also have access to Docker's command line commands. If you have Docker open and running, issuing the following command will show that everything has been successful.</p>
+<pre><code class="language-bash">docker info
+</code></pre>
+<h3 id="install-fmriprep-docker">Install <code>fmriprep-docker</code><a class="headerlink" href="#install-fmriprep-docker" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">pip install fmriprep-docker
+</code></pre>
+<p>Install Docker image for fmriprep.</p>
+<pre><code class="language-bash">docker pull nipreps/fmriprep:&lt;tag&gt;
+</code></pre>
+<p>To check if <code>fmriprep-docker</code> is install correctly, you can run in the command line:</p>
+<pre><code class="language-shell">$ fmriprep-docker --version
+fMRIPrep v20.2.5
+</code></pre>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p>The most straightforward command to run fMRIPrep with Docker is with the convinent <code>fmriprep-docker</code> command. The <code>fmriprep-docker</code> command is documented <a href="https://fmriprep.org/en/20.2.5/usage.html#the-command-line-interface-of-the-docker-wrapper">here</a>.</p>
+<pre><code class="language-bash">fmriprep-docker \
+    &quot;/path/to/bids&quot; \
+    &quot;/path/to/derivatives&quot; \
+    participant \
+    --fs-license-file &quot;/path/to/fs/license.txt&quot;
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>the required FreeSurfer license.txt file....</p>
+</div>
+<p>More complicated commands to use <code>fmriprep</code> will require using the <code>docker</code> command explicitly. An example is provided below with additional specification of the <code>--bids-filter-file</code> argument.</p>
+<p><a href="https://fmriprep.org/en/20.2.5/faq.html#how-do-i-select-only-certain-files-to-be-input-to-fmriprep">bids filter file information</a></p>
+<pre><code class="language-bash">docker run --rm -e DOCKER_VERSION_8395080871=20.10.8 -it \
+    -v &quot;path/to/filter.json:filter.json:ro&quot; \
+    -v &quot;path/to/fs/license.txt:/opt/freesurfer/license.txt:ro&quot; \
+    -v &quot;path/to/bids:/data:ro&quot; \
+    -v &quot;path/to/derivatives:/out&quot; \
+    nipreps/fmriprep:&lt;tag&gt; \
+    /data /out participant \
+    --bids-filter-file filter.json \
+    --fs-license-file /opt/freesurfer/license.txt
+</code></pre>
 <h2 id="output-of-fmriprep">Output of fMRIPrep<a class="headerlink" href="#output-of-fmriprep" title="Permanent link">&para;</a></h2>
+<h3 id="directory-structure">Directory Structure<a class="headerlink" href="#directory-structure" title="Permanent link">&para;</a></h3>
+<pre><code class="language-plaintext">derivatives
+├── fmriprep
+│   ├── dataset_description.json
+│   ├── ...
+│   ├── sub-&lt;subject_label&gt;
+│   │   ├── ...
+│   │   └── ses-&lt;session_label&gt;
+│   │       ├── anat
+│   │       └── func
+│   └── sub-&lt;subject_label&gt;.html
+└── freesurfer
+    ├── fsaverage
+    └── sub-&lt;subject_label&gt;
+</code></pre>
+<h3 id="visual-report">Visual Report<a class="headerlink" href="#visual-report" title="Permanent link">&para;</a></h3>
+<p>One of the outputs is a visual report of the analsysi performed.
+<a href="https://fmriprep.org/en/20.2.5/outputs.html">sample visual report</a>.</p>
+<h3 id="read-more-about-outputs">READ MORE ABOUT OUTPUTS<a class="headerlink" href="#read-more-about-outputs" title="Permanent link">&para;</a></h3>
+<p><a href="https://fmriprep.org/en/20.2.5/outputs.html">output of fMRIPrep documentation</a></p>
 <h2 id="fmriprep-output-on-flywheel">fMRIPRep Output on Flywheel<a class="headerlink" href="#fmriprep-output-on-flywheel" title="Permanent link">&para;</a></h2>
-<h2 id="reconstruction-quality">Reconstruction Quality?<a class="headerlink" href="#reconstruction-quality" title="Permanent link">&para;</a></h2>
-<p>asdfasdf</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The fMRIPrep gear can only be run on datasets that have been BIDS curated and can pass <a href="https://github.com/bids-standard/bids-validator">BIDS Validation</a>. Read about the Flywheel <a href="../bids-curation/">BIDS curation process</a>. Alternatively, specify a <code>.bidsignore</code> file or set the <code>gear-run-bids-validation</code> option to be true to force past the BIDS validation.</p>
+</div>
+<p><a href="https://docs.flywheel.io/hc/en-us/articles/360018872774">errors on flywheel</a></p>
+<p><a href="https://docs.flywheel.io/hc/en-us/articles/360013235453">include license.txt</a></p>
+<figure class="double-border">
+    <img src="../../img/img.png" alt="" />
+    <figcaption class="margin-1em">
+    </figcaption>
+</figure>
                 
                   
                     
@@ -983,7 +1043,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 15, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 21, 2021</span>
       
     
   </small>

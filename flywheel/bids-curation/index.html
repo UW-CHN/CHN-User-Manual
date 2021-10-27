@@ -992,7 +992,7 @@
     </figcption>
 </figure>
 
-<p>When the DICOM is uploaded, Flywheel will also populate its metadata fields. The metadata can be viewed by clicking on the "Information" icon for a file (or any type of Flywheel data). </p>
+<p>When the DICOM is uploaded, Flywheel will also populate its metadata fields. The metadata can be viewed by clicking on the "Information" icon, <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z"/></svg></span>, for a file (or any type of Flywheel data). </p>
 <figure class="double-border">
     <img src="../../img/bids-curation-flywheel-metadata.jpg" alt="Example of Flywheel metadata">
     <figcaption class="margin-1em">
@@ -1002,7 +1002,7 @@
 
 <p>Exporting data at this stage will result in the a directory structure that follows Flywheel's data heirarchy and the files will retain their UID naming. This is typically not ideal as UID names are not human readable without training. Therefore, it is preferable to use the BIDS Curation gear, which helps rename the data files when you are exporting them from Flywheel. </p>
 <h2 id="bids-curation-gear">BIDS Curation Gear<a class="headerlink" href="#bids-curation-gear" title="Permanent link">&para;</a></h2>
-<p>The <a href="https://gitlab.com/flywheel-io/flywheel-apps/curate-bids">BIDS Curation Gear</a> is software developed by Flywheel to help translate Flywheel metadata to BIDS compliant metadata. This allows the data to be downloaded from Flywheel in BIDS standard and allows other softare packages (e.g., <a href="https://fmriprep.org/en/stable/">fmriPrep</a>) to easily process the data. Flywheel's <a href="https://docs.flywheel.io/hc/en-us/articles/1500006525322-BIDS-Curation-Gear">BIDS Curation Gear Documentation</a> also provides additional information about the gear.</p>
+<p>The <a href="https://gitlab.com/flywheel-io/flywheel-apps/curate-bids">BIDS Curation Gear</a> is software developed by Flywheel to help translate Flywheel metadata to BIDS compliant metadata. This allows the data to be downloaded from Flywheel in BIDS standard and allows other softare packages (e.g., <a href="https://fmriprep.org/en/stable/">fMRIPrep</a>) to easily process the data. Flywheel's <a href="https://docs.flywheel.io/hc/en-us/articles/1500006525322-BIDS-Curation-Gear">BIDS Curation Gear Documentation</a> also provides additional information about the gear.</p>
 <p>If you have a Project on Flywheel, navigate to the "Sessions" tab. From here you can check if the BIDS Curation Gear is available for your project by the following steps on Flywheel.</p>
 <ol>
 <li>
@@ -1012,9 +1012,9 @@
 </figure></p>
 </li>
 <li>
-<p>A pop-up will appear, <strong>select "Utility Gear"</strong>.</p>
+<p>A pop-up will appear, <strong>select "Analysis Gear"</strong>.</p>
 <p><figure class="double-border">
-    <img src="../../img/bids-curation-utility-gear.jpg" alt="BIDS Curation Utility Gear button">
+    <img src="../../img/flywheel-analysis-gear.jpg" alt="BIDS Curation Analysis Gear button">
 </figure></p>
 </li>
 <li>
@@ -1038,6 +1038,14 @@
     </figcaption>
 </figure>
 
+<p>During <a href="./#bids-curation-process">BIDS Curation Process at Step 2</a>, you will have the opportunity to supply the "template" to be used during the curation process. The template file can be navigated to with Flywheel's file navigation system, similarly to this <a href="https://docs.flywheel.io/hc/en-us/articles/360013235453">example</a>. </p>
+<figure class="double-border">
+    <img src="../../img/bids-curation-config.jpg" alt="BIDS Curation Gear Configuration Menu">
+    <figcaption class="margin-1em">
+        Example of the BIDS Curation gear configuration menu.
+    </figcaption>
+</figure>
+
 <h2 id="bids-curation-process">BIDS Curation Process<a class="headerlink" href="#bids-curation-process" title="Permanent link">&para;</a></h2>
 <p>The BIDs curation process is well documented by Flywheel as a tutorial and is highly recommended that users read it before attempting on their own. Each step below links to the relevant documentation, but this page will attempt to highlight the main points of each stage.</p>
 <ol>
@@ -1050,11 +1058,19 @@
 </ol>
 </li>
 <li>
-<p><a href="https://docs.flywheel.io/hc/en-us/articles/1500012005281-BIDS-curation-tutorial-part-2-running-the-BIDS-Curation-gear">Run the BIDS Curation Gear</a></p>
+<p><a href="https://docs.flywheel.io/hc/en-us/articles/1500012005281-BIDS-curation-tutorial-part-2-running-the-BIDS-Curation-gear#h_01FJCEKPWE9WBBV81VKTSFZ8ZD">Run the BIDS Curation Gear</a></p>
 <ol>
-<li>Run the BIDS Curation gear with desired configurations</li>
+<li>Run the BIDS Curation gear with desired configurations  </li>
 <li>Review "Provenance" for curation success or failure</li>
 <li>Review BIDS curated acquisitions with "BIDS View"</li>
+</ol>
+</li>
+<li>
+<p><a href="https://docs.flywheel.io/hc/en-us/articles/4405065304723-BIDS-curation-tutorial-part-4-interpreting-the-curation-report">Review the Curation Reports</a></p>
+<ol>
+<li>Review the NIfTI spreadsheet (i.e., <code>*_niftis.csv</code>)</li>
+<li>Review the Acquisitions spreadsheets (i.e., <code>*_acquisitions*.csv</code>)</li>
+<li>(<em>Optional, if fmaps were collected</em>) Review the IntendedFor spreadsheet (i.e., <code>*_intendedfors.csv</code>)</li>
 </ol>
 </li>
 <li>
@@ -1064,10 +1080,10 @@
 <li>Adjust the BIDS Curation template to capture the error, either by:<ol>
 <li>Modify the template to suit your needs <br>
 (and consider sharing a successful template fix with the CHN).</li>
-<li>Contacting Kelly at for help.</li>
+<li>Contacting Kelly for help.</li>
 </ol>
 </li>
-<li>Re-run the BIDS Curation gear</li>
+<li>Repeat Steps 2 and 3.</li>
 </ol>
 </li>
 </ol>
@@ -1080,7 +1096,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 4, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 26, 2021</span>
       
     
   </small>
