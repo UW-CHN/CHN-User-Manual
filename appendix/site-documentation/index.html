@@ -977,12 +977,17 @@
 <pre><code class="language-shell">$ mkdocs --version
 mkdocs, version 1.2.2 from /usr/local/lib/python3.8/site-packages/mkdocs (Python 3.8)
 </code></pre>
-<h3 id="mkdocs-markdown-extensions">MkDocs Markdown Extensions<a class="headerlink" href="#mkdocs-markdown-extensions" title="Permanent link">&para;</a></h3>
-<p>MkDocs also provides a lot of flexibility to site rendering by allowing users to use markdown extensions. The desired extensions can be specified in the <a href="#mkdocsyml"><code>mkdocs.yml</code></a> configuration file. Details about how to add markdown extensions can be found on the <a href="https://www.mkdocs.org/user-guide/configuration/#markdown_extensions">MkDocs documentation page</a>.</p>
-<p>This site requires some popular markdown extensions that will also need to be installed onto the local machine in order to render site. Here is the list of extensions that need be installed:</p>
+<h3 id="mkdocs-external-dependencies">MkDocs External Dependencies<a class="headerlink" href="#mkdocs-external-dependencies" title="Permanent link">&para;</a></h3>
+<p>MkDocs also provides a lot of flexibility to site rendering by allowing users to use <a href="https://www.mkdocs.org/user-guide/configuration/#markdown_extensions">markdown extensions</a> and <a href="https://www.mkdocs.org/dev-guide/plugins/">plugins</a>. The dependencies can be specified in the <a href="#mkdocsyml"><code>mkdocs.yml</code></a> configuration file.</p>
+<p>This site requires some popular markdown extensions and plugins that will also need to be installed onto the local machine in order to render site. Here is the list of extensions that need be installed:</p>
+<p><strong>Markdown Extensions</strong></p>
 <ul>
 <li><a href="https://squidfunk.github.io/mkdocs-material/getting-started/">Material</a></li>
 <li><a href="https://facelessuser.github.io/pymdown-extensions/installation/">PyMdown Extensions</a></li>
+</ul>
+<p><strong>Plugins</strong></p>
+<ul>
+<li><a href="https://pypi.org/project/mkdocs-git-revision-date-localized-plugin/"><code>git-revision-date-localized</code></a></li>
 </ul>
 <h3 id="git">Git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h3>
 <p>Download and install the proper <a href="https://git-scm.com/downloads">git</a> distribution based on your operating system.</p>
