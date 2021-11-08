@@ -1306,8 +1306,7 @@
                             { "$replace": { "$pattern": "^(\\d{1})$", "$replacement": "0\\1" } }
                         ]
                     }
-                }, 
-                "Modality": "MEGRE"
+                }
             }
         },
         {
