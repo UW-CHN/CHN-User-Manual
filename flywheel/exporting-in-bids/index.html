@@ -987,6 +987,12 @@
     --data-type &quot;func&quot; \
     path/to/project_folder
 </code></pre>
+<p>Exporting with dicom source data:</p>
+<pre><code class="language-bash">fw export bids \
+    --project &quot;project_label&quot; \
+    --source-data \
+    path/to/project_folder
+</code></pre>
 <h2 id="bids-validation">BIDS Validation<a class="headerlink" href="#bids-validation" title="Permanent link">&para;</a></h2>
 <p>Downloading the data from Flywheel does not guarantee that it is up-to-date with the <em>latest</em> BIDS specification. The BIDS standard updates regularly, which causes software, such as the BIDS Curation Gear, based on a previous BIDS version to lag behind in updating.</p>
 <p>Therefore, it is good practice to use the <a href="https://github.com/bids-standard/bids-validator">BIDS Validator</a> to ensure compliance with the latest BIDS version. There are multiple implementations of the validator (read the validator's documentation), but the <a href="https://bids-standard.github.io/bids-validator/">online version</a> is probably the easiest and fastest to use.</p>
@@ -998,7 +1004,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 28, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 18, 2021</span>
       
     
   </small>
