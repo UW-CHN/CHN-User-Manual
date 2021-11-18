@@ -53,6 +53,15 @@ fw export bids \
     path/to/project_folder
 ```
 
+Exporting with dicom source data:
+
+```bash
+fw export bids \
+    --project "project_label" \
+    --source-data \
+    path/to/project_folder
+```
+
 ## BIDS Validation
 
 Downloading the data from Flywheel does not guarantee that it is up-to-date with the *latest* BIDS specification. The BIDS standard updates regularly, which causes software, such as the BIDS Curation Gear, based on a previous BIDS version to lag behind in updating.
