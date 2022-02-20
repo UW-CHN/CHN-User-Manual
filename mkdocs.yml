@@ -37,7 +37,7 @@ nav:
     - CMRR Physio: flywheel/cmrr-physio.md
     - MRIQC: flywheel/mriqc.md
     - BIDS Curation: flywheel/bids-curation.md
-    - Exporting Data in BIDS: flywheel/exporting-in-bids.md
+    - Exporting Data: flywheel/exporting-data.md
     - FreeSurfer recon-all: flywheel/freesurfer-recon-all.md
     - fMRIPrep: flywheel/fmriprep.md
     - qsiprep: flywheel/qsiprep.md
@@ -84,7 +84,7 @@ markdown_extensions:
       generic: true
   - toc:
       permalink: True
-      toc_depth: 2
+      toc_depth: 3
 
 plugins:
   - search:

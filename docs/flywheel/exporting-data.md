@@ -1,10 +1,27 @@
-# Exporting Data in BIDS
+# Exporting Data
 
-## Flywheel Command-Line Interface (CLI)
+## DICOM
+
+[flywheel doc](https://docs.flywheel.io/hc/en-us/articles/1500009711462-Downloading-data)
+[cli download](https://docs.flywheel.io/hc/en-us/articles/360016090074)
+
+### Web User Interface (UI)
+
+### Flywheel Command-Line Interface (CLI)
+
+TBA
+
+### Unzipping DICOM Files
+
+[flywheel doc unzip](https://docs.flywheel.io/hc/en-us/articles/360022278453)
+
+## BIDS
+
+It might be useful for some projects to be exported in [BIDS](https://bids-specification.readthedocs.io/en/stable/) compliant format. This is possible so long as the desired files have been processed with the [BIDS Curation](./bids-curation.md) Analysis Gear. 
 
 Currently, the only method of download data from Flywheel in BIDS format is through the Flywheel Command-Line Interface (CLI). The CLI is an additional Flywheel program that can be used from the computer's Command Prompt (Windows) or Terminal (Mac). To install the Flywheel CLI, go to [Flywheel's CLI Installation](https://docs.flywheel.io/hc/en-us/articles/360008162214) page.
 
-## Exporting Data in BIDS Format with the Flywheel CLI
+### Exporting Data in BIDS Format with the Flywheel CLI
 
 Once the CLI has been installed successfully, you can download your data in BIDS format from the Command Prompt or Terminal.
 
@@ -16,7 +33,7 @@ fw export bids [optional flags] --project [project label] [dest folder]
 
 The [Flywheel's BIDS Export Documentation](https://docs.flywheel.io/hc/en-us/articles/1500006477001) explains the exporting process additional information and options available through the CLI.
 
-### Common Commands
+#### Common Commands
 
 Export an entire project:
 
@@ -53,7 +70,7 @@ fw export bids \
     path/to/project_folder
 ```
 
-Exporting with dicom source data:
+Exporting with DICOM source data files:
 
 ```bash
 fw export bids \
@@ -62,7 +79,7 @@ fw export bids \
     path/to/project_folder
 ```
 
-## BIDS Validation
+### BIDS Validation
 
 Downloading the data from Flywheel does not guarantee that it is up-to-date with the *latest* BIDS specification. The BIDS standard updates regularly, which causes software, such as the BIDS Curation Gear, based on a previous BIDS version to lag behind in updating.
 
